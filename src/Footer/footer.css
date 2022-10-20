@@ -9,9 +9,10 @@
     color: white;
     display: flex;
     justify-content: space-around;
-    padding: 48px 0px;
+    padding: 48px 10px;
     font-size: 14px;
     line-height: 24px;
+    gap: 30px;
 }
 
 .footer-1 li {
@@ -34,7 +35,7 @@
     color: white;
     display: flex;
     justify-content: space-between;
-    padding: 25px 120px;
+    padding: 25px 9vw;
     font-size: 14px;
     line-height: 24px;
 }
@@ -43,4 +44,14 @@
     width: 140px;
     display: flex;
     justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+    .footer-1 {
+        flex-wrap: wrap;
+    }
+
+    ul {
+        margin-bottom: 40px;
+    }
 }

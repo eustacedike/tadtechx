@@ -1,6 +1,6 @@
 .Courses {
     background-color: var(--bg-color);
-    padding: 80px 120px;
+    padding: 5.5vw 8.3vw;
     position: relative;
 }
 
@@ -10,10 +10,10 @@
 }
 
 .course-cards {
-    margin-top: 90px;
+    margin-top: 5.8vw;
     display: flex;
     /* justify-content: space-around; */
-    gap: 40px;
+    gap: 5.7vw;
     overflow-x: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
@@ -21,14 +21,14 @@
     scrollbar-width: none;  /* Firefox */
 }
 
-.cards::-webkit-scrollbar {
+.course-cards::-webkit-scrollbar {
     display: none;
   }
 
 .course-card {
     /* width: 25%; */
     /* height: 440px; */
-    min-width: 25%;
+    min-width: 35%;
     scroll-snap-align: start;
     background-color: white;
     border-radius: 8px;
@@ -38,7 +38,16 @@
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
-    margin: 20px;
+    margin: 1.5vw;
+    /* border: 1px solid red; */
+}
+
+.course-card span button {
+    align-self: flex-end;
+}
+
+.course-card h4 {
+    font-size: 1.8vw;
 }
 
 .rating {
@@ -57,32 +66,43 @@
 }
 
 .more {
-    background: none;
+    background: white;
     border: 1px solid var(--primary);
     padding: 10px 0px;
-    width: 144px;
+    width: 20vw;
     color: var(--primary);
     border-radius: 8px;
     display: flex;
     justify-content: space-around;
-    margin: 20px 20px;
+    margin: 20px 1.5vw;
 }
 
 .more img {
     height: 16px;
 }
 
-.arrow {
+.more:hover {
+    border-color: transparent;
+    background-color: var(--primary);
+    color: white;
+    transition: 700ms;
+}
+
+.more:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.Courses .arrow {
     position: absolute;
-    top: 342px;
-    right: 30px;
+    top: 40%;
+    right: 20px;
     cursor: pointer;
 }
 
-.arrow-b {
+.Courses .arrow-b {
     position: absolute;
-    top: 342px;
-    left: 30px;
+    top: 40%;
+    left: 20px;
     cursor: pointer;
     transform: scaleX(-1);
 }
@@ -98,7 +118,67 @@
     font-size: 18px;
 }
 
+.all button:hover {
+    background: none;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    transition: .7s;
+}
+
 .all {
     text-align: center;
     margin: 30px;
+}
+
+@media (max-width: 700px) {
+    .course-card {
+        min-width: 60%;
+        margin: 0 20%;
+        scroll-snap-align: center;
+    }
+
+    .course-card span {
+        margin: 3vw;
+    }
+
+    .course-cards {
+        gap: 0;
+    }
+
+    .Courses .arrow {
+        right: 9%;
+    }
+
+   .Courses .arrow-b {
+        left: 9%;
+    }
+
+    .Courses .arrow img, .Courses .arrow-b img {
+        height: 30px;
+    }
+
+    .course-card h4 {
+        font-size: 15px;
+        line-height: 20px;
+    }
+   
+    .all button {
+        padding: 12px 18px;
+        font-size: 12px;
+        font-weight: bold;
+        height: 36px;
+        width: 141px;
+    }
+
+    .more {
+        padding: 7px 0px;
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        margin: 20px auto;
+    }
+    
+    .more img {
+        height: 16px;
+    }
 }

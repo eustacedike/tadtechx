@@ -5,7 +5,7 @@
 }
 
 .cards {
-    margin-top: 90px;
+    margin-top: 5.7vw;
     display: flex;
     padding: 10px 0;
     gap: 5.7vw;
@@ -70,4 +70,41 @@
     left: 3%;
     cursor: pointer;
     transform: scaleX(-1);
+}
+
+
+@media (max-width: 700px) {
+    .card {
+        min-width: 50%;
+        margin: 0 25%;
+        scroll-snap-align: center;
+    }
+
+    .cards {
+        gap: 0;
+        /* padding-left: 50%; */
+    }
+
+    .Services .arrow {
+        top: 52%;
+        right: 9%;
+    }
+
+   .Services .arrowb {
+        top: 52%;
+        left: 9%;
+    }
+
+    .Services .arrow img, .Services .arrowb img {
+        height: 30px;
+    }
+
+    .card h4 {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .card p {
+        font-size: 10px;
+        line-height: 15px;
+    }
 }

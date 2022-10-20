@@ -154,10 +154,10 @@
 .intro button {
     background-color: white;
     color: #f78d28;
-    padding: 16px 24px;
+    padding: 1.1vw 1.4vw;
     border: none;
-    border-radius: 8px;
-    font-size: 18px;
+    border-radius: 0.7vw;
+    font-size: 1.8vw;
     transition: .7s;
 }
 
@@ -267,3 +267,39 @@
     height: 1.6vw;
 }
 
+@media (max-width: 550px) {
+    .banner {
+        height: 60vw;
+        background-size: 100%;
+    }
+
+    .roll-1{
+        background-size: cover;
+        background-position: right;
+    }
+
+    .options {
+        display: none;
+    }
+
+    .indicator {
+        display: none;
+    }
+
+    .next, .previous {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+    }
+    
+    .next img, .previous img {
+        height: 60%;
+    }
+    
+    .intro {
+        width: 70%;
+        position: relative;
+        margin: 4vw auto;
+        text-align: center;
+    }
+}

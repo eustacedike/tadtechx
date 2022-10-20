@@ -6,6 +6,21 @@ import preview from './assets/preview.png';
 
 function Learn () {
 
+    const discc = useRef();
+
+    const scrll = () => {
+        discc.current.scrollBy(240,0);
+    };
+
+    setInterval (scrll, 4000);
+
+    // if (discc.current.scrollLeft > 460) {
+    //     discc.current.style.color = "red";
+    //   }
+
+    const scrllb = () => {
+        discc.current.scrollBy(-240,0);
+    };
 
     return (
         <div className='Learn'>
@@ -14,7 +29,7 @@ function Learn () {
             <div className='caption'>
                 <h1>Learn, <span className='tech'>Connect</span><br></br> and Discuss</h1>
             </div>
-            <div className="discuss">
+            <div className="discuss" ref={discc}>
                 <div className="discuss-1">
                     <p>White dwarf a still more glorious dawn awaits tingling of the spine emerged into consciousness Vangelis shores of the cosmic ocean. Tendrils of gossamer clouds</p>
                 </div>
@@ -36,7 +51,7 @@ function Learn () {
                      <img src={preview}></img>
                 </div>
                
-                <div>
+                <div className='other'>
                     <h2>Our Scholarship Program</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, modi tempora. Voluptas assumenda officia quisquam. Quidem, similique magni culpa dolores consequatur cumque cupiditate ratione quibusdam eos quo.</p>
                     <br/>

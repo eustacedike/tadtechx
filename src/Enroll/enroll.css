@@ -18,8 +18,8 @@
 }
 
 .enroll-1 h2 {
-    font-size: 38px;
-    line-height: 45px;
+    font-size: 2.6vw;
+    line-height: 3vw;
     font-weight: 500;
     margin: 30px 0;
 }
@@ -37,4 +37,34 @@
 .enroll-2 {
     background-image: url(./assets/bgg.png);
     width: 50%;
+}
+
+@media (max-width: 900px) {
+    .enroll-1 {
+        width: 100%;
+        background-image: url(./assets/bgg.png);
+        padding: 100px 40px;
+    }
+    .enroll-2{
+        display: none;
+    }
+
+    .enroll-1 h1 {
+        font-size: 40px;
+        line-height: 35px;
+    }
+    
+    .enroll-1 h2 {
+        font-size: 4vw;
+        line-height: 3vw;
+        font-weight: 500;
+        margin: 30px 0;
+    }
+
+    .enroll-1 button {
+        border-radius: 6px;
+        font-size: 15px;
+        padding: 12px 18px;
+        margin-top: 20px;
+    }
 }
