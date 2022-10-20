@@ -1,0 +1,17 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #f78b26;
+  --secondary: #2960EC;
+  --our-font: 'Inter', sans-serif;
+  --bg-color: #f4f6ff;
+}
+
+.App {
+  font-family: var(--our-font);
+}

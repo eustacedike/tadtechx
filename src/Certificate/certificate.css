@@ -1,0 +1,84 @@
+.Certificate {
+    background-color: #f4f6ff;
+    padding: 80px 120px;
+    border-radius: 75px;
+}
+
+.Certificate h2 {
+    text-align: center;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 52px;
+    font-size: 34px;
+}
+
+.first {
+    /* margin: 56px 0; */
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.second {
+    display: flex;
+    width: 90%;
+    margin: 68px auto;
+    gap: 30px;
+}
+
+.second li {
+    list-style-image: url(./assets/check.png);
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.certificate-2 {
+    background: linear-gradient(rgba(7, 25, 69,0.9),rgba(7, 25, 69,0.9)), url(./assets/bg2.png);
+    background-size: 100% 100%;
+    height: 800px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 91px 0;
+    /* justify-content: center; */
+}
+
+.certificate-2 img {
+    height: 329px;
+    width: 329px;
+}
+
+.certificate-2 h1 {
+    font-size: 48px;
+    line-height: 48px;
+}
+
+.certificate-2 p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 10px;
+}
+
+.certificate-2 form {
+    /* border: 2px solid red; */
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.certificate-2 input {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    width: 65%;
+}
+
+.certificate-2 button {
+    padding: 15px 25px;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    width: 25%;
+}

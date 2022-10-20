@@ -1,0 +1,104 @@
+.Courses {
+    background-color: var(--bg-color);
+    padding: 80px 120px;
+    position: relative;
+}
+
+.Courses h2 {
+    text-align: center;
+    font-weight: 700;
+}
+
+.course-cards {
+    margin-top: 90px;
+    display: flex;
+    /* justify-content: space-around; */
+    gap: 40px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.cards::-webkit-scrollbar {
+    display: none;
+  }
+
+.course-card {
+    /* width: 25%; */
+    /* height: 440px; */
+    min-width: 25%;
+    scroll-snap-align: start;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.course-card span {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.rating {
+    background-color: var(--secondary);
+    color: gold;
+    border: none;
+    padding: 5px;
+    border-radius: 9px;
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+.course-img {
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.more {
+    background: none;
+    border: 1px solid var(--primary);
+    padding: 10px 0px;
+    width: 144px;
+    color: var(--primary);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 20px;
+}
+
+.more img {
+    height: 16px;
+}
+
+.arrow {
+    position: absolute;
+    top: 342px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.arrow-b {
+    position: absolute;
+    top: 342px;
+    left: 30px;
+    cursor: pointer;
+    transform: scaleX(-1);
+}
+
+.all button {
+    background-color: var(--primary);
+    padding: 16px 24px;
+    height: 48px;
+    width: 188px;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+}
+
+.all {
+    text-align: center;
+    margin: 30px;
+}

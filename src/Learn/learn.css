@@ -1,0 +1,143 @@
+.box-1 {
+    width: 100%;
+    position: relative;
+    background: linear-gradient(90.66deg, #2960EC 3.08%, rgba(247, 141, 40, 0.33) 53.84%), url(./assets/header.png);
+    color: white;
+    padding-top: 8.3vw;
+    height: 43vw;
+    background-size: 100%;
+}
+
+.caption {
+    width: 80%;
+    margin: 0px auto;
+}
+
+.caption h1 {
+    font-size: 3.5vw;
+    font-weight: 700;
+    line-height: 4vw;
+    letter-spacing: 0.5px;
+}
+
+
+.discuss-1 {
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    height: 148px;
+    width: 25%;
+    text-align: center;
+    padding: 6px;
+}
+
+.discuss {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 6.9vw auto;
+}
+
+.discuss p {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.d1 {
+    background-color: var(--primary);
+    border-radius: 50%;
+    width: 58px;
+    height: 58px;
+    position: absolute;
+    top: 64px;
+    right: 202px;
+}
+.d2 {
+    background-color: var(--secondary);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 64px;
+    right: 402px;
+}
+.d3 {
+    background-color: var(--primary);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 249px;
+    right: 91px;
+}
+.d4 {
+    background-color: var(--secondary);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 225px;
+    right: 216px;
+}
+
+.box-2 {
+    display: flex;
+    width: 80%;
+    margin: 50px auto;
+    gap: 40px;
+}
+
+.preview {
+    background: url(./assets/back.png), url(./assets/back2.png);
+    /* background-image: url(./assets/back2.png); */
+    /* border: 1px solid red; */
+    background-repeat: no-repeat;
+    background-position: bottom left, top right;
+    align-items: center;
+    display: flex;
+    height: 390px;
+    padding: 33px;
+    width: 70%;
+}
+
+.preview img {
+    background-color: grey;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+}
+
+.box-2 h2 {
+    color: var(--secondary);
+    font-size: 2.2vw;
+    line-height: 3.3vw;
+}
+
+.box-2 p {
+    font-size: 1.5vw;
+    line-height: 2.3vw;
+}
+
+.box-2 button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-top: 24px;
+}
+
+@media (max-width: 750px) {
+    .discuss p {
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .discuss-1 {
+        height: 108px;
+    }
+
+    .d1, .d2, .d3, .d4 {
+        opacity: 0.3;
+    }
+}
