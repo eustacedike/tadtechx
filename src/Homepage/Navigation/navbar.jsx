@@ -1,16 +1,20 @@
 import React from 'react';
+import { useRef } from 'react';
 import style from './navbar.css';
 import logo from './newLogo.png';
 import vector from './vector.png';
 import search from './search.png';
 
-class Navbar extends React.Component {
-  constructor() {
-    super();
+function Navbar() {
 
-  }
+  const hamm = useRef();
+  const mobilee = useRef();
 
-  render() {
+  const openMenu = () => {
+      hamm.current.classList.toggle('change');
+      mobilee.current.classList.toggle('inView');
+  };
+
     return (
       <div className='Navbar'>
         <nav>
@@ -62,16 +66,32 @@ class Navbar extends React.Component {
             <input type='text' placeholder='Search courses'></input>
             <img className='search-icon' src={search}></img>
           </div>
-          <div className='nav-btn'>
+          <div className='nav-btn gone'>
             <button className='sign'>Sign In</button>
             <button>Register</button>
           </div>
+          <div className='hamburger' onClick={openMenu} ref={hamm}>
+            <div className='bar1'></div>
+            <div className='bar2'></div>
+            <div className='bar3'></div>
+          </div>
         </nav>
+
+        <div className='mobile' ref={mobilee}>
+          <a href=''><h3>Courses</h3></a>
+          <a href=''><h3>Services</h3></a>
+          <a href=''><h3>About Us</h3></a>
+          <a href=''><h3>Register</h3></a>
+          <div className='nav-btn'>
+            <button>Sign In</button>
+            <button>Register</button>
+          </div>
+        </div>
 
         
       </div>
     );
   }
-}
+
 
 export default Navbar;

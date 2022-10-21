@@ -9,26 +9,30 @@
     font-weight: 700;
     color: var(--secondary);
     margin-bottom: 52px;
-    font-size: 48px;
+    font-size: clamp(24px, 3vw, 40px);
+    line-height: clamp(28px, 3.8vw, 42px);
 }
 
 .first {
     /* margin: 56px 0; */
-    font-size: 24px;
-    line-height: 36px;
+    /* font-size: 24px;
+    line-height: 36px; */
+    font-size: clamp(14px,1.5vw,48px);
+    line-height: clamp(24px,2.2vw,64px);
 }
 
 .second {
     display: flex;
-    width: 90%;
-    margin: 68px auto;
+    width: 85%;
+    margin: 20px auto;
+    margin-bottom: 68px;
     gap: 30px;
 }
 
 .second li {
     list-style-image: url(./assets/check.png);
-    font-size: 24px;
-    line-height: 36px;
+    font-size: clamp(13px,1.5vw,48px);
+    line-height: clamp(22px,2.2vw,64px);
 }
 
 .second img {
@@ -79,6 +83,14 @@
     width: 65%;
 }
 
+.certificate-2 input::placeholder,
+.certificate-2 input,
+.certificate-2 button
+ {
+    /* color: red; */
+    font-size: clamp(12px,1.5vw,48px);
+}
+
 .certificate-2 button {
     padding: 15px 25px;
     background-color: var(--primary);
@@ -94,23 +106,21 @@
     }
 
     .second img {
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
     }
 
-    .Certificate h2 {
+    /* .Certificate h2 {
         font-size: 5vw;
-    }
+    } */
     
     .first {
-        /* margin: 56px 0; */
-        font-size: 2.2vw;
-        line-height: 4vw;
+       /* text-align: center; */
     }
     
     .second li {
-        font-size: 2.2vw;
-        line-height: 3vw;
+        /* font-size: 2.2vw;
+        line-height: 3vw; */
     }
 
     .certificate-2 h1 {
@@ -139,10 +149,14 @@
 }
 
 @media (max-width: 600px) {
-.certificate-2 {
-    text-align: center;
-    padding: 91px 10px;
-}
+    .Certificate {
+        border-radius: 45px;
+    }
+
+    .certificate-2 {
+        text-align: center;
+        padding: 91px 10px;
+    }
 
   .certificate-2 img {
     width: 35vw;
@@ -165,10 +179,10 @@
     }
 
 .certificate-2 input {
-    padding: 2.5vw 1vw;
+    padding: 10px 7px;
 }
 
 .certificate-2 button {
-    padding: 1vw 1vw;
+    padding: 10px 3px;
 }
 }

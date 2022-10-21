@@ -1,4 +1,3 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 
 
 .Hero {
@@ -7,7 +6,6 @@
 
 .banner {
     width: 100%;
-    /* height: 644px; */
     height: 44.7vw;
     /* border: 2px solid red; */
     display: flex;
@@ -62,9 +60,10 @@
 }
 
 .intro h1 {
-    font-size: 3.3vw;
+    /* font-size: 3.3vw; */
+    font-size: clamp(16px, 3vw, 48px);
     font-weight: 700;
-    line-height: 3.8vw;
+    line-height: clamp(16px, 3.8vw, 48px);
     letter-spacing: 0.5px;}
 
 .animate-a {
@@ -72,7 +71,7 @@
     white-space: nowrap;
     /* border: 2px solid red; */
     /* width: 50%; */
-    height: 3.88vw;
+    /* height: 3.88vw; */
     margin-bottom: 5px;
     /* display: flex; */
     border-right: 2px solid transparent;
@@ -91,13 +90,31 @@
 .animate-b {
     overflow: hidden;
     white-space: nowrap;
-    height: 3.88vw;
+    /* height: 3.88vw; */
     /* width: 0; */
     margin-bottom: 5px;
     border-right: 2px solid transparent;
     /* animation: typing2 3.5s 3.5s steps(30,end) forwards, blink .7s 3.5s infinite; */
     animation: bust 2s 2s forwards;
     transform: translateX(-100%);
+}
+
+.animate-c {
+    /* overflow: hidden; */
+    /* white-space: nowrap; */
+    /* height: 3.88vw; */
+    /* width: 0; */
+    margin-bottom: 5px;
+    border-right: 2px solid transparent;
+    /* animation: typing2 3.5s 3.5s steps(30,end) forwards, blink .7s 3.5s infinite; */
+    animation: bustdown 2s 2s forwards;
+    transform: translateY(-100%);
+}
+
+@keyframes bustdown {
+    0% {transform: translateY(-100%);}
+    80% {transform: translateY(20%);}
+    100% {transform: translateY(0);}
 }
 
 .curve {
@@ -107,7 +124,7 @@
 .curve-cont {
     position: absolute;
     left: 6.3vw;
-    top: 7.98vw;
+    top: 7.5vw;
 
     width: 0%;
     overflow-x: hidden;
@@ -120,26 +137,41 @@
     to {width: 100%;}
 }
 
-.intro p {
-    font-size: 1.6vw;
+.intro-small {
+    font-size: clamp(10px, 1.6vw, 24px);
     font-weight: 400;
-    line-height: 2.2vw;
-    margin: 35px 0px;
+    /* line-height: clamp(5px, 2.2vw, 12px); */
+    margin: 4.2vw 0px;
 
     overflow: hidden;
     
-    white-space: nowrap;
+    /* white-space: nowrap; */
     /* height: 56px; */
-    width: 0%;
+    /* width: 0%; */
     /* border: 1px solid red; */
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     border-right: 2px solid transparent;
-    animation: typing 3.5s 5s steps(30,end) forwards, blink .7s .1s infinite;
+}
+
+.p1 {
+    animation: typing 3.4s 5s steps(30,end) forwards, blink .7s .1s 12;
+    white-space: nowrap;
+    border-right: 2px solid transparent;
+    overflow: hidden;
+    margin-bottom: 5px;
+    width: 0%;
+}
+.p2 {
+    animation: typing 3.5s 8.5s steps(30,end) forwards, blink .7s 8.6s infinite;
+    white-space: nowrap;
+    border-right: 2px solid transparent;
+    overflow: hidden;
+    width: 0%;
 }
 
 @keyframes typing {
     from {width: 0}
-    to {width: 119%}
+    to {width: 100%}
 }
 
 @keyframes blink {
@@ -157,7 +189,7 @@
     padding: 1.1vw 1.4vw;
     border: none;
     border-radius: 0.7vw;
-    font-size: 1.8vw;
+    font-size: clamp(10px, 1.8vw, 30px);
     transition: .7s;
 }
 
@@ -300,6 +332,24 @@
         width: 70%;
         position: relative;
         margin: 4vw auto;
-        text-align: center;
+        /* text-align: center; */
+    }
+
+    .intro-2 {
+        display: none;
+    }
+
+    .dat2 {
+        background-image: url(./assets/group.png);
+        /* background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right; */
+    }
+
+    .dat3 {
+        background-image: url(./assets/laptop.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
     }
 }

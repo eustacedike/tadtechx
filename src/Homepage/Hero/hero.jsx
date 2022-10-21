@@ -42,7 +42,10 @@ function Hero () {
                         <div className='roll-1'>
                             <div className='intro'>
                                 <h1 className='animate-a'>Become <span className='tech'>Tech</span> Savy By</h1><h1 className='animate-b'>Learning With Us</h1>
-                                <p><span className='p1'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span> <span>Voluptate voluptatibus autem numquam delectus?</span></p>
+                                <div className="intro-small">
+                                    <p className='p1'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p> 
+                                <p className='p2'>Voluptate voluptatibus autem numquam delectus?</p>
+                                </div>
                                 <button className='sign'>Learn more</button>
                                 <div className="curve-cont">
                                     <img className='curve' src={curve} alt="" />
@@ -50,20 +53,31 @@ function Hero () {
                             </div>
                         </div>
                         <div className='roll-2'>
-                            <div className='intro'>
-                                <h1>Maecenas <span className='tech'>dignissim</span> tr justo eget nulla rutr</h1>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem ipsum alias porro ipsa.</p>
+                            <div className='intro dat2'>
+                                <h1 className='animate-c'>Maecenas <span className='tech'>dignissim</span> tr
+                                justo eget nulla rutr</h1>
+                                <div className="intro-small">
+                                    <p className='p1'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p> 
+                                    <p className='p2'>Voluptate voluptatibus autem numquam delectus?</p>
+                                </div>
                                 <button className='sign'>Learn more</button>
+                                
                             </div>
                             <div className='intro-2'>
                                 <img src={group} alt=""></img>
                             </div>
                         </div>
                         <div className='roll-2'>
-                            <div className='intro'>
-                                <h1>Material Kit Premium</h1>
-                                <p>Start your development with a badass material UI Kit for your projects inspired by Material Design</p>
+                            
+                                <div className='intro dat3'>
+                                <h1 className='animate-c'>Material Kit Premium</h1>
+                                <div className="intro-small">
+                                    <p className='p1'>Start your development with a badass material UI </p> 
+                                    <p className='p2'>Kit for your projects inspired by Material Design</p>
+                                </div>
                                 <button className='sign'>Shop Now</button>
+                                
+                            
                             </div>
                             <div className='intro-2'>
                                 <img src={laptop} alt=""></img>

@@ -3,13 +3,15 @@
     padding: 70px 8.3vw;
     border-radius: 0px 0px 75px 75px;
     position: relative;
+    margin-bottom: 100px;
 }
 
 .Testimonials h2 {
     text-align: center;
     font-weight: 700;
     color: white;
-    font-size: 5vw;
+    font-size: clamp(24px, 3vw, 40px);
+    line-height: clamp(28px, 3.8vw, 42px);
 }
 
 .testimonial-cards {
@@ -31,7 +33,7 @@
 .testimonial-card {
     /* width: 25%; */
     /* height: 440px; */
-    min-width: 35%;
+    min-width: 40%;
     scroll-snap-align: start;
     background-color: white;
     border-radius: 8px;
@@ -72,8 +74,10 @@
 }
 
 .content p {
-    font-size: 1.6vw;
-    line-height: 3vw;
+    /* font-size: 1.6vw;
+    line-height: 3vw; */
+    font-size: clamp(14px,1.2vw,28px);
+    line-height: clamp(24px,3vw,36px);
 }
 
 .Testimonials .arrow {
@@ -92,9 +96,13 @@
 }
 
 @media (max-width: 700px) {
+    .Testimonials{
+        border-radius: 0px 0px 45px 45px;
+    }
+
     .testimonial-card {
-        min-width: 60%;
-        margin: 0 20%;
+        min-width: 80%;
+        margin: 0 10%;
         scroll-snap-align: center;
     }
 
@@ -104,19 +112,30 @@
     }
 
     .Testimonials .arrow {
-        right: 9%;
+        right: 5%;
     }
 
     .Testimonials .arrow-b {
-        left: 9%;
+        left: 5%;
     }
 
     .Testimonials .arrow img, .Testimonials .arrow-b img {
         height: 30px;
     }
 
-    .content p {
+    /* .content p {
         font-size: 12px;
         line-height: 24px;
+    } */
+}
+
+@media (min-width: 1700px) {
+    .testimonial-card {
+        width: 25%;
+        min-width: 300px;
+    }
+
+    .testimonial-cards {
+        gap: 80px;
     }
 }
