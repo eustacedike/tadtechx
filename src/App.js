@@ -4,10 +4,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 
 import Layout from "./Layout/layout";
-import Homepage from './Layout/Homepage/homepage';
-import Course from './Layout/Course/course.jsx';
+import Homepage from './Homepage/homepage';
+import Course from './Course/course.jsx';
 
-import CyberSec from './Layout/CoursePage/CyberSec/cybersec';
+import CyberSec from './CoursePage/CyberSec/cybersec';
 
 
 

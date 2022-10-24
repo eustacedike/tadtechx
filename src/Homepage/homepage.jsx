@@ -5,7 +5,7 @@ import Learn from './Learn/learn';
 import Courses from './Courses/courses';
 import Testimonials from './Testimonials/testimonials';
 import Certificate from './Certificate/certificate';
-import Enroll from '../Enroll/enroll';
+import Enroll from '../Layout/Enroll/enroll';
 
 function Homepage() {
   return (

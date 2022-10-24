@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import style from './area.css';
 import artificial from './assets/artificial.png';
 import arrow from './assets/vector-right.png';
@@ -13,7 +13,7 @@ function Area() {
     return (
         <div className='Area'>
 
-            <Link to="/cybersecurity"><h2>Explore Our Courses</h2></Link>
+           <h2>Explore Our Courses</h2>
 
             <div className="main-course">
                 <div className='course-card'>

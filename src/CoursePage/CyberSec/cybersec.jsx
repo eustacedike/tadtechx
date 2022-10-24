@@ -12,7 +12,9 @@ function CyberSec() {
                 <h1>Introduction to Cyber Security</h1>
 
                 <div className="introduction">
-                    <img src={frame}></img>
+                    <div className="frame">
+                        <img src={frame}></img>
+                    </div>
                     <p>sedded odio lacus tempor elit lobortis, cursus tincidunt ullamcorper dui leo. quis viverra laoreet eget placerat scelerisque eget vitae porta massa
                         ipsum quam vel Utfrtyuf jhfyhioooippk hgoootvg
                     </p>
@@ -58,7 +60,7 @@ function CyberSec() {
 
                         <div>
                             <h5>10,000 already enrolled on this course</h5>
-                            <div>
+                            <div className='soon'>
                                 <h4>Starts Soon</h4>
                                 <button>Join Course</button>
                             </div>
