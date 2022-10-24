@@ -1,9 +1,9 @@
 import React from 'react';
 import { useRef } from 'react';
 import style from './navbar.css';
-import logo from './newLogo.png';
-import vector from './vector.png';
-import search from './search.png';
+import logo from './assets/newLogo.png';
+import vector from './assets/vector.png';
+import search from './assets/search.png';
 
 function Navbar() {
 
