@@ -6,6 +6,17 @@ import { useRef } from 'react';
 
 
 function Services() {
+
+
+    const offeredServices = [
+        {id: 1, title: "ICT Training Centre", preview: blog1, about: "Progressively incentivize coperative systems through technically sound functionalities"},
+        {id: 2, title: "Drop Shipping Services", preview: blog1, about: "Progressively incentivize coperative systems through technically sound functionalities"},
+        {id: 3, title: "Web Design and Hosting", preview: blog1, about: "Progressively incentivize coperative systems through technically sound functionalities"},
+        {id: 4, title: "Business Development", preview: blog1, about: "Progressively incentivize coperative systems through technically sound functionalities"},
+        {id: 5, title: "ICT Training Centre", preview: blog1, about: "Progressively incentivize coperative systems through technically sound functionalities"},
+        
+        
+      ];
     
     const carrd = useRef();
 
@@ -25,31 +36,15 @@ function Services() {
             <h2>Our Services</h2>
             
             <div className="cards" ref={carrd}>
-                <div className='card'>
-                    <img src={blog1} alt=""></img>
-                    <h4>ICT Training Centre</h4>
-                    <p>Progressively incentivize coperative systems through technically sound functionalities</p>
-                </div>
-                <div className='card'>
-                    <img src={blog1} alt=""></img>
-                    <h4>Drop Shipping Services</h4>
-                    <p>Progressively incentivize coperative systems through technically sound functionalities</p>
-                </div>
-                <div className='card'>
-                    <img src={blog1} alt=""></img>
-                    <h4>Web Design and Hosting</h4>
-                    <p>Progressively incentivize coperative systems through technically sound functionalities</p>
-                </div>
-                <div className='card'>
-                    <img src={blog1} alt=""></img>
-                    <h4>Business Development</h4>
-                    <p>Progressively incentivize coperative systems through technically sound functionalities</p>
-                </div>
-                <div className='card'>
-                    <img src={blog1} alt=""></img>
-                    <h4>ICT Training Centre</h4>
-                    <p>Progressively incentivize coperative systems through technically sound functionalities</p>
-                </div>
+                {offeredServices.map(eachService => {
+                    return (
+                        <div key={eachService.id} className="card">
+                            <img src={eachService.preview} alt={eachService.title}></img>
+                            <h4>{eachService.title}</h4>
+                            <p>{eachService.about}</p>
+                        </div>
+                    )})
+                }
             </div>
             
            

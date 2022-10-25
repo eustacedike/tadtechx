@@ -12,16 +12,14 @@ function Homepage() {
     <div className="Homepage">
       
       
-      {/* <Navbar/> */}
       <Hero/>
       <Services/>
       <Ideas/>
       <Learn/>
-      <Courses/>
+      <Courses theHead="Explore Our Courses"/>
       <Testimonials/>
       <Certificate/>
       <Enroll/>
-      {/* <Footer/> */}
 
     </div>
   );

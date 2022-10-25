@@ -57,19 +57,19 @@
     margin-bottom: 16px;
 }
 
-.test-1 {
+.testimonial-card:nth-child(odd) {
     background-color: var(--primary);
 }
 
-.inn-1 {
+.testimonial-card:nth-child(odd) .inner-test  {
     background-image: url(./assets/bg2.png);
 }
 
-.test-2 {
+.testimonial-card:nth-child(even) {
     background-color: var(--secondary);
 }
 
-.inn-2 {
+.testimonial-card:nth-child(even) .inner-test  {
     background-image: url(./assets/bg1.png);
 }
 

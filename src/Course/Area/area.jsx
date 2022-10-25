@@ -19,12 +19,12 @@ function Area() {
                 <div className='course-card'>
                     <img className='course-img' src={artificial} alt=""></img>
                     <span><h4>Artificial Intelligence Course</h4><button className='rating'>&#9733; 4.5</button></span>
-                    <Link to="/cybersecurity"><button className='more'>Learn More <img src={arrow} alt="" /></button></Link>
+                    <Link to="/courses/cybersecurity"><button className='more'>Learn More <img src={arrow} alt="" /></button></Link>
                 </div>
                 <div className='course-card'>
                     <img className='course-img' src={artificial} alt=""></img>
                     <span><h4>Artificial Intelligence Course</h4><button className='rating'>&#9733; 4.5</button></span>
-                    <button className='more'>Learn More <img src={arrow} alt="" /></button>
+                    <Link to="/courses/webdevelopment"><button className='more'>Learn More <img src={arrow} alt="" /></button></Link>
                 </div>
                 <div className='course-card'>
                     <img className='course-img' src={artificial} alt=""></img>

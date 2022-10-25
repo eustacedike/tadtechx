@@ -1,11 +1,14 @@
 import React from 'react';
-import style from './testimonials.css';
-import arrow from './assets/arrow.png';
-import profile from './assets/profile.png';
+import style from './trial.css';
+// import artificial from './assets/artificial.png';
+import arrow from './assets/vector-right.png';
+import blog1 from './assets/blog1.png'
 import { useRef } from 'react';
+import { Link } from "react-router-dom";
 
 
-function Testimonials() {
+function Trial() {
+
 
     const attestation = [
         { id: 1, name: "Sammy Lawson", avatar: profile, comment: "White dwarf a still more glorious dawn awaits tingling of the spine emerged into consciousness Vangelis shores of the cosmic ocean. Tendrils of gossamer clouds kindling the energy hidden in matter concept of the number one permanence." },
@@ -15,27 +18,26 @@ function Testimonials() {
         { id: 5, name: "Sandra Peters", avatar: profile, comment: "White dwarf a still more glorious dawn awaits tingling of the spine emerged into consciousness Vangelis shores of the cosmic ocean. Tendrils of gossamer clouds kindling the energy hidden in matter concept of the number one permanence." },
 
     ];
-    
+
+
     const carrd = useRef();
 
     const scrll = () => {
-        carrd.current.scrollBy(240,0);
+        carrd.current.scrollBy(240, 0);
     };
 
     const scrllbck = () => {
-        carrd.current.scrollBy(-240,0);
+        carrd.current.scrollBy(-240, 0);
     };
-    
 
-  
-    
-      return (
-        <div className='Testimonials'>
 
-            <h2>What Our Students Are Saying</h2>
-            
+    return (
+        <div>
+
             <div className="testimonial-cards" ref={carrd}>
-                  {attestation.map(testimony => {
+
+
+                {attestation.map(testimony => {
                     return (
                         <div key={testimony.id} className="testimonial-card">
                             <div className="inner-test">
@@ -50,9 +52,31 @@ function Testimonials() {
                         </div>
                     )
                 })}
+
+
+                {/* <div className='card'>
+                    <img src={blog1} alt=""></img>
+                    <h4>ICT Training Centre</h4>
+                    <p>Progressively incentivize coperative systems through technically sound functionalities</p>
+                </div> */}
             </div>
-            
-           
+
+            {/* <h2>Explore Our Courses</h2> */}
+
+            {/* <div className="course-cards" ref={carrd}>
+                {exCourse.map(eachCourse => {
+                    return (
+                        <div key={eachCourse.id} className="course-card">
+                            <img className='course-img' src={eachCourse.preview} alt={eachCourse.title}></img>
+                            <span><h4>{eachCourse.title}</h4><button className='rating'>&#9733; {eachCourse.rating}</button></span>
+                            <button className='more'>Learn More <img src={arrow} alt="" /></button>
+                        </div>
+                    )
+                })}
+
+            </div> */}
+
+
             <div className="arrow-b">
                 <img onClick={scrllbck} src={arrow} alt="" />
             </div>
@@ -60,11 +84,14 @@ function Testimonials() {
             <div className="arrow">
                 <img onClick={scrll} src={arrow} alt="" />
             </div>
-            
+
+            <div className="all">
+                {/* <Link to="/courses"><button>View all courses</button></Link> */}
+            </div>
+
         </div>
-      );
-    
+    );
+
 }
-  
-  export default Testimonials;
-  
+
+export default Trial;

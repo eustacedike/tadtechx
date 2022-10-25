@@ -1,0 +1,13 @@
+ 
+ {
+      "id":1,
+      "name":"Cyber Security",
+      "preview": "",
+      "intro":"sedded odio lacus tempor elit lobortis, cursus tincidunt ullamcorper dui leo. quis viverra laoreet eget placerat scelerisque eget vitae porta massa ipsum quam vel ipsum dolor sit amet consectetur adipisicing.",
+      "about": "",
+      "duration": 8,
+      "students": 10000,
+      "syllabus": {
+        "week 1": "color contrast"
+      }
+  }

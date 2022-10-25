@@ -1,39 +1,46 @@
 import React from 'react';
-import style from './cybersec.css';
+import style from './course-template.css';
 
-import frame from './assets/frame.png';
+import neww from './assets/new.png';
 
-function CyberSec() {
+import cert from './assets/Certificate.png';
+import clock from './assets/Clock.png';
+import beginner from './assets/Beginner.png';
+
+import Enroll from '../Layout/Enroll/enroll';
+import Courses from '../Homepage/Courses/courses';
+
+
+function CourseTemplate (props) {
 
     return (
-        <div className='CyberSec'>
+        <div className='CyberSec' key={props.currCourse.id}>
             <div className="cyber-1">
             <div className="segment-1">
-                <h1>Introduction to Cyber Security</h1>
+                <h1>Introduction to {props.currCourse.name}</h1>
 
                 <div className="introduction">
                     <div className="frame">
-                        <img src={frame}></img>
+                        <img src={props.curxPreview}></img>
                     </div>
-                    <p>sedded odio lacus tempor elit lobortis, cursus tincidunt ullamcorper dui leo. quis viverra laoreet eget placerat scelerisque eget vitae porta massa
-                        ipsum quam vel Utfrtyuf jhfyhioooippk hgoootvg
+                    <p>{props.currCourse.intro}
                     </p>
                 </div>
 
                 <div className="course-details">
-                    <div>
-                        <img src="" alt="" />
+                    <div className='tails'>
+                        <img src={clock} alt="" />
                         <div>
-                            <h5>8 weeks</h5>
-                            <p>3 - 6 hours per week</p>
+                            <h5>{props.currCourse.duration} weeks</h5>
+                            <h5 style={{fontWeight: 400}}>3 - 6 hours per week</h5>
                         </div>
                     </div>
-                    <div>
-                        <img src="" alt="" />
+                    <div className='tails'>
+                        <img src={beginner} alt="" />
                         <h5>Beginner level</h5>
                     </div>
-                    <div>
-                        <img src="" alt="" />
+                    <div className='tails'>
+                        <img src={cert} alt="" />
                         <h5>Digital certificate</h5>
                     </div>
 
@@ -59,27 +66,64 @@ function CyberSec() {
                         </p>
 
                         <div>
-                            <h5>10,000 already enrolled on this course</h5>
+                            <h5>{props.currCourse.students} already enrolled on this course</h5>
                             <div className='soon'>
                                 <h4>Starts Soon</h4>
                                 <button>Join Course</button>
                             </div>
                         </div>
                     </div>
+                    <div className="news-cat">
+                    <h4>News categories</h4>
                     <div className="news">
-                        <div>
-                            <img src="" alt="" />
+                        
+                        <div className='news-1'>
+                            <img src={neww} alt="" />
                             <div>
-                                <span></span>
+                                <span>
+                                    <button>John Smash</button>
+                                    .5min
+                                </span>
+                                <h4>Lorem ipsum is simply dummy</h4>
+                            </div>
+                        </div>
+                        <div className='news-1'>
+                            <img src={neww} alt="" />
+                            <div>
+                                <span>
+                                    <button>John Smash</button>
+                                    .5min
+                                </span>
                                 <h5>Lorem ipsum is simply dummy</h5>
                             </div>
                         </div>
+                        <div className='news-1'>
+                            <img src={neww} alt="" />
+                            <div>
+                                <span>
+                                    <button>John Smash</button>
+                                    .5min
+                                </span>
+                                <h5>Lorem ipsum is simply dummy</h5>
+                            </div>
+                        </div>
+                        <div className='news-1'>
+                            <img src={neww} alt="" />
+                            <div>
+                                <span>
+                                    <button>John Smash</button>
+                                    .5min
+                                </span>
+                                <h5>Lorem ipsum is simply dummy</h5>
+                            </div>
+                        </div>
+                    </div>
                     </div>
                 </div>
 
                 <div className="segment-3">
                     <h3>Syllabus</h3>
-                    <table>
+                    <table className='syllabus'>
                         <tr>
                             <td>Week 1</td>
                             <td></td>
@@ -104,6 +148,30 @@ function CyberSec() {
                             <td>Color Contrast</td>
                             <td>Colors should pass the WCAG 2.1 Level AA (4.5:1)</td>
                         </tr>
+                        <tr>
+                            <td>Week 4</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Color Contrast</td>
+                            <td>Colors should pass the WCAG 2.1 Level AA (4.5:1)</td>
+                        </tr>
+                        <tr>
+                            <td>Week 5</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Color Contrast</td>
+                            <td>Colors should pass the WCAG 2.1 Level AA (4.5:1)</td>
+                        </tr>
+                        <tr>
+                            <td>Week 6</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Color Contrast</td>
+                            <td>Colors should pass the WCAG 2.1 Level AA (4.5:1)</td>
+                        </tr>
                     </table>
 
                     <h3>Explore new skills</h3>
@@ -114,7 +182,7 @@ function CyberSec() {
 
                     <h3>More courses you might like</h3>
                     <div className="extra-courses">
-
+                        <Courses/>
                     </div>
                 </div>
 
@@ -136,9 +204,11 @@ function CyberSec() {
                     </div>
                 </div>
             </div>
+
+            <Enroll/>
         </div>
     );
 
 }
 
-export default CyberSec;
+export default CourseTemplate;

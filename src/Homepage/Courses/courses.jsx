@@ -6,7 +6,23 @@ import { useRef } from 'react';
 import { Link } from "react-router-dom";
 
 
-function Courses() {
+function Courses(props) {
+
+
+    const offeredCourses = [
+        {id: 1, title: "Artificial Intelligence Course", preview: artificial, rating: 4.5},
+        {id: 2, title: "Ethical Hacking Course", preview: artificial, rating: 4.5},
+        {id: 3, title: "Computer Diploma Course", preview: artificial, rating: 4.5},
+        {id: 4, title: "Web App Development Course", preview: artificial, rating: 4.5},
+        {id: 5, title: "Software Engineering Course", preview: artificial, rating: 4.5},
+        {id: 6, title: "Android/IOS Development Course", preview: artificial, rating: 4.5},
+        {id: 7, title: "Cyber Security Course", preview: artificial, rating: 4.5},
+        {id: 8, title: "Graphics Design UI/UX Course", preview: artificial, rating: 4.5},
+        {id: 9, title: "CMS/BMS/Database MS Course", preview: artificial, rating: 4.5},
+        {id: 10, title: "Machine Learning Course", preview: artificial, rating: 4.5},
+       
+        
+      ];
     
     const carrd = useRef();
 
@@ -24,61 +40,19 @@ function Courses() {
       return (
         <div className='Courses'>
 
-            <h2>Explore Our Courses</h2>
+            <h2>{props.theHead}</h2>
             
             <div className="course-cards" ref={carrd}>
-                <div className='course-card'>
-                    <img className='course-img' src={artificial} alt=""></img>
-                    <span><h4>Artificial Intelligence Course</h4><button className='rating'>&#9733; 4.5</button></span>
-                    <button className='more'>Learn More <img src={arrow} alt="" /></button>
-                </div>
-                <div className='course-card'>
-                    <img className='course-img' src={artificial} alt=""></img>
-                    <span><h4>Ethical Hacking Course</h4><button className='rating'>&#9733; 4.5</button></span>
-                    <button className='more'>Learn More <img src={arrow} alt="" /></button>
-                </div>
-                <div className='course-card'>
-                    <img className='course-img' src={artificial} alt=""></img>
-                    <span><h4>Computer Diploma Course</h4><button className='rating'>&#9733; 4.5</button></span>
-                    <button className='more'>Learn More <img src={arrow} alt="" /></button>
-                </div>
-                <div className='course-card'>
-                    <img className='course-img' src={artificial} alt=""></img>
-                    <span><h4>Web App Development Course</h4><button className='rating'>&#9733; 4.5</button></span>
-                    <button className='more'>Learn More <img src={arrow} alt="" /></button>
-                </div>
-                <div className='course-card'>
-                    <img className='course-img' src={artificial} alt=""></img>
-                    <span><h4>Software Engineering Course</h4><button className='rating'>&#9733; 4.5</button></span>
-                    <button className='more'>Learn More <img src={arrow} alt="" /></button>
-                </div>
-                <div className='course-card'>
-                    <img className='course-img' src={artificial} alt=""></img>
-                    <span><h4>Android/IOS Development Course</h4><button className='rating'>&#9733; 4.5</button></span>
-                    <button className='more'>Learn More <img src={arrow} alt="" /></button>
-                </div>
-                <div className='course-card'>
-                    <img className='course-img' src={artificial} alt=""></img>
-                    <span><h4>Cyber Security Course</h4><button className='rating'>&#9733; 4.5</button></span>
-                    <button className='more'>Learn More <img src={arrow} alt="" /></button>
-                </div>
-                <div className='course-card'>
-                    <img className='course-img' src={artificial} alt=""></img>
-                    <span><h4>Graphics Design UI/UX Course</h4><button className='rating'>&#9733; 4.5</button></span>
-                    <button className='more'>Learn More <img src={arrow} alt="" /></button>
-                </div>
-                <div className='course-card'>
-                    <img className='course-img' src={artificial} alt=""></img>
-                    <span><h4>CMS/BMS/Database MS Course</h4><button className='rating'>&#9733; 4.5</button></span>
-                    <button className='more'>Learn More <img src={arrow} alt="" /></button>
-                </div>
-                <div className='course-card'>
-                    <img className='course-img' src={artificial} alt=""></img>
-                    <span><h4>Machine Learning Course</h4><button className='rating'>&#9733; 4.5</button></span>
-                    <button className='more'>Learn More <img src={arrow} alt="" /></button>
-                </div>
-                
-                
+                {offeredCourses.map(eachCourse => {
+                    return (
+                        <div key={eachCourse.id} className="course-card">
+                            <img className='course-img' src={eachCourse.preview} alt={eachCourse.title}></img>
+                            <span><h4>{eachCourse.title}</h4><button className='rating'>&#9733; {eachCourse.rating}</button></span>
+                            <button className='more'>Learn More <img src={arrow} alt="" /></button>
+                        </div>
+                    )
+                })}
+
             </div>
             
            
