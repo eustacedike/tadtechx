@@ -12,6 +12,15 @@ import Courses from '../Homepage/Courses/courses';
 
 
 function CourseTemplate (props) {
+    
+    const syllabus = [
+        {week: 1, lesson: "Color Contrast", task: "Colors should pass the WCAG 2.1 Level AA (4.5:1)"},
+        {week: 2, lesson: "Color Contrast", task: "Colors should pass the WCAG 2.1 Level AA (4.5:1)"},
+        {week: 3, lesson: "Color Contrast", task: "Colors should pass the WCAG 2.1 Level AA (4.5:1)"},
+        {week: 4, lesson: "Color Contrast", task: "Colors should pass the WCAG 2.1 Level AA (4.5:1)"},
+        {week: 5, lesson: "Color Contrast", task: "Colors should pass the WCAG 2.1 Level AA (4.5:1)"},
+        {week: 6, lesson: "Color Contrast", task: "Colors should pass the WCAG 2.1 Level AA (4.5:1)"},
+    ]
 
     return (
         <div className='CyberSec' key={props.currCourse.id}>
@@ -23,8 +32,7 @@ function CourseTemplate (props) {
                     <div className="frame">
                         <img src={props.curxPreview}></img>
                     </div>
-                    <p>{props.currCourse.intro}
-                    </p>
+                    <p>{props.currCourse.intro}</p>
                 </div>
 
                 <div className="course-details">
@@ -124,54 +132,20 @@ function CourseTemplate (props) {
                 <div className="segment-3">
                     <h3>Syllabus</h3>
                     <table className='syllabus'>
-                        <tr>
-                            <td>Week 1</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Color Contrast</td>
-                            <td>Colors should pass the WCAG 2.1 Level AA (4.5:1)</td>
-                        </tr>
-                        <tr>
-                            <td>Week 2</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Color Contrast</td>
-                            <td>Colors should pass the WCAG 2.1 Level AA (4.5:1)</td>
-                        </tr>
-                        <tr>
-                            <td>Week 3</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Color Contrast</td>
-                            <td>Colors should pass the WCAG 2.1 Level AA (4.5:1)</td>
-                        </tr>
-                        <tr>
-                            <td>Week 4</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Color Contrast</td>
-                            <td>Colors should pass the WCAG 2.1 Level AA (4.5:1)</td>
-                        </tr>
-                        <tr>
-                            <td>Week 5</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Color Contrast</td>
-                            <td>Colors should pass the WCAG 2.1 Level AA (4.5:1)</td>
-                        </tr>
-                        <tr>
-                            <td>Week 6</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Color Contrast</td>
-                            <td>Colors should pass the WCAG 2.1 Level AA (4.5:1)</td>
-                        </tr>
+                    {syllabus.map(eachWeek => {
+                        return (
+                            <>
+                            <tr>
+                                <td>Week {eachWeek.week}</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>{eachWeek.lesson}</td>
+                                <td>{eachWeek.task}</td>
+                            </tr>
+                            </>
+                        )
+                    })}
                     </table>
 
                     <h3>Explore new skills</h3>
@@ -180,9 +154,9 @@ function CourseTemplate (props) {
                     <h3>Who is this course for?</h3>
                     <p>This course is suitable for all skill levels and backgrounds. Whether you want to advance your career prospects, learn a new skill, or broaden your educational horizons this course will help you to gain a solid understanding of the core competencies required to drive a successful career in your chosen industry.</p>
 
-                    <h3>More courses you might like</h3>
+                    {/* <h3>More courses you might like</h3> */}
                     <div className="extra-courses">
-                        <Courses/>
+                        <Courses theHead="More courses you might like" headStyle="alt-h2"/>
                     </div>
                 </div>
 

@@ -3,6 +3,7 @@ import style from './ideas.css';
 import { useRef } from 'react';
 import pexels from './assets/pexels.png';
 import rec from './assets/rec7.png';
+import web3 from './assets/web3.jpg';
 
 
 function Ideas() {
@@ -28,21 +29,30 @@ function Ideas() {
                 </div>
                 <div className='ideas-2' ref={ideaa}>
                     <div className='idea-card'>
-                        <img src={rec}></img>
-                        <h3>Web 3 app</h3>
+                        <img src={web3}></img>
+                        <h3>Web 3 App</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, dolorem!</p> <br/>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, dolorem!</p>
                     </div>
-                    <div className='idea-card'>
-                        <img src={rec}></img>
-                        <h3>E-learning platform</h3>
+                    <div className='idea-card' style={{animationDelay: "4.5s"}}>
+                        <img src={web3}></img>
+                        <h3>Web 3 App</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, dolorem!</p> <br/>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, dolorem!</p>
                     </div>
-                    <div className='idea-card'>
-                        <img src={rec}></img>
-                        <h3>Real Estate</h3>
+                    <div className='idea-card'style={{animationDelay: "9s"}}>
+                        <img src={web3}></img>
+                        <h3>web2 App</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, dolorem!</p> <br/>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, dolorem!</p>
                     </div>
-                    <div className='idea-card'>
-                        <img src={rec}></img>
-                        <h3>E-commerce</h3>
+                    <div className='idea-card' style={{animationDelay: "13.5s"}}>
+                        <img src={web3}></img>
+                        <h3>Webber App</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, dolorem!</p> <br/>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, dolorem!</p>
                     </div>
+                    
 
                 </div>
                 <div className="caret-left" onClick={scrllb}>

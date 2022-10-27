@@ -35,11 +35,12 @@
 }
 
 .ideas-2 {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 20px;
+    /* display: flex; */
+    /* grid-template-columns: auto auto; */
+    /* grid-gap: 20px; */
     width:45%;
     /* border: 1px solid red; */
+    position: relative;
 }
 
 .idea-card {
@@ -50,7 +51,21 @@
     color: var(--secondary);
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-    border-radius: 16px;
+    border-radius: 12px;
+    overflow: hidden;
+
+    position: absolute;
+    top: -210px;
+    opacity: 0;
+    animation: fadeaway 18s infinite;
+}
+
+@keyframes fadeaway {
+    0% {opacity: 0;}
+    6% {opacity: 1;}
+    19% {opacity: 1;}
+    25% {opacity: 0;}
+    100% {opacity: 0;}
 }
 
 .idea-card h3 {
@@ -58,7 +73,7 @@
 }
 
 .idea-card img {
-    width: 98%;
+    width: 100%;
 }
 
 .caret-right, .caret-left {
@@ -106,6 +121,10 @@
         border-radius: 8px;
 
         scroll-snap-align: center;
+
+        animation: none;
+        position: static;
+        opacity: 1;
     }
 
     .idea-card img {

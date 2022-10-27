@@ -10,14 +10,23 @@ import { Link } from "react-router-dom";
 function Trial() {
 
 
-    const attestation = [
-        { id: 1, name: "Sammy Lawson", avatar: profile, comment: "White dwarf a still more glorious dawn awaits tingling of the spine emerged into consciousness Vangelis shores of the cosmic ocean. Tendrils of gossamer clouds kindling the energy hidden in matter concept of the number one permanence." },
-        { id: 2, name: "Azah Anyeni", avatar: profile, comment: "Green dwarf a still more glorious dawn awaits tingling of the spine emerged into consciousness Vangelis shores of the cosmic ocean. Tendrils of gossamer clouds kindling the energy hidden in matter concept of the number one permanence." },
-        { id: 3, name: "Chris Prince", avatar: profile, comment: "White dwarf a still more glorious dawn awaits tingling of the spine emerged into consciousness Vangelis shores of the cosmic ocean. Tendrils of gossamer clouds kindling the energy hidden in matter concept of the number one permanence." },
-        { id: 4, name: "David Charles", avatar: profile, comment: "White dwarf a still more glorious dawn awaits tingling of the spine emerged into consciousness Vangelis shores of the cosmic ocean. Tendrils of gossamer clouds kindling the energy hidden in matter concept of the number one permanence." },
-        { id: 5, name: "Sandra Peters", avatar: profile, comment: "White dwarf a still more glorious dawn awaits tingling of the spine emerged into consciousness Vangelis shores of the cosmic ocean. Tendrils of gossamer clouds kindling the energy hidden in matter concept of the number one permanence." },
+    // const attestation = [
+    //     { id: 1, name: "Sammy Lawson", avatar: profile, comment: "White dwarf a still more glorious dawn awaits tingling of the spine emerged into consciousness Vangelis shores of the cosmic ocean. Tendrils of gossamer clouds kindling the energy hidden in matter concept of the number one permanence." },
+    //     { id: 2, name: "Azah Anyeni", avatar: profile, comment: "Green dwarf a still more glorious dawn awaits tingling of the spine emerged into consciousness Vangelis shores of the cosmic ocean. Tendrils of gossamer clouds kindling the energy hidden in matter concept of the number one permanence." },
+    //     { id: 3, name: "Chris Prince", avatar: profile, comment: "White dwarf a still more glorious dawn awaits tingling of the spine emerged into consciousness Vangelis shores of the cosmic ocean. Tendrils of gossamer clouds kindling the energy hidden in matter concept of the number one permanence." },
+    //     { id: 4, name: "David Charles", avatar: profile, comment: "White dwarf a still more glorious dawn awaits tingling of the spine emerged into consciousness Vangelis shores of the cosmic ocean. Tendrils of gossamer clouds kindling the energy hidden in matter concept of the number one permanence." },
+    //     { id: 5, name: "Sandra Peters", avatar: profile, comment: "White dwarf a still more glorious dawn awaits tingling of the spine emerged into consciousness Vangelis shores of the cosmic ocean. Tendrils of gossamer clouds kindling the energy hidden in matter concept of the number one permanence." },
 
-    ];
+    // ];
+
+    const syllabus = [
+        {week: 1, lesson: "Color Contrast", task: "Colors should pass the WCAG 2.1 Level AA (4.5:1)"},
+        {week: 2, lesson: "Color Contrast", task: "Colors should pass the WCAG 2.1 Level AA (4.5:1)"},
+        {week: 3, lesson: "Color Contrast", task: "Colors should pass the WCAG 2.1 Level AA (4.5:1)"},
+        {week: 4, lesson: "Color Contrast", task: "Colors should pass the WCAG 2.1 Level AA (4.5:1)"},
+        {week: 5, lesson: "Color Contrast", task: "Colors should pass the WCAG 2.1 Level AA (4.5:1)"},
+        {week: 6, lesson: "Color Contrast", task: "Colors should pass the WCAG 2.1 Level AA (4.5:1)"},
+    ]
 
 
     const carrd = useRef();
@@ -36,6 +45,21 @@ function Trial() {
 
             <div className="testimonial-cards" ref={carrd}>
 
+
+                {syllabus.map(eachWeek => {
+                        return (
+                            <>
+                            <tr>
+                                <td>Week {eachWeek.week}</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>{eachWeek.lesson}</td>
+                                <td>{eachWeek.task}</td>
+                            </tr>
+                            </>
+                        )
+                    })}
 
                 {attestation.map(testimony => {
                     return (

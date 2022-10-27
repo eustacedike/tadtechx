@@ -16,7 +16,7 @@ function Homepage() {
       <Services/>
       <Ideas/>
       <Learn/>
-      <Courses theHead="Explore Our Courses"/>
+      <Courses theHead="Explore Our Courses" headStyle="Courses-h2"/>
       <Testimonials/>
       <Certificate/>
       <Enroll/>

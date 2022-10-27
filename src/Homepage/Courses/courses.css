@@ -4,18 +4,26 @@
     position: relative;
 }
 
-.Courses h2 {
+.Courses-h2 {
     text-align: center;
     font-weight: 700;
     font-size: clamp(24px, 3vw, 40px);
     line-height: clamp(28px, 3.8vw, 42px);
 }
 
+.alt-h2 {
+    color: var(--secondary);
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: clamp(18px, 2.6vw, 32px);
+    line-height: clamp(21px, 3.2vw, 36px);
+}
+
 .course-cards {
     margin-top: 5.8vw;
     display: flex;
     /* justify-content: space-around; */
-    gap: 5.7vw;
+    gap: 4%;
     overflow-x: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
@@ -30,7 +38,7 @@
 .course-card {
     /* width: 25%; */
     /* height: 440px; */
-    min-width: 35%;
+    min-width: 30%;
     scroll-snap-align: start;
     background-color: white;
     border-radius: 8px;
@@ -71,7 +79,8 @@
     background: white;
     border: 1px solid var(--primary);
     padding: 10px 0px;
-    width: 20vw;
+    /* width: 20vw; */
+    width: 80%;
     max-width: 200px;
     color: var(--primary);
     border-radius: 8px;
@@ -133,6 +142,17 @@
     margin: 30px;
 }
 
+@media (max-width: 780px) {
+    .course-card {
+        min-width: 42%;
+        margin: 0 8%;
+    }
+
+    .course-cards {
+        gap: 0;
+    }
+}
+
 @media (max-width: 700px) {
     .course-card {
         min-width: 70%;
@@ -189,10 +209,10 @@
 @media (min-width: 1700px) {
     .course-card {
         width: 25%;
-        min-width: 360px;
+        min-width: 20%;
     }
 
     .course-cards {
-        gap: 80px
+        gap: 6%;
     }
 }

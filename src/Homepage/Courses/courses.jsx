@@ -40,7 +40,7 @@ function Courses(props) {
       return (
         <div className='Courses'>
 
-            <h2>{props.theHead}</h2>
+            <h2 className={props.headStyle}>{props.theHead}</h2>
             
             <div className="course-cards" ref={carrd}>
                 {offeredCourses.map(eachCourse => {

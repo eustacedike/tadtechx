@@ -17,8 +17,7 @@
 .testimonial-cards {
     margin-top: 90px;
     display: flex;
-    /* justify-content: space-around; */
-    gap: 40px;
+    gap: 5%;
     overflow-x: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
@@ -31,9 +30,7 @@
   }
 
 .testimonial-card {
-    /* width: 25%; */
-    /* height: 440px; */
-    min-width: 40%;
+    min-width: 30%;
     scroll-snap-align: start;
     background-color: white;
     border-radius: 8px;
@@ -95,6 +92,17 @@
     transform: scaleX(-1);
 }
 
+@media (max-width: 780px) {
+    .testimonial-card {
+        min-width: 45%;
+        margin: 0 5%;
+    }
+
+    .testimonial-cards {
+        gap: 0;
+    }
+}
+
 @media (max-width: 700px) {
     .Testimonials{
         border-radius: 0px 0px 45px 45px;
@@ -132,10 +140,10 @@
 @media (min-width: 1700px) {
     .testimonial-card {
         width: 25%;
-        min-width: 300px;
+        min-width: 29%;
     }
 
     .testimonial-cards {
-        gap: 80px;
+        gap: 7%;
     }
 }

@@ -36,6 +36,13 @@
     padding: 6px;
 }
 
+.discuss-1:hover {
+    background: rgba(0, 0, 0, 1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
+    transform: scale(1.05);
+    transition: .7s;
+}
+
 .discuss {
     display: flex;
     justify-content: space-between;
@@ -46,7 +53,7 @@
 .discuss p {
     /* font-size: 14px;
     line-height: 24px; */
-    font-size: clamp(12px, 1.6vw, 36px);
+    font-size: clamp(12px, 1.6vw, 24px);
     line-height: clamp(18px, 2.4vw, 56px);
 }
 
@@ -85,6 +92,10 @@
     position: absolute;
     top: 225px;
     right: 216px;
+}
+
+.d1, .d2, .d3, .d4 {
+    opacity: 0.3;
 }
 
 .box-2 {
