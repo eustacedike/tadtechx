@@ -117,6 +117,17 @@ function Hero () {
                         </div>
                     </div>
                 </div>
+
+                <div className="marq">
+                    
+                    <marquee behavior="" direction="">
+                       <div className="marq-in">
+                            <p style={{color: "black"}}>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                            <p style={{color: "black"}}>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                            <p style={{color: "black"}}>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                        </div>
+                    </marquee>
+                </div>
             </div>
         );
     

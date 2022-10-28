@@ -37,7 +37,7 @@ function Area() {
                         <div key={eachCourse.id} className="course-card">
                             <img className='course-img' src={eachCourse.preview} alt={eachCourse.title}></img>
                             <span><h4>{eachCourse.title}</h4><button className='rating'>&#9733; {eachCourse.rating}</button></span>
-                            <Link to={`/courses/${eachCourse.link}`}><button className='more'>Learn More <img src={arrow} alt="" /></button></Link>
+                            <Link style={{ textDecoration: 'none' }} to={`/courses/${eachCourse.link}`}><button className='more'>Learn More <img src={arrow} alt="" /></button></Link>
                         </div>
                     )
                 })}

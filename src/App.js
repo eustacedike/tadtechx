@@ -13,6 +13,7 @@ import Layout from "./Layout/layout";
 import Homepage from './Homepage/homepage';
 import Course from './Course/course.jsx';
 import CourseTemplate from './CoursePage/course-template';
+import Service from "./Service/service";
 
 // Course Data
 import courseData from "./CoursePage/coursedata/courseData.json";
@@ -37,11 +38,14 @@ function App() {
           <Route path="courses" element={<Course />}/>
           <Route path="/courses/cybersecurity" element={<CourseTemplate currCourse={courseData.cyberSec} curxPreview={cyberImg}/>}/>
           <Route path="/courses/webdevelopment" element={<CourseTemplate currCourse={courseData.webDev} curxPreview={webImg}/>}/>
-                    
+          
+          <Route path="services" element={<Service />}/>
 
         </Route>
       </Routes>
     </HashRouter>
+
+    {/* <Service/> */}
 
     </div>
   );

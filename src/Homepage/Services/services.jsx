@@ -26,7 +26,20 @@ function Services() {
     const scrllb = () => {
         carrd.current.scrollBy(-240,0);
     };
+
+
+    // const autScrll = () => {
+
+    //     if (carrd.current.scrollWidth - carrd.current.scrollLeft <= carrd.current.clientWidth * 1.25) {
+    //         carrd.current.scroll(0,0);
+    //     } else {
+    //         carrd.current.scrollBy(240,0);
+    //     }
+            
+        
+    // };
     
+    // setInterval (autScrll, 3000);
 
   
     

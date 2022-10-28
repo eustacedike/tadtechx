@@ -1,0 +1,200 @@
+.ServiceHero{
+    background-color: var(--bg-color);
+}
+
+.service-banner {
+    width: 100%;
+    height: 46vw;
+    max-height: 650px;
+    background-color: rgb(41, 96, 236, 0.3);
+    
+
+    position: relative;
+    padding: 3% 0;
+} 
+
+.bgg {
+    background-image: url(./assets/bg-service.png);
+    /* background-color: rgba(167, 167, 270, 0.4); */
+    background-repeat: no-repeat;
+    background-position: 37% bottom;
+    background-size: contain;
+
+    position: absolute;
+    z-index: 5;
+
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.inner-banner {
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 90%;
+    width: 36%;
+    margin: 0 32%;
+    border-radius: 10px;
+    z-index: 3;
+
+    position: absolute;
+}
+
+.sCourse {
+    background-color: white;
+    width: max-content;
+    padding: 7px;
+    border-radius: 4px;
+    box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.5);
+
+    position: absolute;
+    z-index: 6;
+
+    font-size: clamp(12px, 1.6vw, 24px);
+    transition: .7s;
+    cursor: pointer;
+}
+
+.sCourse:nth-child(1) {
+    top: 10%; left: 23%;
+}
+.sCourse:nth-child(2) {
+    top: 10%; left: 60%;
+}
+.sCourse:nth-child(3) {
+    top: 30%; left: 63%;
+}
+.sCourse:nth-child(4) {
+    top: 80%; left: 55%;
+}
+.sCourse:nth-child(5) {
+    top: 50%; left: 60%;
+}
+.sCourse:nth-child(6) {
+    top: 80%; left: 24%;
+}
+
+.sCourse:hover {
+    transform: scale(1.1);
+}
+
+.design-a {
+    height: 9vw;
+    width: 9vw;
+    border-radius: 50%;
+    background-color: red;
+    background: linear-gradient(blue 10%,orange 100%);
+
+    position: absolute;
+    top: 21%;
+    left: 28%;
+}
+.design-b {
+    height: 9vw;
+    width: 9vw;
+    border-radius: 50%;
+    background-color: red;
+    background: linear-gradient(black 10%,blue 100%);
+
+    position: absolute;
+    bottom: 21%;
+    right: 27%;
+}
+
+.service-stats {
+    background-color: white;
+    display: flex;
+    width: 80%;
+    margin: 20px auto;
+    justify-content: space-between;
+    padding: 25px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.3);
+
+}
+
+.service-stat {
+    text-align: center;
+    width: 31%;
+    display: flex;
+    justify-content: center;
+}
+
+.service-stat:nth-child(2) {
+    border-left: 1px solid rgb(14, 14, 14, 0.3);
+    border-right: 1px solid rgb(14, 14, 14, 0.3);
+}
+
+.service-stat p {
+    color: rgba(14, 14, 44, 0.6);
+}
+
+.service-stat img {
+    height: 30px;
+    width: 30px;
+    background-color: rgb(14, 14, 14, 0.2);
+    border-radius: 50%;
+    padding: 3px;
+    margin-right: 4px;
+}
+
+@media (max-width: 530px) {
+.service-stat {
+    flex-wrap: wrap;
+}
+.service-stat div {
+    width: 100%;
+    margin-top: 3px;
+}
+}
+
+@media (max-width: 500px) {
+
+    .service-banner {
+        height: 400px;
+    }
+
+    .inner-banner {
+        width: 60%;
+        margin: 0 20%;
+    }
+
+    .sCourse:nth-child(1) {
+        top: 10%; left: 5%;
+    }
+    .sCourse:nth-child(2) {
+        top: 10%; right: 0%;
+    }
+    .sCourse:nth-child(3) {
+        top: 45%; left: 5%;
+    }
+    .sCourse:nth-child(4) {
+        top: 80%; right: 0%;
+    }
+    .sCourse:nth-child(5) {
+        top: 45%; right: 0%;
+    }
+    .sCourse:nth-child(6) {
+        top: 80%; left: 5%;
+    }
+
+    .service-stats {
+        width: 100%;
+        border-radius: 0;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 361px) {
+    .service-banner {
+        height: 300px;
+    }
+
+    .inner-banner {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+   .sCourse {
+    font-size: 10px;
+   }
+}

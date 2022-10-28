@@ -10,22 +10,20 @@ function Learn () {
 
     const scrll = () => {
 
-        console.log(discc.current.scrollLeft);
 
-        if (discc.current.scrollLeft > discc.current.offsetWidth * 3) {
+        if (discc.current.scrollWidth - discc.current.scrollLeft <= discc.current.clientWidth * 1.25) {
             discc.current.scroll(0,0);
         } else {
             discc.current.scrollBy(240,0);
         }
-            console.log(discc.current.offsetWidth);
+            // console.log(discc.current.scrollLeft);
+            // console.log(discc.current.offsetWidth);
+            // console.log(discc.current.scrollWidth);
+            // console.log(discc.current.clientWidth * 1.25);
         
     };
 
     setInterval (scrll, 5000);
-
-    // if (discc.current.scrollLeft > 460) {
-    //     discc.current.style.color = "red";
-    //   }
 
     const scrllb = () => {
         discc.current.scrollBy(-240,0);

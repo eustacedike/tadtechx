@@ -299,6 +299,14 @@
     height: 1.6vw;
 }
 
+.marq {
+    margin: 40px 0;
+}
+
+.marq-in {
+    display: flex;
+}
+
 @media (max-width: 550px) {
     .banner {
         height: 60vw;

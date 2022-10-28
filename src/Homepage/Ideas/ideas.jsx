@@ -5,6 +5,8 @@ import pexels from './assets/pexels.png';
 import rec from './assets/rec7.png';
 import web3 from './assets/web3.jpg';
 
+import caretas from './assets/vector-right.png';
+
 
 function Ideas() {
 
@@ -55,12 +57,12 @@ function Ideas() {
                     
 
                 </div>
-                <div className="caret-left" onClick={scrllb}>
-                        &raquo;
+                {/* <div className="caret-left" onClick={scrllb}>
+                        <img src={caretas} alt="" />
                     </div>
                     <div className="caret-right" onClick={scrll}>
-                        &raquo;
-                </div>
+                    <img src={caretas} alt="" />
+                </div> */}
             </div>
 
         </div>

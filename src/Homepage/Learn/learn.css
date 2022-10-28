@@ -51,8 +51,6 @@
 }
 
 .discuss p {
-    /* font-size: 14px;
-    line-height: 24px; */
     font-size: clamp(12px, 1.6vw, 24px);
     line-height: clamp(18px, 2.4vw, 56px);
 }
