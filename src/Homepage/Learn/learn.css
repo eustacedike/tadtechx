@@ -1,14 +1,39 @@
 .box-1 {
     width: 100%;
     position: relative;
-    background: linear-gradient(90.66deg, #2960EC 3.08%, rgba(247, 141, 40, 0.33) 53.84%), url(./assets/header.png);
+    background-image: linear-gradient(90.66deg, #2960EC 3.08%, rgba(247, 141, 40, 0.33) 53.84%), url(./assets/header.png);
     color: white;
     padding-top: 8.3vw;
     height: 43vw;
     min-height: 300px;
-    background-size: cover;
+    background-size: 190% 100%;
     background-position: 70%;
+    animation: zoomOut 20s infinite;
 }
+
+@keyframes zoomOut {
+    0% {background-size: 600% 600%;}
+    3% {background-size: 190% 100%;}
+    28% {background-size: 190% 100%;}
+    31% {background-size: 600% 600%; background-image: linear-gradient(90.66deg, #2960EC 3.08%, rgba(247, 141, 40, 0.33) 53.84%), url(./assets/header.png);}
+    32%  {background-image: linear-gradient(90.66deg, #2960EC 3.08%, rgba(247, 141, 40, 0.33) 53.84%), url(./assets/header2.png);}
+    33%  {background-image: linear-gradient(90.66deg, #2960EC 3.08%, rgba(247, 141, 40, 0.33) 53.84%), url(./assets/header2.png);}
+
+    33% {background-size: 600% 600%;}
+    36% {background-size: 190% 100%;}
+    61% {background-size: 190% 100%;}
+    64% {background-size: 600% 600%; background-image: linear-gradient(90.66deg, #2960EC 3.08%, rgba(247, 141, 40, 0.33) 53.84%), url(./assets/header2.png);}
+    65%  {background-image: linear-gradient(90.66deg, #2960EC 3.08%, rgba(247, 141, 40, 0.33) 53.84%), url(./assets/preview.png);}
+    66%  {background-image: linear-gradient(90.66deg, #2960EC 3.08%, rgba(247, 141, 40, 0.33) 53.84%), url(./assets/preview.png);}
+    
+    66% {background-size: 600% 600%;}
+    69% {background-size: 100% 100%;}
+    94% {background-size: 100% 100%;}
+    97% {background-size: 600% 600%; background-image: linear-gradient(90.66deg, #2960EC 3.08%, rgba(247, 141, 40, 0.33) 53.84%), url(./assets/preview.png);}
+    98%  {background-image: linear-gradient(90.66deg, #2960EC 3.08%, rgba(247, 141, 40, 0.33) 53.84%), url(./assets/header.png);}
+    100%  {background-image: linear-gradient(90.66deg, #2960EC 3.08%, rgba(247, 141, 40, 0.33) 53.84%), url(./assets/header.png);}
+}
+
 
 .caption {
     width: 80%;
@@ -185,7 +210,7 @@
         width: 60%;
         min-width: 220px;
         margin: 30px 30%;
-      
+        margin-top: 60px;
         scroll-snap-align: center;
     }
 

@@ -1,3 +1,9 @@
+
+.Footer {
+    transition: 3s;
+    transform: translateX(-100%);
+}
+
 .Footer img {
     width: 14px;
     height: 14px;

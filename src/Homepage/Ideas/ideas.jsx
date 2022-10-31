@@ -34,25 +34,21 @@ function Ideas() {
                         <img src={web3}></img>
                         <h3>Web 3 App</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, dolorem!</p> <br/>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, dolorem!</p>
                     </div>
                     <div className='idea-card' style={{animationDelay: "4.5s"}}>
                         <img src={web3}></img>
                         <h3>Web 3 App</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, dolorem!</p> <br/>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, dolorem!</p>
                     </div>
                     <div className='idea-card'style={{animationDelay: "9s"}}>
                         <img src={web3}></img>
                         <h3>web2 App</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, dolorem!</p> <br/>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, dolorem!</p>
                     </div>
                     <div className='idea-card' style={{animationDelay: "13.5s"}}>
                         <img src={web3}></img>
                         <h3>Webber App</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, dolorem!</p> <br/>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, dolorem!</p>
                     </div>
                     
 

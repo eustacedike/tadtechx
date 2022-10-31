@@ -6,18 +6,25 @@ import style from './enroll.css';
 
 function Enroll() {
 
+
     const enroller = useRef();
 
     const chck = () => {
         
-    console.log(window.pageYOffset);
+    // console.log(enroller.current.getBoundingClientRect().top);
+    var fromTheTop = enroller.current.getBoundingClientRect().top;
+    
+    if (window.pageYOffset > fromTheTop) {
+        enroller.current.style.transform = 'translateX(0%)';
+    } else {
+        enroller.current.style.transform = 'translateX(-100%)';
+    }
         };
 
-    setInterval(chck, 3000);
+    setInterval(chck, 50);
 
-    if (window.pageYOffset > 4700) {
-        enroller.current.style.transform = 'translateX(0%)';
-    }
+    window.addEventListener = ('scroll', chck);
+
 
     return (
         <div className='Enroll' ref={enroller}>

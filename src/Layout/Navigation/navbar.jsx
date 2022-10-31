@@ -1,5 +1,7 @@
 import React from 'react';
 import { useRef } from 'react';
+import { Link } from "react-router-dom";
+
 import style from './navbar.css';
 import logo from './assets/newLogo.png';
 import vector from './assets/vector.png';
@@ -18,16 +20,16 @@ function Navbar() {
     return (
       <div className='Navbar'>
         <nav>
-          <img className='logo' src={logo} />
+          <Link to="/"><img className='logo' src={logo} /></Link>
           <div className='items'>
             <ul>
               <li className='coux'>Courses <img src={vector}></img></li>
               <div className="drop-courses">
           <div className="dc-1">
-            <h2>Courses</h2>
+          <h2>Courses</h2>
           </div>
           <div className="dc-2">
-            <a href="">Software Engineering</a>
+            <Link to="courses/cybersecurity">Software Engineering</Link>
             <a href="">Graphics Design UI/UX</a>
             <a href="">Android/IOS Development</a>
             <a href="">CMS/BMS/Database MS</a>
@@ -39,10 +41,10 @@ function Navbar() {
           </div>
 
         </div>
-              <li className='servx'>Our Services <img src={vector}></img></li>
+        <li className='servx'>Our Services <img src={vector}></img></li>
               <div className="drop-services">
           <div className="dc-1">
-            <h2>Services</h2>
+          <h2>Services</h2>
           </div>
           <div className="dc-2">
             <a href="">Drop Shipping Services</a>

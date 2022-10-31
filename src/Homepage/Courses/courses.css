@@ -1,6 +1,6 @@
 .Courses {
     background-color: var(--bg-color);
-    padding: 5.5vw 8.3vw;
+    padding: 5.5vw 7vw;
     position: relative;
 }
 
@@ -42,6 +42,7 @@
     scroll-snap-align: start;
     background-color: white;
     border-radius: 8px;
+    
 }
 
 .course-card span {
@@ -49,7 +50,7 @@
     flex-direction: column-reverse;
     justify-content: space-between;
     margin: 1.5vw;
-    /* border: 1px solid red; */
+    text-align: center;
 }
 
 .course-card span button {
@@ -86,7 +87,7 @@
     border-radius: 8px;
     display: flex;
     justify-content: space-around;
-    margin: 20px 1.5vw;
+    margin: 20px auto;
 }
 
 .more img {
@@ -155,9 +156,15 @@
 
 @media (max-width: 700px) {
     .course-card {
-        min-width: 70%;
-        margin: 0 20%;
+        min-width: 100%;
+        margin: 0 0%;
         scroll-snap-align: center;
+        border-radius: 2px;
+    }
+
+    .course-card div {
+        height: 54vw;
+        overflow: hidden;
     }
 
     .course-card span {
@@ -169,15 +176,16 @@
     }
 
     .Courses .arrow {
-        right: 6%;
+        right: 10%;
     }
 
    .Courses .arrow-b {
-        left: 6%;
+        left: 10%;
     }
 
     .Courses .arrow img, .Courses .arrow-b img {
-        height: 30px;
+        height: 6vw;
+        opacity: 0.7;
     }
 
     .course-card h4 {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRef } from 'react';
 import style from './footer.css';
 import facebook from './assets/facebook.png';
 import instagram from './assets/instagram.png';
@@ -10,9 +11,28 @@ import mail from './assets/mail.png';
 
 function Footer() {
 
+    const footerr = useRef();
+
+    const chck = () => {
+        
+    // console.log(window.pageYOffset);
+    var fromTheTop = footerr.current.getBoundingClientRect().top;
+
+    
+    if (window.pageYOffset > fromTheTop) {
+        footerr.current.style.transform = 'translateX(0%)';
+    } else {
+        footerr.current.style.transform = 'translateX(-100%)';
+    }
+        };
+
+    setInterval(chck, 50);
+
+    // window.addEventListener = ('scroll', chck);
+
 
     return (
-        <div className='Footer'>
+        <div className='Footer' ref={footerr}>
             <div className="footer-1">
                 <ul>
                     <li><h5>Company Info</h5></li> <br />

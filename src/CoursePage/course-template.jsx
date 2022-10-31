@@ -1,14 +1,16 @@
 import React from 'react';
 import style from './course-template.css';
 
-import neww from './assets/new.png';
 
 import cert from './assets/Certificate.png';
 import clock from './assets/Clock.png';
 import beginner from './assets/Beginner.png';
+import bioo from '../Homepage/Testimonials/assets/profile.png';
 
 import Enroll from '../Layout/Enroll/enroll';
 import Courses from '../Homepage/Courses/courses';
+
+import News from '../News/news';
 
 
 function CourseTemplate (props) {
@@ -83,49 +85,7 @@ function CourseTemplate (props) {
                     </div>
                     <div className="news-cat">
                     <h4>News categories</h4>
-                    <div className="news">
-                        
-                        <div className='news-1'>
-                            <img src={neww} alt="" />
-                            <div>
-                                <span>
-                                    <button>John Smash</button>
-                                    .5min
-                                </span>
-                                <h4>Lorem ipsum is simply dummy</h4>
-                            </div>
-                        </div>
-                        <div className='news-1'>
-                            <img src={neww} alt="" />
-                            <div>
-                                <span>
-                                    <button>John Smash</button>
-                                    .5min
-                                </span>
-                                <h5>Lorem ipsum is simply dummy</h5>
-                            </div>
-                        </div>
-                        <div className='news-1'>
-                            <img src={neww} alt="" />
-                            <div>
-                                <span>
-                                    <button>John Smash</button>
-                                    .5min
-                                </span>
-                                <h5>Lorem ipsum is simply dummy</h5>
-                            </div>
-                        </div>
-                        <div className='news-1'>
-                            <img src={neww} alt="" />
-                            <div>
-                                <span>
-                                    <button>John Smash</button>
-                                    .5min
-                                </span>
-                                <h5>Lorem ipsum is simply dummy</h5>
-                            </div>
-                        </div>
-                    </div>
+                    <News/>
                     </div>
                 </div>
 
@@ -165,16 +125,38 @@ function CourseTemplate (props) {
             <div className="cyber-2">
                 <h3>Reviews</h3>
                 <div className="reviews">
-                    <div>
-                        <div>
-                            <img src="" alt="" />
+                    <div className='review'>
+                        <div className='person'>
+                            <img src={bioo} alt="" />
                             <div>
                                 <h5>Екатерина Лужецкая</h5>
                                 <p>месяц назад</p>
-                                <p>Пишу отзыв спустя 4 месяца после сдачи проекта. В течении этого времени были незначительные ошибки, но ребята сразу их исправляли. В целом все работает стабильно. Сотрудничаем дальше.</p>
+                                <p className='rated'> &#11089; &#11089; &#11089; &#11089; &#11089; </p>
                             </div>
                         </div>
-                        <p></p>
+                        <p>Пишу отзыв спустя 4 месяца после сдачи проекта. В течении этого времени были незначительные ошибки, но ребята сразу их исправляли. В целом все работает стабильно. Сотрудничаем дальше.</p>
+                    </div>
+                    <div className='review'>
+                        <div className='person'>
+                            <img src={bioo} alt="" />
+                            <div>
+                                <h5>Екатерина Лужецкая</h5>
+                                <p>месяц назад</p>
+                                <p> &arrow; </p>
+                            </div>
+                        </div>
+                        <p>Пишу отзыв спустя 4 месяца после сдачи проекта. В течении этого времени были незначительные ошибки, но ребята сразу их исправляли. В целом все работает стабильно. Сотрудничаем дальше.</p>
+                    </div>
+                    <div className='review'>
+                        <div className='person'>
+                            <img src={bioo} alt="" />
+                            <div>
+                                <h5>Екатерина Лужецкая</h5>
+                                <p>месяц назад</p>
+                                <p> &arrow; </p>
+                            </div>
+                        </div>
+                        <p>Пишу отзыв спустя 4 месяца после сдачи проекта. В течении этого времени были незначительные ошибки, но ребята сразу их исправляли. В целом все работает стабильно. Сотрудничаем дальше.</p>
                     </div>
                 </div>
             </div>

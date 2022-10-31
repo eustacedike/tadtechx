@@ -120,30 +120,6 @@
    margin-bottom: 20px;
 }
 
-.news-1 {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.news-1 img {
-    height: 160px;
-}
-
-.news-1 h4 {
-    margin-top: 15px;
-    line-height: 24px;
-}
-
-.news-1 button {
-    padding: 4px 6px;
-    border: none;
-    background-color: var(--primary);
-    color: white;
-    border-radius: 4px;
-    margin-right: 6px;
-}
-
 .segment-3 {
     margin: 0px 8.5vw;
 }
@@ -211,6 +187,53 @@
     background: none;
 }
 
+.cyber-2 {
+    padding: 7vw;
+}
+
+.reviews {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4%;
+    /* border: 1px solid red; */
+}
+
+.review {
+    border: 1px solid rgb(128, 128, 128,0.2);
+    width: 48%;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.person {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.person h5 {
+    font-size: clamp(12px,2vw,36px);
+    /* line-height: clamp(22px,2.2vw,56px); */
+}
+
+.person img {
+    width: auto;
+    height: 100%;
+    margin-right: 20px;
+}
+
+.rated {
+    color: gold !important;
+}
+
+.review p {
+    font-size: clamp(12px,1.8vw,36px);
+    color: grey;
+    font-size: clamp(12px,1.8vw,36px);
+    /* line-height: clamp(22px,2.2vw,56px); */
+}
+
+
+
 @media (max-width: 1000px) {
     .news-1 img {
         height: 120px;
@@ -251,24 +274,6 @@
         width: 100%;
         /* margin: 0 auto; */
     }
-
-    .news {
-        width: 100%;
-        /* border: 2px solid red; */
-        display: flex;
-        overflow-x: scroll;
-        max-width: none;
-    }
-
-    .news-1 {
-        min-width: 90%;
-        margin: 0 5%;
-        gap: 10%;
-    }
-
-    .news-1 img {
-        height: 80px;
-    }
 }
 
 @media (max-width: 550px) {
@@ -285,5 +290,9 @@
 
     .tails img {
         height: 25px;
+    }
+
+    .review {
+        width: 100%;
     }
 }

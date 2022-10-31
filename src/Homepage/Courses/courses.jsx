@@ -46,7 +46,9 @@ function Courses(props) {
                 {offeredCourses.map(eachCourse => {
                     return (
                         <div key={eachCourse.id} className="course-card">
+                            <div>
                             <img className='course-img' src={eachCourse.preview} alt={eachCourse.title}></img>
+                            </div>
                             <span><h4>{eachCourse.title}</h4><button className='rating'>&#9733; {eachCourse.rating}</button></span>
                             <button className='more'>Learn More <img src={arrow} alt="" /></button>
                         </div>

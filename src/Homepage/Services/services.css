@@ -1,8 +1,8 @@
 .Services {
     background-color: var(--bg-color);
-    padding: 5.5vw 8.3vw;
+    padding: 5.5vw 7vw;
     position: relative;
-    padding-top: 100px;
+    /* padding-top: 100px; */
 }
 
 .Services h2 {
@@ -43,6 +43,11 @@
 
 .card img {
     width: 100%;
+    /* object-fit: cover; */
+}
+
+.card div {
+    /* background-color: black; */
 }
 
 .Services h2, .card h4 {
@@ -85,7 +90,7 @@
         margin: 0 8%;
         /* border: 1px solid black; */
         
-        box-shadow: 1px 1px 5px 1px;
+        /* box-shadow: 1px 1px 5px 1px orange; */
 
     }
 
@@ -94,11 +99,16 @@
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     .card {
-        min-width: 60%;
+        min-width: 50%;
         margin: 0 25%;
         scroll-snap-align: center;
+    }
+
+    .card h4 {
+        background-color: black;
+        padding: 5px 0;
     }
 
     .cards {
@@ -117,6 +127,40 @@
 
     .Services .arrow img, .Services .arrowb img {
         height: 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    .card {
+        min-width: 100%;
+        margin: 0 15%;
+        background-color: white;
+        border-radius: 2px;
+    }
+
+    .card div {
+        height: 54vw;
+        /* border: 1px solid red; */
+        overflow: hidden;
+    }
+
+    .card p {
+        padding: 15px 0;
+    }
+    
+    .Services .arrow img, .Services .arrowb img {
+        height: 6vw;
+        opacity: 0.7;
+    }
+
+    .Services .arrow {
+        top: 48%;
+        right: 10%;
+    }
+
+   .Services .arrowb {
+        top: 48%;
+        left: 10%;
     }
 }
 
