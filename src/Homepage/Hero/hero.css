@@ -317,7 +317,7 @@
     .roll-1{
         background-size: cover;
         background-position: 85%;
-        background-image: linear-gradient(rgb(41, 96, 236,0.6), rgb(247, 139, 38,0.6)), url(./assets/background.png);
+        background-image: linear-gradient(rgb(41, 96, 236, 0.4), rgb(247, 139, 38, 0.4)), url(./assets/background.png);
     }
 
     .options {
@@ -356,6 +356,7 @@
     
     .curve-cont {
         top: 17vw;
+        /* transform: rotate(-5deg); */
     }
 
     .intro-2 {

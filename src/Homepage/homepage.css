@@ -1,0 +1,13 @@
+.homeCoursesMobile {
+    display: none;
+}
+
+@media (max-width: 821px) {
+    .homeCoursesMobile {
+        display: block;
+    }
+
+    .homeCourses {
+        display: none;
+    }
+}

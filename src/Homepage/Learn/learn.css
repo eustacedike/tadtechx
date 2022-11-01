@@ -6,9 +6,9 @@
     padding-top: 8.3vw;
     height: 43vw;
     min-height: 300px;
-    background-size: 190% 100%;
+    background-size: cover;
     background-position: 70%;
-    animation: zoomOut 20s infinite;
+    /* animation: zoomOut 20s infinite; */
 }
 
 @keyframes zoomOut {

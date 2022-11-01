@@ -4,6 +4,10 @@ import style from './serviceBody.css';
 
 import Footer from '../../Layout/Footer/footer';
 
+//Images
+
+import thisImg from '../../CoursePage/coursedata/images/cyber.png'
+
 function serviceBody () {
     
         return (
@@ -15,18 +19,20 @@ function serviceBody () {
                     </p>
                     <div>
                         <button>
-                            Let's Talk <img src="" alt="" />
+                            Let's Talk &#128172;
                         </button>
-                        <span><h5>Check our Projects</h5> &#arrow;</span>
+                        <span><h5>Check our Projects</h5> &rarr;</span>
                     </div>
                 </div>
                 <div className="sbody-2">
-                    <div>
+                    <div className='get1'>
                         <h4>ICT Training Center</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error mollitia nemo accusantium deleniti quos natus maiores ipsam!
                         </p>
                     </div>
-                    <img src="" alt="" />
+                    <div className='get2'>
+                        <img src={thisImg} alt="" />
+                    </div>
                 </div>
                 <div className="sbody-3">
                     <h2>Learn, Connect and Discuss</h2>
