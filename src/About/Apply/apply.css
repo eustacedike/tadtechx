@@ -1,5 +1,73 @@
+.Apply {
+    padding: 5%;
+}
 
+.Apply h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: clamp(24px, 3vw, 40px);
+    line-height: clamp(28px, 3.8vw, 42px);
+    color: var(--secondary);
+}
+
+.Apply p {
+    color: grey;
+    font-size: clamp(14px,1.5vw,20px);
+    line-height: clamp(20px,2.3vw,28px);
+    text-align: center;
+}
+
+.applications {
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-between;
+}
+
+.applicant {
+    width: 20%;
+}
 
 .applicant img {
-    /* clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); */
+    width: 100%;
+    /* border: 2px solid red; */
+    clip-path: polygon(0 0, 100% 0%, 100% 60%, 0 60%);
+}
+
+.applicant h3 {
+    text-align: center;
+    font-weight: 400;
+    font-size: clamp(14px, 2vw, 20px);
+    line-height: clamp(24px, 2.6vw, 30px);
+    color: var(--secondary);
+    margin-top: -85px;
+}
+
+@media (max-width: 768px) {
+    .applications {
+       flex-wrap: wrap;
+        /* border: 2px solid red; */
+    }
+    
+    .applicant {
+        width: 40%;
+        margin-bottom: 30px;
+    }
+
+    .applicant h3 {
+        margin-top: -20vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .applications {
+       justify-content: center;
+    }
+    
+    .applicant {
+        width: 200px;
+    }
+
+    .applicant h3 {
+        margin-top: -125px;
+    }
 }

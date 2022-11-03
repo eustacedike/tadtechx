@@ -65,7 +65,7 @@ function Navbar() {
             <a href="">Content Management System</a>
           </div>
           </div>
-              <li>About Us</li>
+              <li><Link style={linkStyle} to="/aboutus">About Us</Link></li>
               <li>Contact</li>
             </ul>
           </div>
@@ -87,7 +87,7 @@ function Navbar() {
         <div className='mobile' ref={mobilee}>
           <Link style={linkStyle} to="/courses"><h3>Courses</h3></Link>
           <Link style={linkStyle} to="/services"><h3>Services</h3></Link>
-          <a href=''><h3>About Us</h3></a>
+          <Link style={linkStyle} to="/aboutus"><h3>About Us</h3></Link>
           <a href=''><h3>Register</h3></a>
           <div className='nav-btn'>
           <Link style={linkStyle} to="/signin"><button>Sign In</button></Link>

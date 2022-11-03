@@ -12,22 +12,37 @@ function Apply() {
     const linkStyle = {
         textDecoration: 'none',
         color: '#f78b26'
-      }
+    }
 
     return (
         <div className='Apply'>
-           <h2>How to Apply</h2>
-           <p>You can apply for a scholarship easily in just a ews steps</p>
+            <h2>How to Apply</h2>
+            <p>You can apply for a scholarship easily in just a few steps</p>
 
-           <div className="applications">
-            <div className="applicant">
-                <img src={step1} alt="" />
-                <h3>Click on Apply</h3>
-                <p>Click on the apply button to start the application process</p>
+            <div className="applications">
+                <div className="applicant">
+                    <img src={step1} alt="" />
+                    <h3>Click on Apply</h3>
+                    <p>Click on the apply button to start the application process</p>
+                </div>
+                <div className="applicant">
+                    <img src={step2} alt="" />
+                    <h3>Click on Apply</h3>
+                    <p>Click on the apply button to start the application process</p>
+                </div>
+                <div className="applicant">
+                    <img src={step3} alt="" />
+                    <h3>Click on Apply</h3>
+                    <p>Click on the apply button to start the application process</p>
+                </div>
+                <div className="applicant">
+                    <img src={step4} alt="" />
+                    <h3>Click on Apply</h3>
+                    <p>Click on the apply button to start the application process</p>
+                </div>
             </div>
-           </div>
 
-           <button>Apply here</button>
+            {/* <button>Apply here</button> */}
         </div>
     );
 
