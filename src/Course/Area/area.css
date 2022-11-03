@@ -44,3 +44,20 @@
         margin: 0 0;
     }
 }
+
+@media (min-width: 1700px) {
+    .main-course {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .Area .course-card {
+        width: 20%;
+        min-width: 500px;
+    }
+
+    /* .course-cards {
+        gap: 6%;
+    } */
+}

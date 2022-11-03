@@ -1,7 +1,12 @@
 import React from 'react';
 import style from './serviceHero.css';
 
+
+//Icons
 import iconn from './assets/vector-right.png';
+import locate from './assets/locate.png';
+import gridd from './assets/grid.png';
+import person from './assets/person.png';
 
 
 
@@ -43,21 +48,21 @@ function serviceHero() {
             </div>
             <div className="service-stats">
                     <div className="service-stat">
-                        <img src={iconn} alt="" />
+                        <img src={person} alt="" />
                         <div>
                             <h4>90+</h4>
                             <p>Clients</p>
                         </div>
                     </div>
                     <div className="service-stat">
-                        <img src={iconn} alt="" />
+                        <img src={locate} alt="" />
                         <div>
                             <h4>30+</h4>
                             <p>Countries</p>
                         </div>
                     </div>
                     <div className="service-stat">
-                        <img src={iconn} alt="" />
+                        <img src={gridd} alt="" />
                         <div>
                             <h4>50+</h4>
                             <p>Projects</p>

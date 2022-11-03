@@ -26,7 +26,11 @@ function Footer() {
     }
         };
 
-    setInterval(chck, 50);
+    // var fromTheTop = footerr.current.getBoundingClientRect();
+    // console.log(window.fromTheTop);
+
+
+    // setInterval(chck, 50);
 
     // window.addEventListener = ('scroll', chck);
 

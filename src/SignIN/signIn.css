@@ -1,0 +1,76 @@
+.SignIn {
+    background: linear-gradient(111.56deg, #FEBB7B 23.84%, #A5BCF7 73.02%);
+    /* height: 700px; */
+    padding: 40px 0;
+}
+
+.signin-box {
+text-align: center;
+width: 80%;
+max-width: 700px;
+
+/* height: 567px; */
+
+
+background: #FCFCFD;
+box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.1);
+border-radius: 12px;
+margin: 60px auto;
+}
+
+.signin-box form {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* height: 30vh; */
+    height: 400px;
+}
+
+.signin-box input {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    border: none;
+    border-bottom: 1px solid var(--primary);
+    outline: none;
+    transition: .5s;
+}
+
+.signin-box input:hover, .signin-box input:focus {
+    border: 1px solid var(--primary);
+}
+
+.signin-box button {
+    width: 40%;
+    margin: 0 auto;
+    padding: 15px;
+    /* background-color: var(--primary); */
+    /* background: linear-gradient(var(--primary), gold); */
+    background: linear-gradient(rgb(247, 139, 38,0.6), rgb(247, 139, 38,1));
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    font-size: clamp(14px, 1.8vw, 24px);
+    font-weight: 700;
+}
+
+.signin-box button:hover {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    background: none;
+}
+
+.signin-box p {
+    font-size: clamp(12px, 2vw, 20px);
+}
+
+@media (max-width: 800px) {
+    .signin-box {
+        width: 90%;
+        }
+
+    .signin-box input, .signin-box button {
+        width: 70%;
+        }
+}

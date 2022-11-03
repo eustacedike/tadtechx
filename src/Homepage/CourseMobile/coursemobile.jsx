@@ -82,6 +82,20 @@ function CourseMobile() {
            
         },
 
+        {
+           id: 4,
+            title: "Python",
+            content: dataScience,
+           
+        },
+
+        {
+           id: 5,
+            title: "Design",
+            content: dataScience,
+           
+        },
+
 
     ]
 
@@ -102,6 +116,8 @@ function CourseMobile() {
         setChecked(value => !value);
 
         if (checked) {
+            // setisOpen(value => 0);
+
             setisOpen(value => a);
         }
         else {

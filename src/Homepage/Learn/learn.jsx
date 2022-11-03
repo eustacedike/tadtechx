@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import preview from './assets/preview.png';
 
 
-function Learn () {
+function Learn (props) {
 
     const discc = useRef();
 
@@ -32,7 +32,7 @@ function Learn () {
     return (
         <div className='Learn'>
 
-            <div className="box-1">
+            <div className="box-1" style={{display: props.show}}>
             <div className='caption'>
                 <h1>Learn, <span className='tech'>Connect</span><br></br> and Discuss</h1>
             </div>

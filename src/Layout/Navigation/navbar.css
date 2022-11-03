@@ -222,8 +222,13 @@ nav {
     }
 
     .search{
-        width: 50%;
+        width: 70%;
         padding: 2px 8px;
+    }
+
+    .search input::placeholder {
+        font-size: 15px;
+        /* lin: 5px; */
     }
 
     .search-icon {

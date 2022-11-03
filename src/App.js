@@ -14,6 +14,9 @@ import Homepage from './Homepage/homepage';
 import Course from './Course/course.jsx';
 import CourseTemplate from './CoursePage/course-template';
 import Service from "./Service/service";
+import About from "./About/about";
+
+import SignIn from "./SignIN/signIn";
 
 // Course Data
 import courseData from "./CoursePage/coursedata/courseData.json";
@@ -40,6 +43,9 @@ function App() {
           <Route path="/courses/webdevelopment" element={<CourseTemplate currCourse={courseData.webDev} curxPreview={webImg}/>}/>
           
           <Route path="services" element={<Service />}/>
+          <Route path="aboutus" element={<About />}/>
+
+          <Route path="signin" element={<SignIn />}/>
 
         </Route>
       </Routes>

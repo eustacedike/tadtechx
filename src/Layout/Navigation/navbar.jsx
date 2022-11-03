@@ -17,13 +17,18 @@ function Navbar() {
       mobilee.current.classList.toggle('inView');
   };
 
+  const linkStyle = {
+    textDecoration: 'none',
+    color: '#f78b26'
+  }
+
     return (
       <div className='Navbar'>
         <nav>
           <Link to="/"><img className='logo' src={logo} /></Link>
           <div className='items'>
             <ul>
-              <li className='coux'>Courses <img src={vector}></img></li>
+              <li className='coux'><Link style={linkStyle} to="/courses">Courses</Link> <img src={vector}></img></li>
               <div className="drop-courses">
           <div className="dc-1">
           <h2>Courses</h2>
@@ -41,7 +46,7 @@ function Navbar() {
           </div>
 
         </div>
-        <li className='servx'>Our Services <img src={vector}></img></li>
+        <li className='servx'><Link style={linkStyle} to="/services">Our Services</Link> <img src={vector}></img></li>
               <div className="drop-services">
           <div className="dc-1">
           <h2>Services</h2>
@@ -69,7 +74,7 @@ function Navbar() {
             <img className='search-icon' src={search}></img>
           </div>
           <div className='nav-btn gone'>
-            <button className='sign'>Sign In</button>
+            <button className='sign'><Link style={linkStyle} to="/signin">Sign In</Link></button>
             <button>Register</button>
           </div>
           <div className='hamburger' onClick={openMenu} ref={hamm}>
@@ -80,12 +85,12 @@ function Navbar() {
         </nav>
 
         <div className='mobile' ref={mobilee}>
-          <a href=''><h3>Courses</h3></a>
-          <a href=''><h3>Services</h3></a>
+          <Link style={linkStyle} to="/courses"><h3>Courses</h3></Link>
+          <Link style={linkStyle} to="/services"><h3>Services</h3></Link>
           <a href=''><h3>About Us</h3></a>
           <a href=''><h3>Register</h3></a>
           <div className='nav-btn'>
-            <button>Sign In</button>
+          <Link style={linkStyle} to="/signin"><button>Sign In</button></Link>
             <button>Register</button>
           </div>
         </div>

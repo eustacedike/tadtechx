@@ -51,7 +51,10 @@ function Hero () {
                     <div className='rolls' ref={roller} onWheel={function(){return false;}}>
                         <div className='roll-1'>
                             <div className='intro'>
-                                <h1 className='animate-a'>Become <span className='tech'>Tech</span> Savy By</h1><h1 className='animate-b'>Learning With Us</h1>
+                               <div className="map">
+                                <h1 className='animate-a'>Become <span className='tech'>Tech</span> Savy By</h1>
+                                <h1 className='animate-b'>Learning With Us</h1>
+                               </div> 
                                 <div className="intro-small">
                                     <p className='p1'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p> 
                                 <p className='p2'>Voluptate voluptatibus autem numquam delectus?</p>
