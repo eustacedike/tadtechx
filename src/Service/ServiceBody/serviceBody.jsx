@@ -43,7 +43,7 @@ function serviceBody() {
             <div className="sbody-3">
                 <h2>Learn, <span className="tech">Connect</span> and Discuss</h2>
                 <div className="sframe">
-                    <iframe src="https://www.youtube.com/embed/bJzb-RuUcMU" frameborder="0"></iframe>
+                    <iframe src="https://www.youtube.com/embed/bJzb-RuUcMU" frameBorder="0"></iframe>
                     <div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, possimus.</p>
                         <ul>

@@ -20,11 +20,15 @@ function SignUp() {
            <div className="signin-box">
             <h2>Register With Us</h2>
             <form action="">
-                <input type="text" placeholder='First Name' name="" id=""/>
-                <input type="text" placeholder='Last Name' name="" id=""/>
+                <div className="r-names">
+                    <input type="text" placeholder='First Name' name="" id=""/>
+                    <input type="text" placeholder='Last Name' name="" id=""/>
+                </div>
                 <input type="email" placeholder='Email' name="" id="" />
-                <label htmlFor="dateofbirth">Date of Birth</label>
+                <div className='dob'>
+                <label htmlFor="dateofbirth">Date of Birth</label> <br />
                 <input type="date" name="" id="" />
+                </div>
                 <input type="password" placeholder='Choose a password' name="" id="" />
 
                 <button>REGISTER</button>

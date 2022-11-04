@@ -77,18 +77,62 @@ padding: 15px 0;
 .signin-box label {
     text-align: left;
     color: var(--primary);
-    font-size: clamp(12px, 1.6vw, 16px) !important;
+    font-size: clamp(15px, 2vw, 16px) !important;
     font-weight: 700;
+    /* width: 60%; */
+    /* margin: 0 auto; */
+}
+
+.r-names {
+    display: flex;
     width: 60%;
     margin: 0 auto;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+}
+
+.r-names input {
+    width: 45% !important;
+    margin: 0 !important;
+}
+
+.dob {
+    text-align: left;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.dob input {
+    width: 100% !important;
 }
 
 @media (max-width: 800px) {
     .signin-box {
         width: 90%;
-        }
+    }
+
+    .r-names {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        /* border: 1px solid red; */
+        justify-content: space-between;
+    }
+        
+    .r-names input {
+        min-width: 45% !important;
+    }
+
+    .dob {
+            width: 90%;
+    }
+
+    .dob input {
+            min-width: 100% !important;
+    }
 
     .signin-box input, .signin-box button {
-        width: 70%;
+        min-width: 90%;
+        max-width: 400px;
         }
 }

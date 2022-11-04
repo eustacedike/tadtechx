@@ -21,7 +21,6 @@ function Footer() {
 
     const chck = () => {
         
-    // console.log(window.pageYOffset);
     var fromTheTop = footerr.current.getBoundingClientRect().top;
 
     
@@ -30,6 +29,10 @@ function Footer() {
     } else {
         footerr.current.style.transform = 'translateX(-100%)';
     }
+
+    console.log(window.pageYOffset);
+    console.log(footerr.current.getBoundingClientRect().top);
+
         };
 
         useEffect(() => {
