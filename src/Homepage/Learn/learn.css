@@ -166,13 +166,14 @@
     line-height: clamp(20px,2.2vw,64px);
 }
 
-.box-2 button {
+.other button {
     background-color: var(--primary);
     color: white;
     border: none;
     padding: 16px 24px;
     border-radius: 8px;
-    font-size: 18px;
+        font-size: clamp(14px,1.5vw,48px);
+
     margin-top: 24px;
 }
 

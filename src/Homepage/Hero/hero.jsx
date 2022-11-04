@@ -1,13 +1,21 @@
+//React
 import React from 'react';
 import { useRef } from 'react';
+
+//Style
 import style from './hero.css';
+
+//Image
 import curve from './assets/curve.svg';
+import group from './assets/group.png';
+import laptop from './assets/laptop.png';
+
+//Icons
 import cert from './assets/certificate.png';
 import scholarship from './assets/scholarship.png';
 import cart from './assets/cart.png';
 import vector from './assets/Vector.png';
-import group from './assets/group.png';
-import laptop from './assets/laptop.png';
+
 
 function Hero () {
     
@@ -44,6 +52,19 @@ function Hero () {
         };
         indicate.current.style.left = `${zts}px`;
     };
+
+    const automsticScrll = () => {
+
+
+        if (roller.current.scrollWidth - roller.current.scrollLeft <= roller.current.clientWidth * 1.25) {
+            roller.current.scroll(0,0);
+        } else {
+            roller.current.scrollBy(240,0);
+        }
+        
+    };
+
+    setInterval (automsticScrll, 5000);
 
         return (
             <div className='Hero'>

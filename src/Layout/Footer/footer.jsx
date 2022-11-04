@@ -1,6 +1,12 @@
+//React
 import React from 'react';
 import { useRef } from 'react';
+import { useEffect } from 'react';
+
+//Style
 import style from './footer.css';
+
+//Icons
 import facebook from './assets/facebook.png';
 import instagram from './assets/instagram.png';
 import twitter from './assets/twitter.png';
@@ -26,13 +32,12 @@ function Footer() {
     }
         };
 
-    // var fromTheTop = footerr.current.getBoundingClientRect();
-    // console.log(window.fromTheTop);
-
-
-    // setInterval(chck, 50);
-
-    // window.addEventListener = ('scroll', chck);
+        useEffect(() => {
+   
+            window.removeEventListener('scroll', chck);
+            window.addEventListener('scroll', chck, { passive: true });
+            return () => window.removeEventListener('scroll', chck);
+        }, []);
 
 
     return (

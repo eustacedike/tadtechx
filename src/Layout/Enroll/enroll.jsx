@@ -1,6 +1,8 @@
 import React from 'react';
 import { useRef } from 'react';
 import style from './enroll.css';
+import { useEffect } from 'react';
+
 
 
 
@@ -11,7 +13,7 @@ function Enroll() {
 
     const chck = () => {
         
-    // console.log(enroller.current.getBoundingClientRect().top);
+    console.log(enroller.current.getBoundingClientRect().top);
     var fromTheTop = enroller.current.getBoundingClientRect().top;
     
     if (window.pageYOffset > fromTheTop) {
@@ -21,9 +23,14 @@ function Enroll() {
     }
         };
 
-    setInterval(chck, 50);
 
-    window.addEventListener = ('scroll', chck);
+
+    useEffect(() => {
+   
+        window.removeEventListener('scroll', chck);
+        window.addEventListener('scroll', chck, { passive: true });
+        return () => window.removeEventListener('scroll', chck);
+    }, []);
 
 
     return (

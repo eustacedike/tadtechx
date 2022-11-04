@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import style from './signIn.css';
 
 
@@ -16,13 +18,13 @@ function SignIn() {
     return (
         <div className='SignIn'>
            <div className="signin-box">
-            <img src={logo} alt="" />
+            <h2>Sign In</h2>
             <form action="">
                 <input type="text" placeholder='Enter Username or email' name="" id="" />
                 <input type="password" placeholder='Enter password' name="" id="" />
 
                 <button>LOG IN</button>
-                <p>or <a href="" style={linkStyle}>sign up</a> if you don't have an account yet</p>
+                <p>or <Link to="/signup" style={linkStyle}>sign up</Link> if you don't have an account yet</p>
             </form>
            </div>
         </div>

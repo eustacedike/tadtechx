@@ -41,8 +41,9 @@ function Apply() {
                     <p>Click on the apply button to start the application process</p>
                 </div>
             </div>
-
-            {/* <button>Apply here</button> */}
+            
+                <button>Apply here</button>
+            
         </div>
     );
 

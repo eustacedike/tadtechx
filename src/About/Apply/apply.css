@@ -1,5 +1,6 @@
 .Apply {
     padding: 5%;
+    text-align: center;
 }
 
 .Apply h2 {
@@ -15,6 +16,7 @@
     font-size: clamp(14px,1.5vw,20px);
     line-height: clamp(20px,2.3vw,28px);
     text-align: center;
+    margin: 10px 0;
 }
 
 .applications {
@@ -25,6 +27,7 @@
 
 .applicant {
     width: 20%;
+    max-width: 250px;
 }
 
 .applicant img {
@@ -42,6 +45,16 @@
     margin-top: -85px;
 }
 
+.Apply button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-size: clamp(14px,1.5vw,48px);
+    margin-top: 0;
+}
+
 @media (max-width: 768px) {
     .applications {
        flex-wrap: wrap;
@@ -55,19 +68,5 @@
 
     .applicant h3 {
         margin-top: -20vw;
-    }
-}
-
-@media (max-width: 400px) {
-    .applications {
-       justify-content: center;
-    }
-    
-    .applicant {
-        width: 200px;
-    }
-
-    .applicant h3 {
-        margin-top: -125px;
     }
 }

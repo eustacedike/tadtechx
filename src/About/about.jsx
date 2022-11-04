@@ -6,6 +6,9 @@ import AboutHero from './AboutHero/aboutHero';
 import WhyWork from './WhyWork/whyWork';
 import Learn from '../Homepage/Learn/learn';
 import Apply from './Apply/apply';
+import Team from './Team/team';
+import Ideas from '../Homepage/Ideas/ideas';
+import Enroll from '../Layout/Enroll/enroll';
 
 //Images
 // import logo from "../Layout/Navigation/assets/newLogo.png";
@@ -44,6 +47,9 @@ function About() {
 
             <Learn show="none"/>
             <Apply/>
+            <Team/>
+            <Ideas/>
+            <Enroll/>
 
         </div>
     );

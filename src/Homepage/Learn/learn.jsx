@@ -63,7 +63,7 @@ function Learn (props) {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, modi tempora. Voluptas assumenda officia quisquam. Quidem, similique magni culpa dolores consequatur cumque cupiditate ratione quibusdam eos quo.</p>
                     <br/>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iure, consectetur sunt repudiandae voluptatum quasi architecto sit aliquam magni inventore! Molestias quia incidunt deleniti.</p>
-                    <button>Apply here</button>
+                    <button style={{display: props.show}}>Apply here</button>
                 </div>
             </div>
         </div>

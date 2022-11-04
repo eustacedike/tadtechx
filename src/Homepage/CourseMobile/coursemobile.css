@@ -23,6 +23,16 @@
     position: relative;
 }
 
+.gettr {
+    animation: getter 1s forwards;
+}
+
+@keyframes getter {
+    0% {height: 10.9vw}
+    70% {height: 500px}
+    100% {height: auto}
+}
+
 .course-category {
     display: flex;
     align-items: center;

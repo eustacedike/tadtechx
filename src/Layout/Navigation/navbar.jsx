@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRef } from 'react';
 import { Link } from "react-router-dom";
+import { useState } from 'react';
 
 import style from './navbar.css';
 import logo from './assets/newLogo.png';
@@ -12,10 +13,21 @@ function Navbar() {
   const hamm = useRef();
   const mobilee = useRef();
 
+  // const openMenu = () => {
+  //     hamm.current.classList.toggle('change');
+  //     mobilee.current.classList.toggle('inView');
+  // };
+
+
+  const [openMobile, setopenMobile] = useState(false);
+
   const openMenu = () => {
-      hamm.current.classList.toggle('change');
-      mobilee.current.classList.toggle('inView');
-  };
+        setopenMobile(value => !value);
+  }
+
+  const closeMenu = () => {
+        setopenMobile(value => false);
+  }
 
   const linkStyle = {
     textDecoration: 'none',
@@ -25,7 +37,7 @@ function Navbar() {
     return (
       <div className='Navbar'>
         <nav>
-          <Link to="/"><img className='logo' src={logo} /></Link>
+          <Link to="/" onClick={closeMenu}><img className='logo' src={logo} /></Link>
           <div className='items'>
             <ul>
               <li className='coux'><Link style={linkStyle} to="/courses">Courses</Link> <img src={vector}></img></li>
@@ -66,32 +78,32 @@ function Navbar() {
           </div>
           </div>
               <li><Link style={linkStyle} to="/aboutus">About Us</Link></li>
-              <li>Contact</li>
+              <li><Link style={linkStyle} to="/contactus">Contact Us</Link></li>
             </ul>
           </div>
           <div className='search'>
             <input type='text' placeholder='Search courses'></input>
-            <img className='search-icon' src={search}></img>
+            <img className='search-icon' src={search} onClick={closeMenu}></img>
           </div>
           <div className='nav-btn gone'>
             <button className='sign'><Link style={linkStyle} to="/signin">Sign In</Link></button>
-            <button>Register</button>
+            <button><Link style={{textDecoration: 'none', color: 'white'}} to="/signup">Register</Link></button>
           </div>
-          <div className='hamburger' onClick={openMenu} ref={hamm}>
+          <div className={openMobile ? 'hamburger change' : 'hamburger'} onClick={openMenu}>
             <div className='bar1'></div>
             <div className='bar2'></div>
             <div className='bar3'></div>
           </div>
         </nav>
 
-        <div className='mobile' ref={mobilee}>
-          <Link style={linkStyle} to="/courses"><h3>Courses</h3></Link>
-          <Link style={linkStyle} to="/services"><h3>Services</h3></Link>
-          <Link style={linkStyle} to="/aboutus"><h3>About Us</h3></Link>
-          <a href=''><h3>Register</h3></a>
+        <div className={openMobile ? 'mobile inView' : 'mobile'} ref={mobilee}>
+          <Link style={linkStyle} to="/courses" onClick={closeMenu}><h3>Courses</h3></Link>
+          <Link style={linkStyle} to="/services" onClick={closeMenu}><h3>Services</h3></Link>
+          <Link style={linkStyle} to="/aboutus" onClick={closeMenu}><h3>About Us</h3></Link>
+          <Link style={linkStyle} to="/contactus" onClick={closeMenu}><h3>Contact Us</h3></Link>
           <div className='nav-btn'>
-          <Link style={linkStyle} to="/signin"><button>Sign In</button></Link>
-            <button>Register</button>
+            <Link style={linkStyle} to="/signin" onClick={closeMenu}><button>Sign In</button></Link>
+            <Link style={{linkStyle}} to="/signup" onClick={closeMenu}><button>Register</button></Link>
           </div>
         </div>
 

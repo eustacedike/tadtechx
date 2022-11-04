@@ -104,24 +104,22 @@ function CourseMobile() {
         console.log(eachCat.title)
     })
 
-
-
-    const [checked, setChecked] = useState(false);
+    const [checked, setChecked] = useState(0);
     const [isOpen, setisOpen] = useState(0);
 
 
 
 
     const toggleChecked = (a) => {
-        setChecked(value => !value);
+        setChecked(value => a);
 
-        if (checked) {
-            // setisOpen(value => 0);
+        if (checked === a && isOpen === a) {
+            setisOpen(value => 0);
 
-            setisOpen(value => a);
+            // setisOpen(value => a);
         }
         else {
-            setisOpen(value => 0);
+            setisOpen(value => a);
         }
 
 
@@ -136,7 +134,7 @@ function CourseMobile() {
 
             {courseCategories.map(eachCat => {
                 return (
-                    <div className='whole' style={{ height: isOpen === eachCat.id ? '500px' : '10.9vw' }}>
+                    <div className={isOpen === eachCat.id ? 'whole gettr' : 'whole'} style={{ height: isOpen === eachCat.id ? '500px' : '10.9vw' }}>
                         <div className='course-category'>
                             <h3>{eachCat.title}</h3>
                             <img src={caret} alt="" onClick={() => toggleChecked(eachCat.id)} style={{ transform: isOpen === eachCat.id ? 'rotate(180deg)' : 'rotate(0deg)' }} />
