@@ -45,6 +45,9 @@ function Services() {
     
     const carrd = useRef();
 
+    const indicate = useRef();
+
+
     const scrll = () => {
         carrd.current.scrollBy(350,0);
     };
@@ -52,13 +55,22 @@ function Services() {
         carrd.current.scrollBy(-350,0);
     };
 
+    var zts = -3;
+
 
     const autScrll = () => {
 
         if (carrd.current.scrollWidth - carrd.current.scrollLeft <= carrd.current.clientWidth * 1.25) {
             carrd.current.scroll(0,0);
+            zts = -3;
+        indicate.current.style.marginLeft = `${zts}px`;
+
         } else {
             carrd.current.scrollBy(500,0);
+
+            zts+=17.2;
+        indicate.current.style.marginLeft = `${zts}px`;
+        // indicate.current.style.backgroundColor = `red`;
         }
             
         
@@ -85,6 +97,21 @@ function Services() {
                         </div>
                     )})
                 }
+            </div>
+
+                <div className="ind-container">
+            <div className='indicator-serv'>
+            <div className='c7' ref={indicate}></div>
+            {offeredServices.map(eachService => {
+                    return (
+                        <div key={eachService.id} className="c2"></div>
+                    )})
+                }
+                {/* 
+                <div className='c2'></div>
+                <div className='c2'></div>
+                <div className='c2'></div> */}
+            </div>
             </div>
             
            

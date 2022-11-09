@@ -125,6 +125,23 @@ function CourseMobile() {
 
     }
 
+    const carrd = useRef();
+
+    const autScrll = () => {
+
+        if (carrd.current.scrollWidth - carrd.current.scrollLeft <= carrd.current.clientWidth * 1.25) {
+            carrd.current.scroll(0,0);
+
+        } else {
+            carrd.current.scrollBy(200,0);
+            // carrd.current.style.border = '2px solid red';
+        }
+            
+        
+    };
+
+    setInterval (autScrll, 3000);
+
 
 
     return (
@@ -140,7 +157,7 @@ function CourseMobile() {
                             <img src={caret} alt="" onClick={() => toggleChecked(eachCat.id)} style={{ transform: isOpen === eachCat.id ? 'rotate(180deg)' : 'rotate(0deg)' }} />
                         </div>
                         <div className="draw">
-                            <div className="course-cards">
+                            <div className="course-cards" ref={carrd}>
                                 {eachCat.content.map(eachCox => {
                                     return (
                                         <div key={eachCox.id} className="course-card">

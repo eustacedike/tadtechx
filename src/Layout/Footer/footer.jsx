@@ -19,28 +19,28 @@ function Footer() {
 
     const footerr = useRef();
 
-    const chck = () => {
+    // const chck = () => {
         
-    var fromTheTop = footerr.current.getBoundingClientRect().top;
+    // var fromTheTop = footerr.current.getBoundingClientRect().top;
 
     
-    if (window.pageYOffset > fromTheTop) {
-        footerr.current.style.transform = 'translateX(0%)';
-    } else {
-        footerr.current.style.transform = 'translateX(-100%)';
-    }
+    // if (window.pageYOffset > fromTheTop) {
+    //     footerr.current.style.transform = 'translateX(0%)';
+    // } else {
+    //     footerr.current.style.transform = 'translateX(-100%)';
+    // }
 
-    console.log(window.pageYOffset);
-    console.log(footerr.current.getBoundingClientRect().top);
+    // console.log(window.pageYOffset);
+    // console.log(footerr.current.getBoundingClientRect().top);
 
-        };
+    //     };
 
-        useEffect(() => {
+    //     useEffect(() => {
    
-            window.removeEventListener('scroll', chck);
-            window.addEventListener('scroll', chck, { passive: true });
-            return () => window.removeEventListener('scroll', chck);
-        }, []);
+    //         window.removeEventListener('scroll', chck);
+    //         window.addEventListener('scroll', chck, { passive: true });
+    //         return () => window.removeEventListener('scroll', chck);
+    //     }, []);
 
 
     return (

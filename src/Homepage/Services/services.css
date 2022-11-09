@@ -6,8 +6,8 @@
 }
 
 .Services h2 {
-    font-size: clamp(24px, 3vw, 40px);
-    line-height: clamp(28px, 3.8vw, 42px);
+    font-size: var(--h2-font);
+    line-height: var(--h2-line);
     color: var(--secondary);
     text-align: center;
 }
@@ -63,24 +63,32 @@
     
 }
 
-.card div {
-    /* background-color: black; */
+.ind-container {
+    /* border: 1px solid red; */
+    width: 180px;
+    margin: 0 auto;
 }
 
-.Services h2, .card h4 {
-    
+.indicator-serv {
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+    position: absolute;
+    /* left: 0%; */
+    align-items: center;
+    bottom: 0%;
+    opacity: 0.8;
 }
 
 .card h4 {
-    font-size: clamp(18px,2vw,36px);
-    line-height: clamp(24px,2.5vw,46px);
+    font-size: var(--card-h-font);
+    line-height: var(--card-h-line);
     color: var(--primary);
     text-align: center;
 }
 .card p {
-    /* font-size: 1.2vw; */
-    font-size: clamp(14px,1.2vw,24px);
-    line-height: clamp(20px,2.5vw,30px);
+    font-size: var(--card-p-font);
+    line-height: var(--card-p-line);
 }
 
 .Services .arrow {
@@ -176,14 +184,34 @@
         opacity: 0.7;
     }
 
+    .Services .c7 {
+        border: 1px solid var(--primary);
+        border-radius: 50%;
+        position: absolute;
+        /* left: 19px; */
+        /* left: 41px; */
+        transition: 700ms;
+
+        height: 14px;
+        width: 14px;
+        margin-left: -3px;
+    }
+    .Services .c2 {
+        background-color: var(--primary);
+        height: 8px;
+        width: 8px;
+    }
+
     .Services .arrow {
         top: 48%;
         right: 10%;
+        display: none;
     }
 
    .Services .arrowb {
         top: 48%;
         left: 10%;
+        display: none;
     }
 }
 

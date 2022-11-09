@@ -28,6 +28,21 @@
     height: 100%;
 }
 
+.bgg2 {
+    background-image: url(../../Homepage/Learn/assets/header.png);
+    /* background-color: rgba(167, 167, 270, 0.4); */
+    background-repeat: no-repeat;
+    background-position: 37% bottom;
+    background-size: cover;
+
+    position: absolute;
+    z-index: 5;
+
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .inner-banner {
     background-color: rgba(255, 255, 255, 0.3);
     height: 90%;
@@ -45,13 +60,21 @@
     padding: 7px;
     border-radius: 4px;
     box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.5);
-
+    
     position: absolute;
     z-index: 6;
 
     font-size: clamp(12px, 1.6vw, 24px);
     transition: .7s;
     cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.sCourse img {
+    height: 30px;
 }
 
 .sCourse:nth-child(1) {
@@ -71,6 +94,12 @@
 }
 .sCourse:nth-child(6) {
     top: 80%; left: 24%;
+}
+.sCourse:nth-child(7) {
+    top: 30%; left: 18%;
+}
+.sCourse:nth-child(8) {
+    top: 50%; left: 21%;
 }
 
 .sCourse:hover {
@@ -127,6 +156,7 @@
 
 .service-stat p {
     color: rgba(14, 14, 44, 0.6);
+    font-size: var(--p-font);
 }
 
 .service-stat img {
@@ -138,6 +168,68 @@
     margin-right: 4px;
 }
 
+@media (max-width: 550px) {
+.service-stat {
+    flex-wrap: wrap;
+}
+.service-stat div {
+    width: 100%;
+    margin-top: 3px;
+}
+
+.service-stat img {
+    background: none;
+    border-radius: 0;
+}
+
+}
+
+@media (max-width: 800px) {
+
+    .service-banner {
+        height: 400px;
+    }
+
+    .bgg2 {
+        background-position: center;
+    }
+
+    .inner-banner {
+        width: 60%;
+        margin: 0 20%;
+    }
+
+    .sCourse:nth-child(1) {
+        top: 10%; left: 15%;
+    }
+    .sCourse:nth-child(2) {
+        top: 10%; left: 60%;
+    }
+    .sCourse:nth-child(3) {
+        top: 30%; left: 63%;
+    }
+    .sCourse:nth-child(4) {
+        top: 80%; left: 55%;
+    }
+    .sCourse:nth-child(5) {
+        top: 50%; left: 60%;
+    }
+    .sCourse:nth-child(6) {
+        top: 80%; left: 12%;
+    }
+    .sCourse:nth-child(7) {
+        top: 30%; left: 12%;
+    }
+    .sCourse:nth-child(8) {
+        top: 50%; left: 9%;
+    }
+
+    .service-stats {
+        width: 100%;
+        border-radius: 0;
+        margin-top: 0;
+    }
+}
 @media (max-width: 530px) {
 .service-stat {
     flex-wrap: wrap;
@@ -150,44 +242,42 @@
 
 @media (max-width: 500px) {
 
-    .service-banner {
-        height: 400px;
-    }
-
-    .inner-banner {
-        width: 60%;
-        margin: 0 20%;
+    .sCourse {
+        display: block;
+        text-align: center;
+        height: 75px;
+        width: 100px;
     }
 
     .sCourse:nth-child(1) {
-        top: 10%; left: 5%;
+        top: 10%; left: 10%;
     }
     .sCourse:nth-child(2) {
-        top: 10%; right: 0%;
+        top: 10%; right: 10%; left: unset;  
     }
     .sCourse:nth-child(3) {
-        top: 45%; left: 5%;
+        top: 54%; right: 10%; left: unset;
     }
     .sCourse:nth-child(4) {
-        top: 80%; right: 0%;
+        top: 76%; right: 10%; left: unset;
     }
     .sCourse:nth-child(5) {
-        top: 45%; right: 0%;
+        top: 32%; right: 10%; left: unset;
     }
     .sCourse:nth-child(6) {
-        top: 80%; left: 5%;
+        top: 32%; left: 10%;
     }
-
-    .service-stats {
-        width: 100%;
-        border-radius: 0;
-        margin-top: 0;
+    .sCourse:nth-child(7) {
+        top: 54%; left: 10%;
+    }
+    .sCourse:nth-child(8) {
+        top: 76%; left: 10%;
     }
 }
 
 @media (max-width: 361px) {
     .service-banner {
-        height: 300px;
+        /* height: 300px; */
     }
 
     .inner-banner {

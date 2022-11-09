@@ -11,26 +11,26 @@ function Enroll() {
 
     const enroller = useRef();
 
-    const chck = () => {
+    // const chck = () => {
         
-    console.log(enroller.current.getBoundingClientRect().top);
-    var fromTheTop = enroller.current.getBoundingClientRect().top;
+    // console.log(enroller.current.getBoundingClientRect().top);
+    // var fromTheTop = enroller.current.getBoundingClientRect().top;
     
-    if (window.pageYOffset > fromTheTop) {
-        enroller.current.style.transform = 'translateX(0%)';
-    } else {
-        enroller.current.style.transform = 'translateX(-100%)';
-    }
-        };
+    // if (window.pageYOffset > fromTheTop) {
+    //     enroller.current.style.transform = 'translateX(0%)';
+    // } else {
+    //     enroller.current.style.transform = 'translateX(-100%)';
+    // }
+    //     };
 
 
 
-    useEffect(() => {
+    // useEffect(() => {
    
-        window.removeEventListener('scroll', chck);
-        window.addEventListener('scroll', chck, { passive: true });
-        return () => window.removeEventListener('scroll', chck);
-    }, []);
+    //     window.removeEventListener('scroll', chck);
+    //     window.addEventListener('scroll', chck, { passive: true });
+    //     return () => window.removeEventListener('scroll', chck);
+    // }, []);
 
 
     return (

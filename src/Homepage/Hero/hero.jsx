@@ -37,6 +37,7 @@ function Hero () {
         if (zts > 41) {zts = -3;
             roller.current.scroll(0,0)
         };
+        
         indicate.current.style.left = `${zts}px`;
         
         heroo2.current.classList.toggle('animate-c');

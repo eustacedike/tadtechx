@@ -170,8 +170,8 @@
 
 .tester p {
     color: grey;
-    font-size: clamp(10px,1.5vw,18px);
-    line-height: clamp(18px,2vw,30px);
+    font-size: var(--card-p-font);
+    line-height: clamp(--card-p-line);
 }
 
 .in-tester {

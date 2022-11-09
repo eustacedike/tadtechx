@@ -162,8 +162,8 @@
 }
 
 .box-2 p {
-    font-size: clamp(14px,1.5vw,48px);
-    line-height: clamp(20px,2.2vw,64px);
+    font-size: var(--p-font);
+    line-height: var(--p-line);
 }
 
 .other button {

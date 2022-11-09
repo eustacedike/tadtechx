@@ -27,7 +27,7 @@ function SignUp() {
                 <input type="email" placeholder='Email' name="" id="" />
                 <div className='dob'>
                 <label htmlFor="dateofbirth">Date of Birth</label> <br />
-                <input type="date" name="" id="" />
+                <input type="month" name="" id="" />
                 </div>
                 <input type="password" placeholder='Choose a password' name="" id="" />
 

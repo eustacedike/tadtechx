@@ -60,7 +60,6 @@
 }
 
 .intro h1 {
-    /* font-size: 3.3vw; */
     font-size: clamp(16px, 3vw, 78px);
     font-weight: 700;
     line-height: clamp(16px, 3.8vw, 84px);
