@@ -42,7 +42,7 @@
     scroll-snap-align: start;
     background-color: white;
     border-radius: 8px;
-    box-shadow: 5px 2px 5px 0px lightgrey;
+    box-shadow: 2px 1px 5px 0px rgb(0, 0, 255,0.3);
     
 }
 

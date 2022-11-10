@@ -64,9 +64,7 @@
 }
 
 .ind-container {
-    /* border: 1px solid red; */
-    width: 180px;
-    margin: 0 auto;
+    display: none;
 }
 
 .indicator-serv {
@@ -182,6 +180,13 @@
     .Services .arrow img, .Services .arrowb img {
         height: 6vw;
         opacity: 0.7;
+    }
+
+    .ind-container {
+        /* border: 1px solid red; */
+        width: 180px;
+        margin: 0 auto;
+        display: block;
     }
 
     .Services .c7 {

@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import pexels from './assets/pexels.png';
 import rec from './assets/rec7.png';
 import web3 from './assets/web3.jpg';
+import gplay from './assets/gplay.png'
 
 import caretas from './assets/vector-right.png';
 
@@ -33,24 +34,26 @@ function Ideas() {
                     <div className='idea-card'>
                         <img src={web3}></img>
                         <h3>Web 3 App</h3>
-                        <a href="">Get on Google Play</a>
+                        <a href=""><img id='gplay' src={gplay} alt="" /></a>
                     </div>
                     <div className='idea-card' style={{animationDelay: "4.5s"}}>
                         <img src={web3}></img>
                         <h3>Web 3 App</h3>
-                        <a href="">Get on Google Play</a>
+                        <a href=""><img id='gplay' src={gplay} alt="" /></a>
 
                     </div>
                     <div className='idea-card'style={{animationDelay: "9s"}}>
                         <img src={web3}></img>
                         <h3>web2 App</h3>
-                        <a href="">Get on Google Play</a>
+                        <a href=""><img id='gplay' src={gplay} alt="" /></a>
+
 
                     </div>
                     <div className='idea-card' style={{animationDelay: "13.5s"}}>
                         <img src={web3}></img>
                         <h3>Webber App</h3>
-                        <a href="">Get on Google Play</a>
+                        <a href=""><img id='gplay' src={gplay} alt="" /></a>
+
 
                     </div>
                     

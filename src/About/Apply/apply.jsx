@@ -27,18 +27,18 @@ function Apply() {
                 </div>
                 <div className="applicant">
                     <img src={step2} alt="" />
-                    <h3>Click on Apply</h3>
-                    <p>Click on the apply button to start the application process</p>
+                    <h3>Log In/Sign Up</h3>
+                    <p>Login if you already have an account. If you don't have an account, sign up to create one</p>
                 </div>
                 <div className="applicant">
                     <img src={step3} alt="" />
-                    <h3>Click on Apply</h3>
-                    <p>Click on the apply button to start the application process</p>
+                    <h3>Fill the Forms</h3>
+                    <p>Fill all the forms presented with precise and credible information</p>
                 </div>
                 <div className="applicant">
                     <img src={step4} alt="" />
-                    <h3>Click on Apply</h3>
-                    <p>Click on the apply button to start the application process</p>
+                    <h3>Submit Form</h3>
+                    <p>Click on the submit button after filling the forms with the needed data</p>
                 </div>
             </div>
             

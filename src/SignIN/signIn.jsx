@@ -8,6 +8,9 @@ import style from './signIn.css';
 import logo from "../Layout/Navigation/assets/newLogo.png";
 
 
+//Components
+import Form from '../Form/form';
+
 function SignIn() {
 
     const linkStyle = {
@@ -17,7 +20,9 @@ function SignIn() {
 
     return (
         <div className='SignIn'>
-           <div className="signin-box">
+            <h2>Sign In</h2>
+            <Form nameShow="none" msgShow="none" buttonContent="Log In"/>
+           {/* <div className="signin-box">
             <h2>Sign In</h2>
             <form action="">
                 <input type="text" placeholder='Enter Username or email' name="" id="" />
@@ -26,7 +31,7 @@ function SignIn() {
                 <button>LOG IN</button>
                 <p>or <Link to="/signup" style={linkStyle}>sign up</Link> if you don't have an account yet</p>
             </form>
-           </div>
+           </div> */}
         </div>
     );
 

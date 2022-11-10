@@ -33,6 +33,7 @@ function Navbar() {
 
   const closeMenu = () => {
     setopenMobile(value => false);
+    window.scrollTo(0,0);
   }
 
   const linkStyle = {
@@ -47,7 +48,7 @@ function Navbar() {
         <img src={navBarr ? closee : search} alt="" className='mob-search' onClick={newSearch} />
         <div className='items'>
           <ul>
-            <li className='coux'><Link style={linkStyle} to="/courses">Courses</Link> <img src={vector}></img></li>
+            <li className='coux'><Link onClick={closeMenu} style={linkStyle} to="/courses">Courses</Link> <img src={vector}></img></li>
             <div className="drop-courses">
               <div className="dc-1">
                 <h2>Courses</h2>

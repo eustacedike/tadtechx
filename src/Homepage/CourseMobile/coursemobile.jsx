@@ -125,22 +125,23 @@ function CourseMobile() {
 
     }
 
-    const carrd = useRef();
+    const carrd = useRef([]);
 
     const autScrll = () => {
 
-        if (carrd.current.scrollWidth - carrd.current.scrollLeft <= carrd.current.clientWidth * 1.25) {
-            carrd.current.scroll(0,0);
+        if (carrd.current[checked].scrollWidth - carrd.current[checked].scrollLeft <= carrd.current.clientWidth * 1.25) {
+            carrd.current[checked].scroll(0,0);
 
         } else {
-            carrd.current.scrollBy(200,0);
-            // carrd.current.style.border = '2px solid red';
+            carrd.current[checked].scrollBy(200,0);
+            // carrd.current[checked].style.border = '2px solid red';
         }
             
         
     };
 
     setInterval (autScrll, 3000);
+    // autScrll();
 
 
 
@@ -157,7 +158,7 @@ function CourseMobile() {
                             <img src={caret} alt="" onClick={() => toggleChecked(eachCat.id)} style={{ transform: isOpen === eachCat.id ? 'rotate(180deg)' : 'rotate(0deg)' }} />
                         </div>
                         <div className="draw">
-                            <div className="course-cards" ref={carrd}>
+                            <div className="course-cards" ref={(element)=>{carrd.current[eachCat.id]=element}}>
                                 {eachCat.content.map(eachCox => {
                                     return (
                                         <div key={eachCox.id} className="course-card">

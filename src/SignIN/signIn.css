@@ -1,5 +1,6 @@
 .SignIn {
-    background: linear-gradient(111.56deg, #FEBB7B 23.84%, #A5BCF7 73.02%);
+    /* background: linear-gradient(111.56deg, #FEBB7B 23.84%, #A5BCF7 73.02%); */
+    background-color: var(--bg-color);
     /* height: 1000px; */
     padding: 40px 0;
 }
@@ -30,10 +31,11 @@ padding: 15px 0;
     height: fit-content !important;
 }
 
-.signin-box h2 {
-    color: var(--primary);
+.SignIn h2 {
+    color: var(--secondary);
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding-top: 20px;
+    text-align: center;
 }
 
 .signin-box input {

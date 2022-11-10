@@ -32,13 +32,14 @@
 
 .applicant img {
     width: 100%;
+    height: 27vw;
     /* border: 2px solid red; */
     clip-path: polygon(0 0, 100% 0%, 100% 60%, 0 60%);
 }
 
 .applicant h3 {
     text-align: center;
-    font-weight: 400;
+    font-weight: 550;
     font-size: clamp(14px, 2vw, 20px);
     line-height: clamp(24px, 2.6vw, 30px);
     color: var(--secondary);
@@ -68,5 +69,9 @@
 
     .applicant h3 {
         margin-top: -20vw;
+    }
+
+    .applicant img {
+        height: 50vw;
     }
 }
