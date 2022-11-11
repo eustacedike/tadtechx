@@ -2,7 +2,13 @@
     /* background: linear-gradient(111.56deg, #FEBB7B 23.84%, #A5BCF7 73.02%); */
     background-color: var(--bg-color);
     /* height: 1000px; */
-    padding: 40px 0;
+    padding-bottom: 40px;
+}
+
+.SignIn p {
+    font-size: clamp(12px, 1.6vw, 16px) !important;
+    text-align: center;
+    color: grey;
 }
 
 .signin-box {
@@ -29,13 +35,6 @@ padding: 15px 0;
     gap: 30px;
     margin: 20px 0;
     height: fit-content !important;
-}
-
-.SignIn h2 {
-    color: var(--secondary);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    padding-top: 20px;
-    text-align: center;
 }
 
 .signin-box input {
@@ -70,10 +69,6 @@ padding: 15px 0;
     border: 1px solid var(--primary);
     color: var(--primary);
     background: none;
-}
-
-.signin-box p {
-    font-size: clamp(12px, 1.6vw, 16px) !important;
 }
 
 .signin-box label {

@@ -2,6 +2,33 @@
     display: none;
 }
 
+.filterr{
+    padding: 8px 10px;
+
+}
+
+.filterr-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+    background-color: var(--bg-color);
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+.filterr-box p {
+   padding: 15px;
+   border-radius: 18px;
+   width: 30%;
+   text-align: center;
+   transition: .6s;
+}
+
+.filterr-box p:nth-child(2) {
+    /* background-color: var(--primary); */
+
+}
+
 @media (max-width: 821px) {
     .homeCoursesMobile {
         display: block;
@@ -9,5 +36,26 @@
 
     .homeCourses {
         display: none;
+    }
+
+    .filterr-box {
+        padding: 5px;
+        border-radius: 18px;
+    }
+    
+    .filterr-box p {
+       padding: 12px;
+       border-radius: 18px;
+    }
+}
+@media (max-width: 500px) {
+    .filterr-box {
+        padding: 3px;
+        border-radius: 18px;
+    }
+    
+    .filterr-box p {
+       padding: 6px;
+       border-radius: 18px;
     }
 }

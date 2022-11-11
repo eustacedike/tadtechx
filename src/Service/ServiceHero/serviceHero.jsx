@@ -23,6 +23,8 @@ function serviceHero(props) {
         { id: 4, title: "Business Development", icon: webdez },
         { id: 5, title: "ICT Training", icon: webdez },
         { id: 6, title: "Drop Shipping", icon: webdez },
+        { id: 7, title: "Data Analysis", icon: webdez },
+        { id: 8, title: "Content Management System", icon: webdez },
 
 
     ];
@@ -30,11 +32,11 @@ function serviceHero(props) {
 
     return (
         <div className='ServiceHero'>
-            <div className="service-banner">
+            <div className={props.theBG}>
 
                 <div className="inner-banner"></div>
 
-                <div className={props.theBG}></div>
+                <div className='bgg'></div>
 
                 <div className="design-a"></div>
                 <div className="design-b"></div>

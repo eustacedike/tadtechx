@@ -6,22 +6,17 @@ import { useState } from 'react';
 import style from './navbar.css';
 import logo from './assets/newLogo.png';
 import vector from './assets/vector.png';
-import search from './assets/search.png';
+import search from './assets/searchr.png';
 import closee from './assets/close.png';
 
 function Navbar() {
 
-  const hamm = useRef();
-  const mobilee = useRef();
-
-  // const openMenu = () => {
-  //     hamm.current.classList.toggle('change');
-  //     mobilee.current.classList.toggle('inView');
-  // };
 
 
   const [openMobile, setopenMobile] = useState(false);
   const [navBarr, setnavBarr] = useState(false);
+  const [cmobNavDrop, setcmobNavDrop] = useState(false);
+  const [smobNavDrop, setsmobNavDrop] = useState(false);
 
   const newSearch = () => {
     setnavBarr(value => !value);
@@ -36,15 +31,27 @@ function Navbar() {
     window.scrollTo(0,0);
   }
 
+  const cmobDrop = () => {
+    setcmobNavDrop(value => !value);
+    if (smobNavDrop) {setsmobNavDrop(value => false);}
+  }
+
+  const smobDrop = () => {
+    setsmobNavDrop(value => !value);
+  }
+
   const linkStyle = {
     textDecoration: 'none',
-    color: '#f86a03'
+    color: '#f86a03',
   }
 
   return (
     <div className='Navbar'>
       <nav style={{height: navBarr ? '110px' : '62px'}}>
-        <Link to="/" onClick={closeMenu}><img className='logo' src={logo} /></Link>
+        <Link style={linkStyle} to="/" onClick={closeMenu}>
+          {/* <img className='logo' src={logo} /> */}
+          <h3 className='logotxt'>TAD <span className='tech'>Tech</span></h3>
+          </Link>
         <img src={navBarr ? closee : search} alt="" className='mob-search' onClick={newSearch} />
         <div className='items'>
           <ul>
@@ -118,14 +125,39 @@ function Navbar() {
         </div>
       </nav>
 
-      <div className={openMobile ? 'mobile inView' : 'mobile'} ref={mobilee}>
-        <Link style={linkStyle} to="/courses" onClick={closeMenu}><h3>Courses</h3></Link>
-        <Link style={linkStyle} to="/services" onClick={closeMenu}><h3>Services</h3></Link>
+      <div className={openMobile ? 'mobile inView' : 'mobile'}>
+        <h3><Link style={{fontWeight: 'bold', fontSize: '16px'}} to="/courses" onClick={closeMenu}>Courses</Link><img src={vector} onClick={cmobDrop} style={{transform: cmobNavDrop ? "rotate(180deg)" : "rotate(0deg)"}}></img></h3>
+        <h3><Link style={{fontWeight: 'bold', fontSize: '16px'}} to="/services" onClick={closeMenu}>Services</Link><img src={vector} onClick={smobDrop} style={{transform: smobNavDrop ? "rotate(180deg)" : "rotate(0deg)"}}></img></h3>
         <Link style={linkStyle} to="/aboutus" onClick={closeMenu}><h3>About Us</h3></Link>
         <Link style={linkStyle} to="/contactus" onClick={closeMenu}><h3>Contact Us</h3></Link>
         <div className='nav-btn'>
           <Link style={linkStyle} to="/signin" onClick={closeMenu}><button>Sign In</button></Link>
           <Link style={{ linkStyle }} to="/signup" onClick={closeMenu}><button>Register</button></Link>
+        </div>
+        <div className='mobile-course-drop' style={{height: cmobNavDrop ? "350px" : "0px"}}>
+              <Link to="courses/cybersecurity">Software Engineering</Link>
+                <Link to="courses/cybersecurity">Graphics Design UI/UX</Link>
+                <Link to="courses/cybersecurity">Android/IOS Development</Link>
+                <Link to="courses/cybersecurity">CMS/BMS/Database MS</Link>
+                <Link to="courses/cybersecurity">Machine Learning</Link>
+                <Link to="courses/cybersecurity">Ethical Hacking</Link>
+                <Link to="courses/cybersecurity">Computer Diploma</Link>
+                <Link to="courses/cybersecurity">Cyber Security</Link>
+                <Link to="courses/cybersecurity">Artificial Intelligence</Link>
+        </div>
+        <div className='mobile-service-drop' style={{height: smobNavDrop ? "400px" : "0px"}}>
+        
+                <Link to="services/drpshipping">Drop Shipping Services</Link>
+                <Link to="services/drpshipping">Web Design and Hosting</Link>
+                <Link to="services/drpshipping">Penetration Testing</Link>
+                <Link to="services/drpshipping">ICT Training Center</Link>
+                <Link to="services/drpshipping">Business Branding</Link>
+                <Link to="services/drpshipping">Data Analysis</Link>
+                <Link to="services/drpshipping">Graphics Design</Link>
+                <Link to="services/drpshipping">Business Development</Link>
+                <Link to="services/drpshipping">Android/IOS Development</Link>
+                <Link to="services/drpshipping">Product Design UI/UX</Link>
+                <Link to="services/drpshipping">Content Management System</Link>
         </div>
       </div>
 

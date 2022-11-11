@@ -27,6 +27,17 @@ import courseData from "./CoursePage/coursedata/courseData.json";
 import cyberImg from "./CoursePage/coursedata/images/cyber.png";
 import webImg from "./CoursePage/coursedata/images/webdev.png";
 
+import artificial from './CoursePage/coursedata/images/artificial.png';
+import andr from './CoursePage/coursedata/images/androidcourse.png';
+// import cyber from './CoursePage/coursedata/images/cyber.png';
+import dbase from './CoursePage/coursedata/images/database.png';
+import diploma from './CoursePage/coursedata/images/diploma.png';
+import gdesign from './CoursePage/coursedata/images/gdesign.png';
+import ehack from './CoursePage/coursedata/images/hacking.png';
+import machinee from './CoursePage/coursedata/images/machine.png';
+import softw from './CoursePage/coursedata/images/software.png';
+// import webdev from './CoursePage/coursedata/images/webdev.png';
+
 
 
 
@@ -43,6 +54,14 @@ function App() {
           <Route path="courses" element={<Course />}/>
           <Route path="/courses/cybersecurity" element={<CourseTemplate currCourse={courseData.cyberSec} curxPreview={cyberImg}/>}/>
           <Route path="/courses/webdevelopment" element={<CourseTemplate currCourse={courseData.webDev} curxPreview={webImg}/>}/>
+          <Route path="/courses/artificialintelligence" element={<CourseTemplate currCourse={courseData.ai} curxPreview={artificial}/>}/>
+          <Route path="/courses/ethicalhacking" element={<CourseTemplate currCourse={courseData.ehack} curxPreview={ehack}/>}/>
+          <Route path="/courses/computerdiploma" element={<CourseTemplate currCourse={courseData.diploma} curxPreview={diploma}/>}/>
+          <Route path="/courses/softwareengineering" element={<CourseTemplate currCourse={courseData.software} curxPreview={softw}/>}/>
+          <Route path="/courses/androidiosdevelopment" element={<CourseTemplate currCourse={courseData.androidios} curxPreview={andr}/>}/>
+          <Route path="/courses/graphicsdesign" element={<CourseTemplate currCourse={courseData.gdesign} curxPreview={gdesign}/>}/>
+          <Route path="/courses/databasecourse" element={<CourseTemplate currCourse={courseData.dbase} curxPreview={dbase}/>}/>
+          <Route path="/courses/machinelearning" element={<CourseTemplate currCourse={courseData.machine} curxPreview={machinee}/>}/>
           
           <Route path="services" element={<Service />}/>
           <Route path="aboutus" element={<About />}/>

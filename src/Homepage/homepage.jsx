@@ -1,4 +1,7 @@
 
+import { useState } from 'react';
+
+
 import style from './homepage.css';
 
 import Hero from './Hero/hero';
@@ -27,7 +30,41 @@ import webber from '../Service/ServiceHero/assets/webber.png';
 
 function Homepage() {
 
-  const deezTags = [
+  const learnn = [
+    { id: 1, title: "Web Development", icon: webber},
+    { id: 2, title: "Artificial Intelligence", icon: arti},
+    { id: 3, title: "Ethical Hacking", icon: hckng},
+    { id: 4, title: "Android/IOS Course", icon: iandroid},
+
+    {id: 5, title: "Computer Diploma Course", icon: iandroid},
+    {id: 6, title: "Software Engineering Course", icon: iandroid},
+    {id: 7, title: "Cyber Security Course", icon: iandroid},
+    {id: 8, title: "Graphics Design UI/UX Course", icon: iandroid},
+    {id: 9, title: "Database MS Course", icon: iandroid},
+    {id: 10, title: "Machine Learning Course", icon: iandroid},
+    
+
+];
+  const offerss = [
+    { id: 1, title: "Graphics Design", icon: graphdez},
+    { id: 2, title: "Web Design and Hosting", icon: webdez},
+
+    {id: 3, title: "ICT Training Centre", icon: analyt},
+    {id: 4, title: "Business Development", icon: analyt},
+    {id: 5, title: "Penetration Testing", icon: analyt},
+    {id: 6, title: "Business Branding", icon: analyt},
+    {id: 7, title: "Android/IOS Development", icon: analyt},
+    {id: 8, title: "Content Management System", icon: analyt},
+
+    { id: 9, title: "Data Analysis", icon: analyt},
+    {id: 10, title: "Product Design UI/UX", icon: analyt},
+    { id: 11, title: "Drop Shipping", icon: drops},
+
+        
+    
+
+];
+  const otherss = [
     { id: 1, title: "Web Development", icon: webber},
     { id: 2, title: "Graphics Design", icon: graphdez},
     { id: 3, title: "Web Design and Hosting", icon: webdez},
@@ -41,10 +78,37 @@ function Homepage() {
 ];
 
 
+
+var [deezTags, setDeezTags] = useState(learnn);
+var [styl, setStyl] = useState(1);
+
+const showLearn = () => {
+  setDeezTags(learnn);
+  setStyl(value => 1)
+}
+const showServices = () => {
+  setDeezTags(offerss);
+  setStyl(value => 2)
+}
+const showOthers = () => {
+  setDeezTags(otherss);
+  setStyl(value => 3)
+}
+
+
   return (
     <div className="Homepage">
       
-      <ServiceHero theTags={deezTags} theBG="bgg2"/>
+    <div className="filterr">
+      <div className="filterr-box">
+        <p onClick={showLearn} style={{background: styl === 1 ? "#f86a03" : "none"}}>Learn</p>
+        <p onClick={showServices} style={{background: styl === 2 ? "#f86a03" : "none"}}>Services</p>
+        <p onClick={showOthers} style={{background: styl === 3 ? "#f86a03" : "none"}}>Statistics</p>
+      </div>
+    </div>
+
+
+      <ServiceHero theTags={deezTags} theBG="service-banner2"/>
 
       {/* <Hero/> */}
       <Services/>

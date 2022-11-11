@@ -67,7 +67,7 @@ function Footer() {
                 
             </div>
             <div className="footer-2">
-                <p>&copy; TAD Creative. All rights reserved</p>
+                <p>&copy; TAD Tech by Tad Creative Network. All rights reserved</p>
                 <div className="socials">
                     <a><img src={facebook} alt="facebook" /></a>
                     <a><img src={instagram} alt="instagram" /></a>

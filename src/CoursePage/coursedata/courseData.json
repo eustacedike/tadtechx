@@ -23,5 +23,112 @@
     "syllabus": {
       "week 1": "color contrast"
     }
+  },
+
+  
+  "ai": {
+    "id": 3,
+    "name": "Artificial Intelligence",
+    "preview": "",
+    "intro": "Web Development strategies and ways to",
+    "about": "",
+    "duration": 12,
+    "students": 4980,
+    "syllabus": {
+      "week 1": "color contrast"
+    }
+  },
+
+  "ehack": {
+    "id": 4,
+    "name": "Ethical Hacking",
+    "preview": "",
+    "intro": "Web Development strategies and ways to",
+    "about": "",
+    "duration": 12,
+    "students": 4980,
+    "syllabus": {
+      "week 1": "color contrast"
+    }
+  },
+
+  "diploma": {
+    "id": 5,
+    "name": "Computer Diploma",
+    "preview": "",
+    "intro": "Web Development strategies and ways to",
+    "about": "",
+    "duration": 12,
+    "students": 4980,
+    "syllabus": {
+      "week 1": "color contrast"
+    }
+  },
+
+  "software": {
+    "id": 6,
+    "name": "Software Engineering",
+    "preview": "",
+    "intro": "Web Development strategies and ways to",
+    "about": "",
+    "duration": 12,
+    "students": 4980,
+    "syllabus": {
+      "week 1": "color contrast"
+    }
+  },
+
+  "androidios": {
+    "id": 7,
+    "name": "Android/IOS Development",
+    "preview": "",
+    "intro": "Web Development strategies and ways to",
+    "about": "",
+    "duration": 12,
+    "students": 4980,
+    "syllabus": {
+      "week 1": "color contrast"
+    }
+  },
+
+  "gdesign": {
+    "id": 8,
+    "name": "Graphics Design UI/UX",
+    "preview": "",
+    "intro": "Web Development strategies and ways to",
+    "about": "",
+    "duration": 12,
+    "students": 4980,
+    "syllabus": {
+      "week 1": "color contrast"
+    }
+  },
+
+  "dbase": {
+    "id": 9,
+    "name": "CMS/BMS/Database MS",
+    "preview": "",
+    "intro": "Web Development strategies and ways to",
+    "about": "",
+    "duration": 12,
+    "students": 4980,
+    "syllabus": {
+      "week 1": "color contrast"
+    }
+  },
+
+  "machine": {
+    "id": 10,
+    "name": "Machine Learning",
+    "preview": "",
+    "intro": "Web Development strategies and ways to",
+    "about": "",
+    "duration": 12,
+    "students": 4980,
+    "syllabus": {
+      "week 1": "color contrast"
+    }
   }
+
+  
 }

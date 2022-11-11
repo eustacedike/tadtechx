@@ -14,14 +14,13 @@ import Form from '../Form/form';
 function SignUp() {
 
     const linkStyle = {
-        textDecoration: 'none',
-        color: '#f78b26'
+        color: '#2960ec'
       }
 
     return (
         <div className='SignIn'>
-            <h2>Register</h2>
             <Form msgShow="none" buttonContent="Register"/>
+            <p><Link to="/signin" style={linkStyle}>Login</Link> here if you already have an account</p>
         </div>
     );
 
