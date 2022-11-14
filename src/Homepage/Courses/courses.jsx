@@ -1,6 +1,6 @@
 //React
 import React from 'react';
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import { Link } from "react-router-dom";
 
 //Style
@@ -55,6 +55,8 @@ function Courses(props) {
     var zts = -3;
 
 
+
+    useEffect(() => {    
     const autScrll = () => {
 
         if (carrd.current.scrollWidth - carrd.current.scrollLeft <= carrd.current.clientWidth * 1.25) {
@@ -74,7 +76,8 @@ function Courses(props) {
 
     setInterval (autScrll, 3000);
 
-    
+}, []);
+
   
     
       return (

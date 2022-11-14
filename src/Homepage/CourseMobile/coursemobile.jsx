@@ -1,7 +1,7 @@
 //React
 import React from 'react';
 import { useState } from 'react';
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import { Link } from "react-router-dom";
 
 //Style
@@ -58,7 +58,6 @@ function CourseMobile() {
     return obj.category === "excel"
    })
 
-   console.log(dataScience);
 
     const courseCategories = [
         {
@@ -100,9 +99,11 @@ function CourseMobile() {
     ]
 
 
-    courseCategories.map(eachCat => {
-        console.log(eachCat.title)
-    })
+    // courseCategories.map(eachCat => {
+    //     console.log(eachCat.title)
+    // })
+
+
 
     const [checked, setChecked] = useState(0);
     const [isOpen, setisOpen] = useState(0);
@@ -127,8 +128,11 @@ function CourseMobile() {
 
     const carrd = useRef([]);
 
+    
+
     const autScrll = () => {
 
+        if (checked > 0) {
         if (carrd.current[checked].scrollWidth - carrd.current[checked].scrollLeft <= carrd.current.clientWidth * 1.25) {
             carrd.current[checked].scroll(0,0);
 
@@ -136,12 +140,12 @@ function CourseMobile() {
             carrd.current[checked].scrollBy(200,0);
             // carrd.current[checked].style.border = '2px solid red';
         }
-            
+      }      
         
     };
 
     setInterval (autScrll, 3000);
-    // autScrll();
+
 
 
 

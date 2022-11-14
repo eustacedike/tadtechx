@@ -106,13 +106,15 @@ nav {
 }
 
 .change .bar1 {
-    transform: rotate(45deg) translate(7px,-1px);
+    transform: rotate(45deg) translate(8px,0px);
+    height: 3px;
 }
 .change .bar2 {
     opacity: 0;
 }
 .change .bar3 {
     transform: rotate(-45deg) translate(7px,-1px);
+    height: 3px;
 }
 
 .mobile {
@@ -207,6 +209,10 @@ nav {
     transition: 1s;
 }
 
+.servx img, .applyx img, .coux img, .mobile h3 img {
+    height: 8px;
+}
+
 .servx:hover~.drop-services {
     opacity: 1;
     transform: translateX(0);
@@ -270,13 +276,15 @@ nav {
     background-color: white;
     width: 95%;
     margin: 0 2.5%;
-    /* padding: 20px 0; */
+    
     position: absolute;
     top: 100px;
     border-radius: 4px;
     /* height: 0px; */
     overflow: hidden;
     transition: .7s;
+    text-align: left;
+    padding: 0 2px;
 }
 
 .mobile-service-drop {
@@ -287,13 +295,14 @@ nav {
     background-color: white;
     width: 95%;
     margin: 0 2.5%;
-    /* padding: 20px 0; */
     position: absolute;
     top: 170px;
     border-radius: 4px;
     /* height: 0px; */
     overflow: hidden;
     transition: .7s;
+    text-align: left;
+    padding: 0 2px;
 }
 
 

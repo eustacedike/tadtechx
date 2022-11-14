@@ -3,7 +3,7 @@
     padding: 70px 8.3vw;
     border-radius: 0px 0px 75px 75px;
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
 }
 
 .Testimonials h2 {
@@ -80,7 +80,6 @@
     top: 55%;
     right: 20px;
     cursor: pointer;
-    filter:invert(100%);
 }
 
 .Testimonials .arrow-b {
@@ -89,7 +88,6 @@
     left: 20px;
     cursor: pointer;
     transform: scaleX(-1);
-    filter:invert(100%);
 }
 
 @media (max-width: 780px) {
@@ -109,8 +107,8 @@
     }
 
     .testimonial-card {
-        min-width: 80%;
-        margin: 0 10%;
+        min-width: 96%;
+        margin: 0 2%;
         scroll-snap-align: center;
     }
 
@@ -120,11 +118,11 @@
     }
 
     .Testimonials .arrow {
-        right: 5%;
+        right: 2%;
     }
 
     .Testimonials .arrow-b {
-        left: 5%;
+        left: 2%;
     }
 
     .Testimonials .arrow img, .Testimonials .arrow-b img {

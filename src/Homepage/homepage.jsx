@@ -28,6 +28,17 @@ import hckng from '../Service/ServiceHero/assets/hckng.png';
 import iandroid from '../Service/ServiceHero/assets/iandroid.png';
 import webber from '../Service/ServiceHero/assets/webber.png';
 
+import cybb from '../CoursePage/coursedata/icons/cybb.png';
+import dbicon from '../CoursePage/coursedata/icons/dbicon.png';
+import diplo from '../CoursePage/coursedata/icons/diplo.png';
+import soft from '../CoursePage/coursedata/icons/soft.png';
+
+
+//icons
+import learner from './assets/learn.png';
+import servi from './assets/servi.png';
+
+
 function Homepage() {
 
   const learnn = [
@@ -36,12 +47,12 @@ function Homepage() {
     { id: 3, title: "Ethical Hacking", icon: hckng},
     { id: 4, title: "Android/IOS Course", icon: iandroid},
 
-    {id: 5, title: "Computer Diploma Course", icon: iandroid},
-    {id: 6, title: "Software Engineering Course", icon: iandroid},
-    {id: 7, title: "Cyber Security Course", icon: iandroid},
-    {id: 8, title: "Graphics Design UI/UX Course", icon: iandroid},
-    {id: 9, title: "Database MS Course", icon: iandroid},
-    {id: 10, title: "Machine Learning Course", icon: iandroid},
+    {id: 5, title: "Computer Diploma Course", icon: diplo},
+    {id: 6, title: "Software Engineering Course", icon: soft},
+    {id: 7, title: "Cyber Security Course", icon: cybb},
+    {id: 8, title: "Graphics Design UI/UX Course", icon: graphdez},
+    {id: 9, title: "Database MS Course", icon: dbicon},
+    
     
 
 ];
@@ -51,14 +62,14 @@ function Homepage() {
 
     {id: 3, title: "ICT Training Centre", icon: analyt},
     {id: 4, title: "Business Development", icon: analyt},
-    {id: 5, title: "Penetration Testing", icon: analyt},
-    {id: 6, title: "Business Branding", icon: analyt},
-    {id: 7, title: "Android/IOS Development", icon: analyt},
-    {id: 8, title: "Content Management System", icon: analyt},
+    
+    {id: 5, title: "Business Branding", icon: analyt},
+    {id: 6, title: "Android/IOS Development", icon: analyt},
+    {id: 7, title: "Content Management System", icon: analyt},
 
-    { id: 9, title: "Data Analysis", icon: analyt},
-    {id: 10, title: "Product Design UI/UX", icon: analyt},
-    { id: 11, title: "Drop Shipping", icon: drops},
+    { id: 8, title: "Data Analysis", icon: analyt},
+    
+    { id: 9, title: "Drop Shipping", icon: drops},
 
         
     
@@ -73,6 +84,7 @@ function Homepage() {
     { id: 6, title: "Artificial Intelligence", icon: arti},
     { id: 7, title: "Ethical Hacking", icon: hckng},
     { id: 8, title: "Android/IOS Course", icon: iandroid},
+    { id: 9, title: "Android/IOS Course", icon: iandroid},
     
 
 ];
@@ -101,9 +113,13 @@ const showOthers = () => {
       
     <div className="filterr">
       <div className="filterr-box">
-        <p onClick={showLearn} style={{background: styl === 1 ? "#f86a03" : "none"}}>Learn</p>
-        <p onClick={showServices} style={{background: styl === 2 ? "#f86a03" : "none"}}>Services</p>
-        <p onClick={showOthers} style={{background: styl === 3 ? "#f86a03" : "none"}}>Statistics</p>
+        <p onClick={showLearn} style={{background: styl === 1 ? "black" : "none", color: styl === 1 ? "white" : "black"}}>
+          <img src={learner} style={{filter: styl === 1 ? "invert(100)" : "invert(0)"}} alt="" />
+          Learn</p>
+        <p onClick={showServices} style={{background: styl === 2 ? "black" : "none", color: styl === 2 ? "white" : "black"}}>
+        <img src={servi} style={{filter: styl === 2 ? "invert(100)" : "invert(0)"}} alt="" />
+          Services</p>
+        <p onClick={showOthers} style={{background: styl === 3 ? "black" : "none", color: styl === 3 ? "white" : "black"}}>Statistics</p>
       </div>
     </div>
 

@@ -126,8 +126,8 @@ function Navbar() {
       </nav>
 
       <div className={openMobile ? 'mobile inView' : 'mobile'}>
-        <h3><Link style={{fontWeight: 'bold', fontSize: '16px'}} to="/courses" onClick={closeMenu}>Courses</Link><img src={vector} onClick={cmobDrop} style={{transform: cmobNavDrop ? "rotate(180deg)" : "rotate(0deg)"}}></img></h3>
-        <h3><Link style={{fontWeight: 'bold', fontSize: '16px'}} to="/services" onClick={closeMenu}>Services</Link><img src={vector} onClick={smobDrop} style={{transform: smobNavDrop ? "rotate(180deg)" : "rotate(0deg)"}}></img></h3>
+        <h3><Link style={{fontWeight: 'bold', fontSize: '18px'}} to="/courses" onClick={closeMenu}>Courses</Link><img src={vector} onClick={cmobDrop} style={{transform: cmobNavDrop ? "rotate(180deg)" : "rotate(0deg)"}}></img></h3>
+        <h3><Link style={{fontWeight: 'bold', fontSize: '18px'}} to="/services" onClick={closeMenu}>Services</Link><img src={vector} onClick={smobDrop} style={{transform: smobNavDrop ? "rotate(180deg)" : "rotate(0deg)"}}></img></h3>
         <Link style={linkStyle} to="/aboutus" onClick={closeMenu}><h3>About Us</h3></Link>
         <Link style={linkStyle} to="/contactus" onClick={closeMenu}><h3>Contact Us</h3></Link>
         <div className='nav-btn'>

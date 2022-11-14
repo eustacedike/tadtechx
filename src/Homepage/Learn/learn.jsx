@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './learn.css';
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import preview from './assets/preview.png';
 
 
@@ -8,6 +8,8 @@ function Learn (props) {
 
     const discc = useRef();
 
+
+    useEffect(() => {
     const scrll = () => {
 
 
@@ -24,6 +26,7 @@ function Learn (props) {
     };
 
     setInterval (scrll, 5000);
+}, []);
 
     const scrllb = () => {
         discc.current.scrollBy(-240,0);

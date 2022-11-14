@@ -17,11 +17,21 @@
 }
 
 .filterr-box p {
-   padding: 15px;
-   border-radius: 18px;
+   padding: 10px;
+   border-radius: 25px;
    width: 30%;
    text-align: center;
    transition: .6s;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: clamp(13px, 2.4vw, 23px);
+
+}
+
+.filterr-box img {
+    height: 26px;
+    margin-right: 20px;
 }
 
 .filterr-box p:nth-child(2) {
@@ -39,14 +49,21 @@
     }
 
     .filterr-box {
-        padding: 5px;
-        border-radius: 18px;
+        padding: 4px;
+        border-radius: 30px;
     }
     
     .filterr-box p {
-       padding: 12px;
-       border-radius: 18px;
+       padding: 10px;
+       border-radius: 30px;
+       justify-content: center;
     }
+     
+     .filterr-box img {
+         height: 21px;
+         margin-right: 15px;
+     }
+     
 }
 @media (max-width: 500px) {
     .filterr-box {
@@ -57,5 +74,11 @@
     .filterr-box p {
        padding: 6px;
        border-radius: 18px;
+       justify-content: space-around;
+    }
+
+    .filterr-box img {
+        height: 16px;
+        margin-right: 0px;
     }
 }

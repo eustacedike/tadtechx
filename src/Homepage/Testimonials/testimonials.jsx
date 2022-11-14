@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './testimonials.css';
-import arrow from './assets/arrow.png';
+import arrow from './assets/vector-right.png';
 import profile from './assets/profile.png';
 import { useRef } from 'react';
 
