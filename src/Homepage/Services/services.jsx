@@ -70,7 +70,7 @@ function Services() {
             } else {
                 carrd.current.scrollBy(500, 0);
 
-                zts += 8.6;
+                zts += 17.2;
                 indicate.current.style.marginLeft = `${zts}px`;
                 // indicate.current.style.backgroundColor = `red`;
             }

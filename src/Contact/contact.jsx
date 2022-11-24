@@ -44,8 +44,34 @@ function Contact() {
                 </div>
             </div>
 
-            <Form pswShow='none' buttonContent="Send"/>
-            
+            <div className='contact-us-form'>
+                <form action="">
+                    <div className="firstlast">
+                        <div className="firstn">
+                            <label htmlFor="firstname">First Name</label> <br />
+                            <input type="text" />
+                        </div>
+                        <div className="lastn">
+                            <label htmlFor="lastname">Last Name</label> <br />
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div className="email-add">
+                        <label htmlFor="email">Email Address</label> <br />
+                        <input type="email" />
+                    </div>
+                    <div className="your-msg">
+                        <label htmlFor="message">Message</label> <br />
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <div className="snd-btn">
+                        <button>Submit</button>
+                    </div>
+
+                </form>
+            </div>
+
 
             <div className="maprouter">
                     <iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=50%20Apara%20Link%20Road&t=&z=13&ie=UTF8&iwloc=&output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe>
