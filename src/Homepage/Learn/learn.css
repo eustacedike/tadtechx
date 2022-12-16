@@ -173,7 +173,7 @@
     padding: 16px 24px;
     border-radius: 8px;
         font-size: clamp(14px,1.5vw,48px);
-
+    cursor: pointer;
     margin-top: 24px;
 }
 

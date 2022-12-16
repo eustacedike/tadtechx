@@ -11,12 +11,40 @@ import closee from './assets/close.png';
 
 function Navbar() {
 
+  const offeredCourses = [
+    {id: 1, title: "Artificial Intelligence", rating: 4.5, link: "artificialintelligence"},
+    {id: 2, title: "Ethical Hacking", rating: 4.5, link: "ethicalhacking"},
+    {id: 3, title: "Computer Diploma", rating: 4.5, link: "computerdiploma"},
+    {id: 4, title: "Web App Development", rating: 4.5, link: "webdevelopment"},
+    {id: 5, title: "Software Engineering", rating: 4.5, link: "softwareengineering"},
+    {id: 6, title: "Android/IOS Development", rating: 4.5, link: "androidiosdevelopment"},
+    {id: 7, title: "Cyber Security", rating: 4.5, link: "cybersecurity"},
+    {id: 8, title: "Graphics Design UI/UX", rating: 4.5, link: "graphicsdesign"},
+    {id: 9, title: "CMS/BMS/Database MS",  rating: 4.5, link: "databasecourse"},
+    {id: 10, title: "Machine Learning", rating: 4.5, link: "machinelearning"},
+   ];
 
+   const offeredServices = [
+    { id: 1, title: "ICT Training Centre", about: "Progressively incentivize coperative systems through technically sound functionalities" },
+    { id: 2, title: "Drop Shipping Services", about: "Progressively incentivize coperative systems through technically sound functionalities" },
+    { id: 3, title: "Web Design and Hosting", about: "Progressively incentivize coperative systems through technically sound functionalities" },
+    { id: 4, title: "Business Development", about: "Progressively incentivize coperative systems through technically sound functionalities" },
+    { id: 5, title: "Penetration Testing", about: "Progressively incentivize coperative systems through technically sound functionalities" },
+    { id: 6, title: "Business Branding", about: "Progressively incentivize coperative systems through technically sound functionalities" },
+    { id: 7, title: "Data Analysis", about: "Progressively incentivize coperative systems through technically sound functionalities" },
+    { id: 8, title: "Graphics Design", about: "Progressively incentivize coperative systems through technically sound functionalities" },
+    { id: 9, title: "Android/IOS Development", about: "Progressively incentivize coperative systems through technically sound functionalities" },
+    { id: 10, title: "Product Design UI/UX", about: "Progressively incentivize coperative systems through technically sound functionalities" },
+    { id: 11, title: "Content Management System", about: "Progressively incentivize coperative systems through technically sound functionalities" },
+
+
+];
 
   const [openMobile, setopenMobile] = useState(false);
   const [navBarr, setnavBarr] = useState(false);
   const [cmobNavDrop, setcmobNavDrop] = useState(false);
   const [smobNavDrop, setsmobNavDrop] = useState(false);
+  const [amobNavDrop, setamobNavDrop] = useState(false);
 
   const newSearch = () => {
     setnavBarr(value => !value);
@@ -34,10 +62,21 @@ function Navbar() {
   const cmobDrop = () => {
     setcmobNavDrop(value => !value);
     if (smobNavDrop) {setsmobNavDrop(value => false);}
+    if (amobNavDrop) {setamobNavDrop(value => false);}
   }
+    
+  
 
   const smobDrop = () => {
     setsmobNavDrop(value => !value);
+    if (cmobNavDrop) {setcmobNavDrop(value => false);}
+    if (amobNavDrop) {setamobNavDrop(value => false);}
+  }
+
+  const amobDrop = () => {
+    setamobNavDrop(value => !value);
+    if (smobNavDrop) {setsmobNavDrop(value => false);}
+    if (cmobNavDrop) {setcmobNavDrop(value => false);}
   }
 
   const linkStyle = {
@@ -61,15 +100,11 @@ function Navbar() {
                 <h2>Courses</h2>
               </div>
               <div className="dc-2">
-                <Link to="courses/cybersecurity">Software Engineering</Link>
-                <a href="">Graphics Design UI/UX</a>
-                <a href="">Android/IOS Development</a>
-                <a href="">CMS/BMS/Database MS</a>
-                <a href="">Machine Learning</a>
-                <a href="">Ethical Hacking</a>
-                <a href="">Computer Diploma</a>
-                <a href="">Cyber Security</a>
-                <a href="">Artificial Intelligence</a>
+              {offeredCourses.map(eachCourse => {
+                    return (
+                            <Link to={`/courses/${eachCourse.link}`}>{eachCourse.title}</Link>
+                    )
+                })}
               </div>
 
             </div>
@@ -79,27 +114,22 @@ function Navbar() {
                 <h2>Services</h2>
               </div>
               <div className="dc-2">
-                <a href="">Drop Shipping Services</a>
-                <a href="">Web Design and Hosting</a>
-                <a href="">Penetration Testing</a>
-                <a href="">ICT Training Center</a>
-                <a href="">Business Branding</a>
-                <a href="">Data Analysis</a>
-                <a href="">Graphics Design</a>
-                <a href="">Business Development</a>
-                <a href="">Android/IOS Development</a>
-                <a href="">Product Design UI/UX</a>
-                <a href="">Content Management System</a>
+              {offeredServices.map(eachService => {
+                    return (
+                            <Link to={`/services`}>{eachService.title}</Link>
+                    )
+                })}
               </div>
             </div>
-            <li className='applyx'><Link style={linkStyle} to="/services">Apply For</Link> <img src={vector}></img></li>
+            <li className='applyx'><Link style={linkStyle} to="/application">Apply For</Link> <img src={vector}></img></li>
             <div className="drop-apply">
               <div className="dc-1">
                 <h2>Apply for</h2>
               </div>
               <div className="dc-3">
                 <a href="">1-Month Bootcamp</a> <br />
-                <a href="">3-Month Regular Course</a>
+                <a href="">3-Month Regular Course</a> <br />
+                <a href="">Scholarship</a>
                 
               </div>
             </div>
@@ -128,36 +158,33 @@ function Navbar() {
       <div className={openMobile ? 'mobile inView' : 'mobile'}>
         <h3><Link style={{fontWeight: 'bold', fontSize: '18px'}} to="/courses" onClick={closeMenu}>Courses</Link><img src={vector} onClick={cmobDrop} style={{transform: cmobNavDrop ? "rotate(180deg)" : "rotate(0deg)"}}></img></h3>
         <h3><Link style={{fontWeight: 'bold', fontSize: '18px'}} to="/services" onClick={closeMenu}>Services</Link><img src={vector} onClick={smobDrop} style={{transform: smobNavDrop ? "rotate(180deg)" : "rotate(0deg)"}}></img></h3>
+        <h3><Link style={{fontWeight: 'bold', fontSize: '18px'}} to="/application" onClick={closeMenu}>Apply</Link><img src={vector} onClick={amobDrop} style={{transform: amobNavDrop ? "rotate(180deg)" : "rotate(0deg)"}}></img></h3>
         <Link style={linkStyle} to="/aboutus" onClick={closeMenu}><h3>About Us</h3></Link>
         <Link style={linkStyle} to="/contactus" onClick={closeMenu}><h3>Contact Us</h3></Link>
         <div className='nav-btn'>
           <Link style={linkStyle} to="/signin" onClick={closeMenu}><button>Sign In</button></Link>
           <Link style={{ linkStyle }} to="/signup" onClick={closeMenu}><button>Register</button></Link>
         </div>
-        <div className='mobile-course-drop' style={{height: cmobNavDrop ? "350px" : "0px"}}>
-              <Link to="courses/cybersecurity">Software Engineering</Link>
-                <Link to="courses/cybersecurity">Graphics Design UI/UX</Link>
-                <Link to="courses/cybersecurity">Android/IOS Development</Link>
-                <Link to="courses/cybersecurity">CMS/BMS/Database MS</Link>
-                <Link to="courses/cybersecurity">Machine Learning</Link>
-                <Link to="courses/cybersecurity">Ethical Hacking</Link>
-                <Link to="courses/cybersecurity">Computer Diploma</Link>
-                <Link to="courses/cybersecurity">Cyber Security</Link>
-                <Link to="courses/cybersecurity">Artificial Intelligence</Link>
+        <div className='mobile-course-drop' style={{height: cmobNavDrop ? "370px" : "0px"}}>
+        {offeredCourses.map(eachCourse => {
+                    return (
+                            <Link onClick={closeMenu} to={`/courses/${eachCourse.link}`}>{eachCourse.title}</Link>
+                    )
+                })}
         </div>
         <div className='mobile-service-drop' style={{height: smobNavDrop ? "400px" : "0px"}}>
         
-                <Link to="services/drpshipping">Drop Shipping Services</Link>
-                <Link to="services/drpshipping">Web Design and Hosting</Link>
-                <Link to="services/drpshipping">Penetration Testing</Link>
-                <Link to="services/drpshipping">ICT Training Center</Link>
-                <Link to="services/drpshipping">Business Branding</Link>
-                <Link to="services/drpshipping">Data Analysis</Link>
-                <Link to="services/drpshipping">Graphics Design</Link>
-                <Link to="services/drpshipping">Business Development</Link>
-                <Link to="services/drpshipping">Android/IOS Development</Link>
-                <Link to="services/drpshipping">Product Design UI/UX</Link>
-                <Link to="services/drpshipping">Content Management System</Link>
+        {offeredServices.map(eachService => {
+                    return (
+                            <Link onClick={closeMenu} to={`/services`}>{eachService.title}</Link>
+                    )
+                })}
+        </div>
+        <div className='mobile-apply-drop' style={{height: amobNavDrop ? "110px" : "0px"}}>
+        
+            <Link onClick={closeMenu} to="/application">1-Month Bootcamp</Link> <br />
+            <Link onClick={closeMenu} to="/application">3-Month Regular Course</Link> <br />
+            <Link onClick={closeMenu} to="/applicationg">Scholarship</Link>
         </div>
       </div>
 

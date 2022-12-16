@@ -30,16 +30,16 @@ function CourseMobile() {
 
 
     const offeredCourses = [
-        { id: 1, title: "Artificial Intelligence Course", preview: artificial, rating: 4.5, category: "javascript",},
-        { id: 2, title: "Ethical Hacking Course", preview: ehack, rating: 4.5, category: "datascience",},
-        { id: 3, title: "Computer Diploma Course", preview: diploma, rating: 4.5, category: "datascience", },
-        { id: 4, title: "Web App Development Course", preview: webdev, rating: 4.7, category: "javascript", },
-        { id: 5, title: "Software Engineering Course", preview: softw, rating: 4.5, category: "excel", },
-        { id: 6, title: "Android/IOS Development Course", preview: andr, rating: 4.5, category: "excel", },
-        { id: 7, title: "Cyber Security Course", preview: cyber, rating: 4.7, category: "excel", },
-        { id: 8, title: "Graphics Design UI/UX Course", preview: gdesign, rating: 4.5, category: "javascript", },
-        { id: 9, title: "CMS/BMS/Database MS Course", preview: dbase, rating: 4.7, category: "datascience", },
-        { id: 10, title: "Machine Learning Course", preview: machinee, rating: 4.5, category: "javascript", },
+        { id: 1, title: "Artificial Intelligence Course", preview: artificial, rating: 4.5, category: "javascript", link: "artificialintelligence"},
+        { id: 2, title: "Ethical Hacking Course", preview: ehack, rating: 4.5, category: "datascience", link: "ethicalhacking"},
+        { id: 3, title: "Computer Diploma Course", preview: diploma, rating: 4.5, category: "datascience", link: "computerdiploma"},
+        { id: 4, title: "Web App Development Course", preview: webdev, rating: 4.7, category: "javascript", link: "webdevelopment"},
+        { id: 5, title: "Software Engineering Course", preview: softw, rating: 4.5, category: "excel", link: "softwareengineering"},
+        { id: 6, title: "Android/IOS Development Course", preview: andr, rating: 4.5, category: "excel", link: "androidiosdevelopment"},
+        { id: 7, title: "Cyber Security Course", preview: cyber, rating: 4.7, category: "excel", link: "cybersecurity"},
+        { id: 8, title: "Graphics Design UI/UX Course", preview: gdesign, rating: 4.5, category: "javascript", link: "graphicsdesign"},
+        { id: 9, title: "CMS/BMS/Database MS Course", preview: dbase, rating: 4.7, category: "datascience", link: "databasecourse"},
+        { id: 10, title: "Machine Learning Course", preview: machinee, rating: 4.5, category: "javascript", link: "machinelearning"},
 
 
     ];
@@ -147,7 +147,10 @@ function CourseMobile() {
     setInterval (autScrll, 3000);
 
 
-
+    const linkStyle = {
+        textDecoration: 'none',
+        color: 'unset',
+      }
 
     return (
         <div className='CourseMobile'>
@@ -170,7 +173,7 @@ function CourseMobile() {
                                                 <img className='course-img' src={eachCox.preview} alt={eachCox.title}></img>
                                             </div>
                                             <span><h4>{eachCox.title}</h4><button className='rating'>&#9733; {eachCox.rating}</button></span>
-                                            <button className='more'>Learn More <img src='' alt="" /></button>
+                                            <Link style={linkStyle} to={`/courses/${eachCox.link}`}><button className='more'>Learn More <img src={arrow} alt="" /></button></Link>
                                         </div>
                                     )
                                 })}

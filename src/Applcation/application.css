@@ -1,0 +1,20 @@
+.SignIn {
+    /* background: linear-gradient(111.56deg, #FEBB7B 23.84%, #A5BCF7 73.02%); */
+    background-color: var(--bg-color);
+    /* height: 1000px; */
+    padding-bottom: 40px;
+}
+
+.email-add select {
+    width: 100%;
+    /* margin: 100px auto; */
+    padding: 20px;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    outline: none;
+    transition: .5s;
+}
+
+option {
+    padding: 0 4px;
+}

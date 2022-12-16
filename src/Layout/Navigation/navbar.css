@@ -197,16 +197,19 @@ nav {
 }
 
 .drop-apply {
-    padding: 20px 50px;
+    padding: 0px 50px;
     position: absolute;
-    width: 100%;
+    width: 40%;
+    max-width: 400px;
     background-color: white;
     z-index: 11;
-    left: 0;
+    left: 30%;
     top: 62px;
-    opacity: 0;
-    transform: translateX(-100%);
+    /* opacity: 0;
+    transform: translateY(-150%); */
     transition: 1s;
+    height: 0;
+    overflow: hidden;
 }
 
 .servx img, .applyx img, .coux img, .mobile h3 img {
@@ -224,8 +227,10 @@ nav {
 }
 
 .applyx:hover~.drop-apply {
-    opacity: 1;
-    transform: translateX(0);
+    /* opacity: 1;
+    transform: translateY(0); */
+    height: 200px;
+    padding: 20px 50px;
 }
 
 .drop-courses:hover {
@@ -239,8 +244,10 @@ nav {
 }
 
 .drop-apply:hover {
-    transform: translateX(0);
-    opacity: 1;
+    /* transform: translateX(0);
+    opacity: 1; */
+    height: 200px;
+    padding: 20px 50px;
 }
 
 .dc-1 {
@@ -297,6 +304,24 @@ nav {
     margin: 0 2.5%;
     position: absolute;
     top: 170px;
+    border-radius: 4px;
+    /* height: 0px; */
+    overflow: hidden;
+    transition: .7s;
+    text-align: left;
+    padding: 0 2px;
+}
+
+.mobile-apply-drop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* gap: 20px; */
+    background-color: white;
+    width: 95%;
+    margin: 0 2.5%;
+    position: absolute;
+    top: 230px;
     border-radius: 4px;
     /* height: 0px; */
     overflow: hidden;

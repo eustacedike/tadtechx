@@ -1,6 +1,9 @@
 import React from 'react';
 import style from './learn.css';
 import { useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
+
 import preview from './assets/preview.png';
 
 
@@ -18,10 +21,7 @@ function Learn (props) {
         } else {
             discc.current.scrollBy(240,0);
         }
-            // console.log(discc.current.scrollLeft);
-            // console.log(discc.current.offsetWidth);
-            // console.log(discc.current.scrollWidth);
-            // console.log(discc.current.clientWidth * 1.25);
+  
         
     };
 
@@ -66,7 +66,7 @@ function Learn (props) {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, modi tempora. Voluptas assumenda officia quisquam. Quidem, similique magni culpa dolores consequatur cumque cupiditate ratione quibusdam eos quo.</p>
                     <br/>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iure, consectetur sunt repudiandae voluptatum quasi architecto sit aliquam magni inventore! Molestias quia incidunt deleniti.</p>
-                    <button style={{display: props.show}}>Apply here</button>
+                    <Link to='/application'><button style={{display: props.show}}>Apply here</button></Link>
                 </div>
             </div>
         </div>

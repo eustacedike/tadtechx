@@ -27,19 +27,17 @@ function Courses(props) {
 
 
     const offeredCourses = [
-        {id: 1, title: "Artificial Intelligence Course", preview: artificial, rating: 4.5},
-        {id: 2, title: "Ethical Hacking Course", preview: ehack, rating: 4.5},
-        {id: 3, title: "Computer Diploma Course", preview: diploma, rating: 4.5},
-        {id: 4, title: "Web App Development Course", preview: webdev, rating: 4.5},
-        {id: 5, title: "Software Engineering Course", preview: softw, rating: 4.5},
-        {id: 6, title: "Android/IOS Development Course", preview: andr, rating: 4.5},
-        {id: 7, title: "Cyber Security Course", preview: cyber, rating: 4.5},
-        {id: 8, title: "Graphics Design UI/UX Course", preview: gdesign, rating: 4.5},
-        {id: 9, title: "CMS/BMS/Database MS Course", preview: dbase, rating: 4.5},
-        {id: 10, title: "Machine Learning Course", preview: machinee, rating: 4.5},
-       
-        
-      ];
+        {id: 1, title: "Artificial Intelligence Course", preview: artificial, rating: 4.5, link: "artificialintelligence"},
+        {id: 2, title: "Ethical Hacking Course", preview: ehack, rating: 4.5, link: "ethicalhacking"},
+        {id: 3, title: "Computer Diploma Course", preview: diploma, rating: 4.5, link: "computerdiploma"},
+        {id: 4, title: "Web App Development Course", preview: webdev, rating: 4.5, link: "webdevelopment"},
+        {id: 5, title: "Software Engineering Course", preview: softw, rating: 4.5, link: "softwareengineering"},
+        {id: 6, title: "Android/IOS Development Course", preview: andr, rating: 4.5, link: "androidiosdevelopment"},
+        {id: 7, title: "Cyber Security Course", preview: cyber, rating: 4.5, link: "cybersecurity"},
+        {id: 8, title: "Graphics Design UI/UX Course", preview: gdesign, rating: 4.5, link: "graphicsdesign"},
+        {id: 9, title: "CMS/BMS/Database MS Course", preview: dbase, rating: 4.5, link: "databasecourse"},
+        {id: 10, title: "Machine Learning Course", preview: machinee, rating: 4.5, link: "machinelearning"},
+       ];
     
     const carrd = useRef();
 
@@ -79,7 +77,11 @@ function Courses(props) {
 }, []);
 
   
-    
+const linkStyle = {
+    textDecoration: 'none',
+    color: 'unset',
+  }
+
       return (
         <div className='Courses'>
 
@@ -93,7 +95,7 @@ function Courses(props) {
                             <img className='course-img' src={eachCourse.preview} alt={eachCourse.title}></img>
                             </div>
                             <span><h4>{eachCourse.title}</h4><button className='rating'>&#9733; {eachCourse.rating}</button></span>
-                            <button className='more'>Learn More <img src={arrow} alt="" /></button>
+                            <Link style={linkStyle} to={`/courses/${eachCourse.link}`}><button className='more'>Learn More <img src={arrow} alt="" /></button></Link>
                         </div>
                     )
                 })}

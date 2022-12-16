@@ -105,6 +105,7 @@
 }
 .sCourse:nth-child(9) {
     top: 13%; left: 40%;
+    display: none;
 }
 .sCourse:nth-child(3) {
     top: 32%; left: 11%;
@@ -268,6 +269,11 @@
         border-radius: 0;
         margin-top: 0;
     }
+
+    .sCourse:nth-child(9) {
+        top: 13%; left: 40%;
+        display: block;
+    }
 }
 @media (max-width: 530px) {
 .service-stat {
@@ -306,8 +312,8 @@
         /* height: 75px; */
         /* width: 100px; */
         width: 30%;
-        height: 24vw;
-        max-height: 80px;
+        height: 27vw;
+        max-height: 88px;
         border-radius: 8px;
         position: static;
     }

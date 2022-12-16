@@ -2,6 +2,7 @@
 import React from 'react';
 import { useRef } from 'react';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 //Style
 import style from './footer.css';
@@ -42,21 +43,27 @@ function Footer() {
     //         return () => window.removeEventListener('scroll', chck);
     //     }, []);
 
+    const goUp = () => {
+        window.scrollTo(0,0);
+      }
+
 
     return (
         <div className='Footer' ref={footerr}>
             <div className="footer-1">
                 <ul>
                     <li><h5>Company Info</h5></li> <br />
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Courses</a></li>
+                    <li><Link onClick={goUp} to="/aboutus">About Us</Link></li>
+                    <li><Link onClick={goUp} to="/contactus">Contact</Link></li>
+                    <li><Link onClick={goUp} to="/courses">Courses</Link></li>
                 </ul>
                 <ul>
                     <li><h5>Explore</h5></li> <br />
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Courses</a></li>
+                    <li><Link onClick={goUp} to="/services">Services</Link></li>
+                    <li><Link onClick={goUp} to="/courses">Apply For</Link></li>
+                    <li><Link onClick={goUp} to="/courses">Courses</Link></li>
+                    <li><Link onClick={goUp} to="/courses">FAQs</Link></li>
+                    <li><Link onClick={goUp} to="/courses">Join Us</Link></li>
                 </ul>
                 <ul>
                     <li><h5>Get In Touch</h5></li> <br />

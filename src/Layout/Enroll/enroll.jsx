@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 import style from './enroll.css';
 import { useEffect } from 'react';
@@ -11,6 +12,12 @@ function Enroll() {
 
     const enroller = useRef();
 
+
+    const linkStyle = {
+        textDecoration: 'none',
+        color: 'unset',
+      }
+    
     // const chck = () => {
         
     // console.log(enroller.current.getBoundingClientRect().top);
@@ -38,7 +45,7 @@ function Enroll() {
             <div className="enroll-1">
                 <h1 className='tech'>GET STARTED</h1>
                 <h2>Break into the tech industry like a pro</h2>
-            <button>Enroll now</button>
+            <button> <Link style={linkStyle} to='/application'>Enroll now</Link></button>
             </div>
             <div className="enroll-2">
 

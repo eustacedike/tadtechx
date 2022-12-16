@@ -45,3 +45,9 @@
 .snd-btn {
     text-align: right;
 }
+
+@media (min-width: 2px) {
+    .App {
+        opacity: 0;
+    }
+}
