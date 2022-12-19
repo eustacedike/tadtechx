@@ -17,6 +17,7 @@ import Service from "./Service/service";
 import About from "./About/about";
 import Contact from "./Contact/contact";
 import Application from "./Applcation/application";
+import ClassApp from "./ClassApp/classapp";
 
 import SignIn from "./SignIN/signIn";
 import SignUp from "./SignUP/signUp";
@@ -69,6 +70,7 @@ function App() {
           <Route path="aboutus" element={<About />}/>
           <Route path="contactus" element={<Contact />}/>
           <Route path="application" element={<Application />}/>
+          <Route path="class" element={<ClassApp />}/>
 
           <Route path="signin" element={<SignIn />}/>
           <Route path="signup" element={<SignUp />}/>

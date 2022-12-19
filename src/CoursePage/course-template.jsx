@@ -1,4 +1,8 @@
 import React from 'react';
+import { useState } from 'react';
+
+
+
 import style from './course-template.css';
 
 
@@ -23,6 +27,12 @@ function CourseTemplate (props) {
         {week: 5, lesson: "Color Contrast", task: "Colors should pass the WCAG 2.1 Level AA (4.5:1)"},
         {week: 6, lesson: "Color Contrast", task: "Colors should pass the WCAG 2.1 Level AA (4.5:1)"},
     ]
+
+    const [modal, setModal] = useState(false);
+
+    const openModal = () => {
+        setModal(value => !value);
+      }
 
     return (
         <div className='CyberSec' key={props.currCourse.id}>
@@ -79,7 +89,7 @@ function CourseTemplate (props) {
                             <h5>{props.currCourse.students} already enrolled on this course</h5>
                             <div className='soon'>
                                 <h4>Starts Soon</h4>
-                                <button>Join Course</button>
+                                <button onClick={openModal}>Join Course</button>
                             </div>
                         </div>
                     </div>
@@ -158,6 +168,41 @@ function CourseTemplate (props) {
                         </div>
                         <p>Пишу отзыв спустя 4 месяца после сдачи проекта. В течении этого времени были незначительные ошибки, но ребята сразу их исправляли. В целом все работает стабильно. Сотрудничаем дальше.</p>
                     </div>
+                </div>
+            </div>
+
+            <div className="join-modal"
+            style={{ transform: modal ? 'translate(-50%) scale(1)' : 'translate(-50%) scale(0)' }}
+            >
+                <div className="modal-head">
+                        <h3></h3><p onClick={()=>{setModal(value => false);}} style={{cursor: 'pointer', textAlign:'right'}}>&#10006;</p>
+                    </div>
+            <div className='contact-us-form'>
+                <form action="">
+                    {/* <div className="firstlast" style={{display: props.nameShow}}>
+                        <div className="firstn">
+                            <label htmlFor="firstname">First Name</label> <br />
+                            <input type="text" />
+                        </div>
+                        <div className="lastn">
+                            <label htmlFor="lastname">Last Name</label> <br />
+                            <input type="text" />
+                        </div>
+                    </div> */}
+                    <div className="email-add">
+                        <label htmlFor="email">Student ID</label> <br />
+                        <input type="text" />
+                    </div>
+                    <div className="email-add" style={{display: props.pswShow}}>
+                        <label htmlFor="password" >Password</label> <br />
+                        <input type="password" />
+                    </div>
+    
+                    <div className="snd-btn">
+                        <button>Join Course</button>
+                    </div>
+
+                </form>
                 </div>
             </div>
 

@@ -1,0 +1,92 @@
+
+
+
+.ClassApp {
+display: flex;
+}
+
+
+            
+.class-members {
+width: 20%;
+height: 800px;
+background-color: var(--bg-color);
+padding: 20px;
+}
+
+.class-members li {
+    list-style-type: symbols(\27A4);
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 10px;
+    color: var(--primary);
+}
+
+.class-members h4 {
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    color: var(--secondary);
+}
+    
+.main-classbox {
+    border: 1px solid var(--primary);
+    width: 55%;
+    height: 800px;
+    padding: 20px;
+}
+
+.code-edit {
+    height: 50%;
+    background-color: black;
+    border: 1px solid var(--secondary);
+    color: white;
+}
+
+.class-questions{
+    background-color: var(--bg-color);
+
+    width: 25%;
+    height: 800px;
+    padding: 20px;
+}
+
+.class-questions form {
+    text-align: right;
+
+}
+
+.class-questions textarea {
+    padding: 8px;
+    width: 100%;
+    /* height: 60px; */
+    margin-bottom: 8px;
+    border-radius: 3px;
+    border: 1px solid grey;
+}
+
+.class-questions button {
+
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 7px;
+    width: 35%;
+    margin-bottom: 8px;
+}
+
+.class-comment{
+    background-color: var(--primary);
+    padding: 10px 10px;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.class-comment p{
+    font-size: var(--card-p-font);
+}
+
+.class-comment h4, .class-comment b {
+    color: black;
+}
