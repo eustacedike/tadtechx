@@ -3,6 +3,10 @@ import { useRef } from 'react';
 import { Link } from "react-router-dom";
 import { useState } from 'react';
 
+import axios from 'axios';
+
+import { useCookies } from 'react-cookie';
+
 import style from './navbar.css';
 import logo from './assets/newLogo.png';
 import vector from './assets/vector.png';
@@ -10,6 +14,35 @@ import search from './assets/searchr.png';
 import closee from './assets/close.png';
 
 function Navbar() {
+
+  const [cookies, setCookie, removeCookie] = useCookies(['user']);
+  const isAuthenticated = (cookies.isAuthenticated === 'true');
+
+  const setAuthToken = token => {
+    if (token) {
+      // Apply authorization token to every request if logged in
+      axios.defaults.headers.common["Authorization"] = token;
+    } else {
+      // Delete auth header
+      delete axios.defaults.headers.common["Authorization"];
+    }
+  };
+
+//   Log user out
+const logoutUser = () => {
+// Remove token from local storage
+localStorage.removeItem("jwtToken");
+// Remove auth header for future requests
+setAuthToken(false);
+// Set current user to empty object {} which will set isAuthenticated to false
+setCookie('isAuthenticated', false, { path: '/' });
+removeCookie('FirstName', { path: '/' });
+removeCookie('LastName', { path: '/' });
+removeCookie('Email', { path: '/' });
+removeCookie('Role', { path: '/' });
+window.location.reload();
+};
+
 
   const offeredCourses = [
     {id: 1, title: "Artificial Intelligence", rating: 4.5, link: "artificialintelligence"},
@@ -139,9 +172,20 @@ function Navbar() {
           <input type='text' placeholder='Search courses'></input>
           <img className='search-icon' src={search} onClick={closeMenu}></img>
         </div>
-        <div className='nav-btn gone'>
-          <button className='sign'><Link style={linkStyle} to="/signin">Sign In</Link></button>
-          <button><Link style={{ textDecoration: 'none', color: 'white' }} to="/signup">Register</Link></button>
+        <div className='nav-btn gone'
+        >
+          <button 
+          style={{display: isAuthenticated? "none" : "block"}}
+          
+          className='sign'><Link style={linkStyle} to="/signin">Sign In</Link></button>
+          <button
+          style={{display: isAuthenticated? "none" : "block"}}
+          
+          ><Link style={{ textDecoration: 'none', color: 'white' }} to="/signup">Register</Link></button>
+          <button
+          style={{display: isAuthenticated? "block" : "none"}}
+          onClick={logoutUser}
+          >Log Out</button>
         </div>
         <div className={openMobile ? 'hamburger change' : 'hamburger'} onClick={openMenu}>
           <div className='bar1'></div>

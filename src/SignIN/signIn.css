@@ -11,6 +11,12 @@
     color: grey;
 }
 
+.SignIn .errors {
+    color: red;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
 .signin-box {
 text-align: center;
 width: 80%;
@@ -102,6 +108,10 @@ padding: 15px 0;
 .dob input {
     width: 100% !important;
 }
+
+/* .errors {
+    color: red;
+} */
 
 @media (max-width: 800px) {
     .signin-box {

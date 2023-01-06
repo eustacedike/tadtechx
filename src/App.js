@@ -4,6 +4,10 @@ import ReactDOM from "react-dom/client";
 import { HashRouter, BrowserRouter, Routes, Route } from "react-router-dom";
 
 
+import store from "./Redux/store";
+import { Provider } from "react-redux";
+import { CookiesProvider } from "react-cookie";
+
 // Style
 import './App.css';
 
@@ -18,6 +22,7 @@ import About from "./About/about";
 import Contact from "./Contact/contact";
 import Application from "./Applcation/application";
 import ClassApp from "./ClassApp/classapp";
+import Dashboard from "./Dashboard/dashboard";
 
 import SignIn from "./SignIN/signIn";
 import SignUp from "./SignUP/signUp";
@@ -46,7 +51,9 @@ import softw from './CoursePage/coursedata/images/software.png';
 
 
 function App() {
+  
   return (
+  <Provider store={store}>
     <div className="App">
 
       
@@ -70,7 +77,15 @@ function App() {
           <Route path="aboutus" element={<About />}/>
           <Route path="contactus" element={<Contact />}/>
           <Route path="application" element={<Application />}/>
-          <Route path="class" element={<ClassApp />}/>
+          <Route path="dashboard" element={<Dashboard />}/>
+          
+          
+          <Route path="class" element={<ClassApp thisClass={courseData.webDev}  />}/>
+          <Route path="class/webdevelopment" element={<ClassApp thisClass={courseData.webDev} pLanguage="https://replit.com/@EustaceDike/myHTML?embed=true"/>}/>
+          <Route path="class/artificialintelligence" element={<ClassApp thisClass={courseData.ai} pLanguage="https://replit.com/@EustaceDike/myPython?embed=true"/>}/>
+          <Route path="class/ethicalhacking" element={<ClassApp thisClass={courseData.ehack} />}/>
+          <Route path="class/androidiosdevelopment" element={<ClassApp thisClass={courseData.androidios} />}/>
+          <Route path="class/graphicsdesign" element={<ClassApp thisClass={courseData.gdesign} />}/>
 
           <Route path="signin" element={<SignIn />}/>
           <Route path="signup" element={<SignUp />}/>
@@ -78,10 +93,12 @@ function App() {
         </Route>
       </Routes>
     </HashRouter>
+   
 
     {/* <Service/> */}
 
     </div>
+    </Provider>
   );
 }
 

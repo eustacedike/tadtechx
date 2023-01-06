@@ -177,7 +177,7 @@ function CourseTemplate (props) {
                 <div className="modal-head">
                         <h3></h3><p onClick={()=>{setModal(value => false);}} style={{cursor: 'pointer', textAlign:'right'}}>&#10006;</p>
                     </div>
-            <div className='contact-us-form'>
+            <div className='contact-us-form' style={{backgroundColor: "white"}}>
                 <form action="">
                     {/* <div className="firstlast" style={{display: props.nameShow}}>
                         <div className="firstn">
@@ -201,6 +201,13 @@ function CourseTemplate (props) {
                     <div className="snd-btn">
                         <button>Join Course</button>
                     </div>
+
+                    <br/>
+
+                    <p
+                    style={{fontSize: "12px", color: "grey"}}
+                    >Please, note you can't register for another class once you've signed up for this class
+                    </p>
 
                 </form>
                 </div>

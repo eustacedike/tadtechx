@@ -16,9 +16,11 @@ function ClassMembers () {
 
             <br/> <br/>
 
-            <h4>Students</h4> <br/> 
+            <h4>Participants</h4> <br/> 
             
-            <li>John Wallace</li> <br/>
+            <li><span>John Wallace</span></li> <br/>
+            <li><span>John Wallace</span></li> <br/>
+            <li><span>John Wallace</span></li> <br/>
             <li>John Wallace</li> <br/>
             <li>John Wallace</li> <br/>
             <li>John Wallace</li> <br/>
