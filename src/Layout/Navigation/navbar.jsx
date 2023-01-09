@@ -182,6 +182,11 @@ window.location.reload();
           style={{display: isAuthenticated? "none" : "block"}}
           
           ><Link style={{ textDecoration: 'none', color: 'white' }} to="/signup">Register</Link></button>
+          
+          <Link style={{textDecoration: 'none', color: 'white'}} to="/dashboard"><button
+          style={{display: isAuthenticated? "block" : "none"}}
+          >Profile</button>
+          </Link>
           <button
           style={{display: isAuthenticated? "block" : "none"}}
           onClick={logoutUser}
@@ -206,8 +211,20 @@ window.location.reload();
         <Link style={linkStyle} to="/aboutus" onClick={closeMenu}><h3>About Us</h3></Link>
         <Link style={linkStyle} to="/contactus" onClick={closeMenu}><h3>Contact Us</h3></Link>
         <div className='nav-btn'>
-          <Link style={linkStyle} to="/signin" onClick={closeMenu}><button>Sign In</button></Link>
-          <Link style={{ linkStyle }} to="/signup" onClick={closeMenu}><button>Register</button></Link>
+          <Link style={linkStyle} to="/signin" onClick={closeMenu}>
+            <button style={{display: isAuthenticated? "none" : "block"}}>Sign In</button>
+            </Link>
+          <Link style={{ linkStyle }} to="/signup" onClick={closeMenu}>
+            <button style={{display: isAuthenticated? "none" : "block"}}>Register</button>
+            </Link>
+            <Link style={{textDecoration: 'none', color: 'white'}} to="/dashboard"><button
+          style={{display: isAuthenticated? "block" : "none"}}
+          >Profile</button>
+          </Link>
+          <button
+          style={{display: isAuthenticated? "block" : "none"}}
+          onClick={logoutUser}
+          >Log Out</button>
         </div>
         <div className='mobile-course-drop' style={{height: cmobNavDrop ? "370px" : "0px"}}>
         {offeredCourses.map(eachCourse => {

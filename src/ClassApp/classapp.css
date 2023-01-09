@@ -45,7 +45,8 @@ font-size: smaller;
 }
 
 .class-members li {
-    list-style-type: "\25B6";
+    /* list-style-type: "\25B6"; */
+    list-style-type: none;
     border-bottom: 1px solid lightgrey;
     padding-bottom: 10px;
     color: var(--primary);
@@ -53,8 +54,8 @@ font-size: smaller;
 
 }
 .class-members li span {
-    position: relative;
-    left: 10px;
+    /* position: relative;
+    left: 10px; */
 }
 
 .class-members h4 {
@@ -74,12 +75,21 @@ font-size: smaller;
 }
 
 .code-edit {
-    height: 50%;
+    height: 75%;
     background-color: black;
     border: 1px solid;
     color: white;
     width: 100%;
 
+}
+
+.refresh {
+    width: 20px;
+    color: white;
+    background-color: var(--secondary);
+    border:none;
+    padding: 2px;
+    cursor: pointer;
 }
 
 .class-messages {
@@ -154,6 +164,23 @@ font-size: smaller;
     color: var(--secondary);
 }
 
+.class-messages button {
+    color: white;
+    background-color: blue;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 2px;
+}
+
+.class-messages form {
+    width: 100%;
+}
+
+.class-messages input {
+    color: white;
+    padding: 6px 10px;
+    width: 60%;
+}
 
 
 

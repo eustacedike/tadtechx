@@ -1,7 +1,11 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
-import style from "./classapp.css"
+import style from "./classapp.css";
+
+import {FaUser, FaUsers, FaComment} from "react-icons/fa";
+import {BiRefresh} from "react-icons/bi";
 
 
 import ClassMembers from "./classmembers";
@@ -49,11 +53,11 @@ function ClassApp(props) {
         <div className="ClassApp">
 
             <nav className="classapp-nav">
-                <button>Me</button>
+               <Link to="/dashboard"><button><FaUser/></button></Link>
                 <h3>{props.thisClass.name}</h3>
                 <div>
-                    <button onClick={openMembers}>Members</button>
-                    <button onClick={openQuestions}>Questions</button>
+                    <button onClick={openMembers}><FaUsers/></button>
+                    <button onClick={openQuestions}><FaComment/></button>
                 </div>
             </nav>
             <div className="classapp-body">
@@ -73,7 +77,7 @@ function ClassApp(props) {
                      >
                         
                     </iframe>
-                    <button onClick={reloadIFrame}>reload</button>
+                    <button className="refresh" onClick={reloadIFrame}><BiRefresh/></button>
 
                     <br />
                     
@@ -83,34 +87,17 @@ function ClassApp(props) {
                             <h4>Dean Mark (Instructor)</h4> <br />
                             <p>HTML is a markup language used to structure a webpage/site</p>
                         </div>
-                        <div className="class-comment">
-                            <h4>Dean Mark (Instructor)</h4> <br />
-                            <p>HTML is a markup language used to structure a webpage/site</p>
-                        </div>
-                        <div className="class-comment">
-                            <h4>Instructor</h4> <br />
-                            <p>HTML is a markup language used to structure a webpage/site</p>
-                        </div>
-                        <div className="class-comment">
-                            <h4>Instructor</h4> <br />
-                            <p>HTML is a markup language used to structure a webpage/site</p>
-                        </div>
-                        <div className="class-comment">
-                            <h4>Instructor</h4> <br />
-                            <p>HTML is a markup language used to structure a webpage/site</p>
-                        </div>
-                        <div className="class-comment">
-                            <h4>Instructor</h4> <br />
-                            <p>HTML is a markup language used to structure a webpage/site</p>
-                        </div>
-                        <div className="class-comment">
-                            <h4>Instructor</h4> <br />
-                            <p>HTML is a markup language used to structure a webpage/site</p>
-                        </div>
-                        <div className="class-comment">
-                            <h4>Instructor</h4> <br />
-                            <p>HTML is a markup language used to structure a webpage/site</p>
-                        </div>
+
+                        
+                        <button className="vw">
+                            view more..
+                        </button>
+                        <br />
+                        <br />
+                        <form>
+                            <input type='text'></input>
+                            <button>send</button>
+                        </form>
                     </div>
 
                 </div>

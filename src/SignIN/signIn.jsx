@@ -81,7 +81,8 @@ const loginUser = (e) => {
         setCookie('FirstName', res.data.userFirstName, { path: '/' });
         setCookie('LastName', res.data.userLastName, { path: '/' });
         setCookie('Email', res.data.userEmail, { path: '/' });
-        setCookie('Role', res.data.Role, { path: '/' });
+        setCookie('Role', res.data.userRole, { path: '/' });
+        setCookie('JoinDate', res.data.userJoinDate, { path: '/' });
 
         navigate('/dashboard');
         window.location.reload();
@@ -135,7 +136,7 @@ const onChange = (b,a) => {
     return (
         <div className='SignIn'>
 
-<button onClick={printCookies}> print cookies </button> 
+{/* <button onClick={printCookies}> print cookies </button>  */}
 {/* <h1>{cookies.FirstName}</h1> */}
 
             <div className='contact-us-form'>

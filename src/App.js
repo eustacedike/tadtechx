@@ -4,8 +4,7 @@ import ReactDOM from "react-dom/client";
 import { HashRouter, BrowserRouter, Routes, Route } from "react-router-dom";
 
 
-import store from "./Redux/store";
-import { Provider } from "react-redux";
+
 import { CookiesProvider } from "react-cookie";
 
 // Style
@@ -47,13 +46,15 @@ import softw from './CoursePage/coursedata/images/software.png';
 // import webdev from './CoursePage/coursedata/images/webdev.png';
 
 
+//Private Route
+import PrivateRoute from "./Private-Route/PrivateRoute";
 
 
 
 function App() {
   
   return (
-  <Provider store={store}>
+  <CookiesProvider>
     <div className="App">
 
       
@@ -77,10 +78,18 @@ function App() {
           <Route path="aboutus" element={<About />}/>
           <Route path="contactus" element={<Contact />}/>
           <Route path="application" element={<Application />}/>
-          <Route path="dashboard" element={<Dashboard />}/>
+          {/* <Route path="dashboard" element={<Dashboard />}/> */}
+          <Route
+                        path="dashboard"
+                        element={
+                            <PrivateRoute>
+                                <Dashboard />
+                            </PrivateRoute>
+                        }
+                    />
           
           
-          <Route path="class" element={<ClassApp thisClass={courseData.webDev}  />}/>
+          {/* <Route path="class" element={<ClassApp thisClass={courseData.webDev}  />}/> */}
           <Route path="class/webdevelopment" element={<ClassApp thisClass={courseData.webDev} pLanguage="https://replit.com/@EustaceDike/myHTML?embed=true"/>}/>
           <Route path="class/artificialintelligence" element={<ClassApp thisClass={courseData.ai} pLanguage="https://replit.com/@EustaceDike/myPython?embed=true"/>}/>
           <Route path="class/ethicalhacking" element={<ClassApp thisClass={courseData.ehack} />}/>
@@ -98,7 +107,7 @@ function App() {
     {/* <Service/> */}
 
     </div>
-    </Provider>
+    </CookiesProvider>
   );
 }
 

@@ -40,25 +40,37 @@
     gap: 10%;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0 5%;
+    background-color: white;
+    /* border: 2px solid red; */
+    width: 100%;
+    /* padding: 0 5%; */
 }
 
 .reg-course {
-    background-color: white;
+    /* background-color: white; */
     /* padding: 30px; */
-    border-radius: 5px;
+    /* border-radius: 5px; */
     /* color: white; */
     margin-bottom: 40px;
-    width: 45%;
+    width: 100%;
+
+
     /* font-size: smaller; */
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+}
+
+.reg-course h2{
+    background-color: black;
+    padding: 15px 30px;
+    /* border-radius: 4px 4px 0 0; */
+    color: white;
 }
 
 .reg-course h3{
-    background-color: var(--secondary);
+    /* background-color: black; */
     padding: 15px 30px;
-    border-radius: 4px 4px 0 0;
-    color: white;
+    /* border-radius: 4px 4px 0 0; */
+    color: var(--secondary);
 }
 
 .reg-course p{
@@ -86,6 +98,24 @@
     background-color:  var(--primary);
 }
 
+.online{
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+}
+
+.online p{
+    margin: 0px 9px;
+}
+
+.online div {
+    height: 9px;
+    width: 9px;
+    background-color: green;
+    border-radius: 50%;
+    box-shadow:0 0 9px green, inset 0 0 8px green;
+}
+
 @media (max-width: 400px) {
     .reg-course b {
         display: block;
@@ -94,7 +124,7 @@
 
 @media (max-width: 700px) {
     .dash-main{
-        padding: 0 3%;
+        /* padding: 0 3%; */
     }
 
     .reg-course {
@@ -114,14 +144,14 @@
     }
 
     .dash-main {
-        padding: 60px;
+        /* padding: 60px; */
     }
 
     .profile {
         display: block;
-        width: 40%;
+        /* width: 40%; */
         border-bottom: none;
         /* border-right: 1px solid var(--primary); */
-        max-width: 500px;
+        /* max-width: 500px; */
     }
 }
