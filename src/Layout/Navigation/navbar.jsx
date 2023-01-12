@@ -217,7 +217,7 @@ window.location.reload();
           <Link style={{ linkStyle }} to="/signup" onClick={closeMenu}>
             <button style={{display: isAuthenticated? "none" : "block"}}>Register</button>
             </Link>
-            <Link style={{textDecoration: 'none', color: 'white'}} to="/dashboard"><button
+            <Link style={{textDecoration: 'none', color: 'white'}} to="/dashboard" onClick={closeMenu}><button
           style={{display: isAuthenticated? "block" : "none"}}
           >Profile</button>
           </Link>

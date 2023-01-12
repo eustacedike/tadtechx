@@ -78,10 +78,8 @@ function App() {
           <Route path="aboutus" element={<About />}/>
           <Route path="contactus" element={<Contact />}/>
           <Route path="application" element={<Application />}/>
-          {/* <Route path="dashboard" element={<Dashboard />}/> */}
-          <Route
-                        path="dashboard"
-                        element={
+
+          <Route path="dashboard" element={
                             <PrivateRoute>
                                 <Dashboard />
                             </PrivateRoute>
@@ -90,7 +88,11 @@ function App() {
           
           
           {/* <Route path="class" element={<ClassApp thisClass={courseData.webDev}  />}/> */}
-          <Route path="class/webdevelopment" element={<ClassApp thisClass={courseData.webDev} pLanguage="https://replit.com/@EustaceDike/myHTML?embed=true"/>}/>
+          <Route path="class/webdevelopment" element={
+          <PrivateRoute>
+          <ClassApp thisClass={courseData.webDev} pLanguage="https://replit.com/@EustaceDike/myHTML?embed=true"/>
+          </PrivateRoute>
+          }/>
           <Route path="class/artificialintelligence" element={<ClassApp thisClass={courseData.ai} pLanguage="https://replit.com/@EustaceDike/myPython?embed=true"/>}/>
           <Route path="class/ethicalhacking" element={<ClassApp thisClass={courseData.ehack} />}/>
           <Route path="class/androidiosdevelopment" element={<ClassApp thisClass={courseData.androidios} />}/>
