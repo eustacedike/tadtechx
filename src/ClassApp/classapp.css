@@ -149,6 +149,12 @@ font-size: smaller;
     margin-bottom: 8px;
 }
 
+.all-class-questions {
+    height: 55vh;
+    /* border: 2px solid red; */
+    overflow: scroll;
+}
+
 .class-comment{
     background-color: white;
     padding: 10px 10px;
@@ -160,9 +166,22 @@ font-size: smaller;
 
 }
 
-.class-comment p{
-    /* font-size: var(--card-p-font); */
+.class-comment p {
+    cursor: pointer;
 }
+
+.class-comment p:hover span{
+    display: block;
+}
+
+.class-comment span{
+    color: red;
+    margin-left: 10px;
+    display: none;
+    cursor: pointer;
+}
+
+
 
 .class-comment h4, .class-comment b {
     color: var(--secondary);
