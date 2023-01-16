@@ -15,8 +15,6 @@ import ClassQuestions from "./classquestions";
 
 import { useCookies } from 'react-cookie';
 
-
-
 function ClassApp(props) {
 
     const [cookies, setCookie, removeCookie] = useCookies(['user']);
@@ -85,7 +83,13 @@ function ClassApp(props) {
 
     };
 
-    getMessages();
+    // useEffect(() => {
+    //     getMessages();
+    //   });
+    useEffect(() => {
+        getMessages();
+   }, [instructorMessages]);
+    // getMessages();
 
     const deleteMessage = (a) => {
 
@@ -108,7 +112,7 @@ function ClassApp(props) {
             {/* <button onClick={deleteMessage}>get</button> */}
 
             <nav className="classapp-nav">
-                <Link to="/dashboard"><button><FaUser /></button></Link>
+                {/* <Link to="/dashboard"><button><FaUser /></button></Link> */}
                 <h3>{props.thisClass.name}</h3>
                 <div>
                     <button onClick={openMembers}><FaUsers /></button>
@@ -138,13 +142,14 @@ function ClassApp(props) {
 
 
                     <div className="class-messages">
-                        <div className="class-comment">
-                            <h4>Dean Mark (Instructor)</h4> <br />
-
+                        
                             {
                                 instructorMessages.map(imessage => {
-                                    return (
+                                    return (<div className="class-comment">
+                            {/* <h4>Dean Mark (Instructor)</h4> <br /> */}
+
                                         <>
+                                        <h2 style={{color: "blue"}}>Topic</h2> <br/>
                                             <p key={instructorMessages.indexOf(imessage)}>{imessage.message}
                                                 <span className="delete-msg"
                                                     onClick={() => { deleteMessage(instructorMessages.indexOf(imessage)) }}
@@ -152,12 +157,12 @@ function ClassApp(props) {
                                                 ><FaTrash /></span>
                                             </p> <br />
                                             {/* <p>{instructorMessages.indexOf(imessage)}</p> */}
-                                        </>
+                                        </></div>
                                     )
                                 })
                             }
 
-                        </div>
+                        
 
 
 

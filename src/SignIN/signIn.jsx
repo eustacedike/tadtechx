@@ -124,7 +124,7 @@ const loginUser = (e) => {
 const onChange = (b,a) => {
     b(value => a);
 
-    console.log(logUser)
+    // console.log(logUser)
 }
 
 

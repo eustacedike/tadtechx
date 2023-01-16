@@ -87,7 +87,7 @@ function App() {
                     />
           
           
-          {/* <Route path="class" element={<ClassApp thisClass={courseData.webDev}  />}/> */}
+          <Route path="class" element={<ClassApp thisClass={courseData.webDev}  />}/>
           <Route path="class/webdevelopment" element={
           <PrivateRoute>
           <ClassApp thisClass={courseData.webDev} pLanguage="https://replit.com/@EustaceDike/myHTML?embed=true"/>

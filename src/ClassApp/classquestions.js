@@ -2,7 +2,7 @@ import React from "react";
 
 import axios from "axios";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { Cookies, useCookies } from 'react-cookie';
 
@@ -58,7 +58,9 @@ function ClassQuestions(props) {
 
     };
 
-    getQuestions();
+    useEffect(() => {
+        getQuestions();
+      }, [questionOutput]);
 
 
     const [answer, setAnswer] = useState("");
@@ -87,7 +89,11 @@ function ClassQuestions(props) {
     return (
         <div className="classdiv">
 
-            <form onSubmit={sendQuestion} noValidate>
+            <form
+            onSubmit={sendQuestion}
+            noValidate
+            style={{ display: cookies.Role === "instructor" ? "none" : "" }}
+            >
                 <textarea
                     rows="10" placeholder="Enter your question here"
                     id="qstn-box"
@@ -98,7 +104,10 @@ function ClassQuestions(props) {
             </form>
 
             <br /> <br />
-            <div className="all-class-questions">
+            <div
+            className="all-class-questions"
+            style={{ height: cookies.Role === "instructor" ? "75vh" : "" }}
+            >
 
             {
                 questionOutput.map(eachQuestion => {

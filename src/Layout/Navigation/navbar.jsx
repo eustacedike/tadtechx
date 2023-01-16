@@ -13,6 +13,8 @@ import vector from './assets/vector.png';
 import search from './assets/searchr.png';
 import closee from './assets/close.png';
 
+import { FaUser } from 'react-icons/fa';
+
 function Navbar() {
 
   const [cookies, setCookie, removeCookie] = useCookies(['user']);
@@ -175,20 +177,20 @@ window.location.reload();
         <div className='nav-btn gone'
         >
           <button 
-          style={{display: isAuthenticated? "none" : "block"}}
+          style={{display: isAuthenticated? "none" : ""}}
           
           className='sign'><Link style={linkStyle} to="/signin">Sign In</Link></button>
           <button
-          style={{display: isAuthenticated? "none" : "block"}}
+          style={{display: isAuthenticated? "none" : ""}}
           
           ><Link style={{ textDecoration: 'none', color: 'white' }} to="/signup">Register</Link></button>
           
           <Link style={{textDecoration: 'none', color: 'white'}} to="/dashboard"><button
-          style={{display: isAuthenticated? "block" : "none"}}
-          >Profile</button>
+          style={{display: isAuthenticated? "" : "none", marginRight: "10px"}}
+          ><FaUser/></button>
           </Link>
           <button
-          style={{display: isAuthenticated? "block" : "none"}}
+          style={{display: isAuthenticated? "" : "none"}}
           onClick={logoutUser}
           >Log Out</button>
         </div>
@@ -219,7 +221,7 @@ window.location.reload();
             </Link>
             <Link style={{textDecoration: 'none', color: 'white'}} to="/dashboard" onClick={closeMenu}><button
           style={{display: isAuthenticated? "block" : "none"}}
-          >Profile</button>
+          ><FaUser/></button>
           </Link>
           <button
           style={{display: isAuthenticated? "block" : "none"}}
