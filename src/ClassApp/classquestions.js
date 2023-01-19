@@ -6,6 +6,9 @@ import { useState, useEffect } from "react";
 
 import { Cookies, useCookies } from 'react-cookie';
 
+import { FaCaretUp, FaCaretDown } from "react-icons/fa";
+
+
 
 
 import style from "./classapp.css"
@@ -83,8 +86,13 @@ function ClassQuestions(props) {
                 console.log(err.response.data)
             });
 
-        // document.getElementById("qstn-box").value = "";
+        document.getElementById("answ-box").value = "";
     };
+
+    const orderedQuestions = [...new Set(questionOutput.map((val) => val.name))];
+   
+
+    const [expandComments, setExpandComments] = useState(0);
 
     return (
         <div className="classdiv">
@@ -109,7 +117,7 @@ function ClassQuestions(props) {
             style={{ height: cookies.Role === "instructor" ? "75vh" : "" }}
             >
 
-            {
+            {/* {
                 questionOutput.map(eachQuestion => {
                     return (
                             <div className="class-comment" key={questionOutput.indexOf(eachQuestion)}>
@@ -133,7 +141,61 @@ function ClassQuestions(props) {
                             
                     )
                 })
+            } */}
+
+
+            {
+                orderedQuestions.map(eachOne => {
+                  const OQ2 =  questionOutput.filter(aa => {
+                        return aa.name === eachOne
+                    });
+                return (
+                    <div className="class-comment"
+                    style={{height: expandComments===orderedQuestions.indexOf(eachOne)+1? "":"110px"}}
+                    >
+                    <h3>{eachOne}
+                    <i 
+
+                    onClick={
+                        ()=>{
+                            expandComments === orderedQuestions.indexOf(eachOne)+1?
+                            setExpandComments(0) :
+                            setExpandComments(orderedQuestions.indexOf(eachOne)+1)}}
+                        >
+                        {expandComments===orderedQuestions.indexOf(eachOne)+1? <FaCaretUp/> : <FaCaretDown/>}
+                    </i></h3> <br/>
+
+                    {OQ2.map(eOQ2=>{
+                        return (
+                        <>
+                        <h4>Q</h4>
+                        <p className="quest">{eOQ2.question}</p>
+                                <br />
+                                <h4 style={{textAlign: "right"}}>A</h4>
+                                <form>
+                                <input
+                                onChange={(e) => { setAnswer(e.target.value) }}
+                                style={{ display: cookies.Role === "instructor" ? "" : "none" }}
+                                type="text"
+                                id="qstn-box"
+                                />
+                                <button
+                                onClick={() => { sendAnswer(questionOutput.indexOf(eOQ2)) }}
+                                style={{ display: cookies.Role === "instructor" ? "" : "none" }}
+
+                               >
+                                    reply
+                                </button>
+                                </form>
+                                <p className="ans">{eOQ2.answer}</p> <br/>
+                        </>)
+                    })}
+                    </div>
+                )
+
+                })
             }
+
                         </div>
 
 

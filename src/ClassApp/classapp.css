@@ -100,7 +100,7 @@ font-size: smaller;
 
     overflow-y: scroll;
     /* height: 50%; */
-    padding: 0 10px;
+    padding: 5px 10px;
 }
 
 .class-messages::-webkit-scrollbar {
@@ -118,7 +118,7 @@ font-size: smaller;
 
 .class-questions{
     background-color: var(--bg-color);
-
+    /* background-color: rgb(122, 123, 127); */
     width: 25%;
     height: 800px;
     padding: 20px;
@@ -156,7 +156,8 @@ font-size: smaller;
 }
 
 .class-comment{
-    background-color: white;
+    background-color: lightgrey;
+    /* background-color: rgb(0, 0, 0); */
     padding: 10px 10px;
     border-radius: 5px;
     /* color: white; */
@@ -164,17 +165,61 @@ font-size: smaller;
     font-size: smaller;
     box-shadow: 2.5px 2.5px 5px 1px rgba(0, 0, 0, 0.25);
 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    overflow: hidden;
+
+}
+
+.class-comment h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.class-comment h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.class-comment i {
+    color:#000000b3;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+.quest {
+margin-left: 10px;
+}
+
+.ans {
+    text-align: right;
+    /* background-color: var(--primary); */
+    margin-left: auto;
+    margin-right: 10px;
+
 }
 
 .class-comment p {
+    background-color: #000000b3;
     cursor: pointer;
+    color: white;
+    padding: 6px;
+    margin-top: 5px;
+    border-radius: 7px;
+    width: 85%;
+   
 }
 
-.class-comment p:hover span{
-    display: block;
+.class-comment h2:hover span{
+    display: inline;
 }
 
-.class-comment span{
+.class-comment h2 span{
     color: red;
     margin-left: 10px;
     display: none;
@@ -183,8 +228,8 @@ font-size: smaller;
 
 
 
-.class-comment h4, .class-comment b {
-    color: var(--secondary);
+.class-comment h4 {
+    color: black;
 }
 
 .class-comment button {
@@ -202,25 +247,65 @@ font-size: smaller;
     width: 70%;
 }
 
-.class-messages button {
+.date-stamp {
+    color: blue;
+    margin-top: 10px;
+}
+
+
+
+.instructor-modal {
+    position: sticky;
+    left: 85%;
+    bottom: 0px;
+
+    color: white;
+    background: var(--secondary);
+    padding: 10px 0px;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 55px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.instructor-form {
+    width: 48%;
+    min-width: 280px;
+    position: fixed;
+    bottom: 190px;
+    /* height: 250px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 7px;
+    gap: 55px;
+    background-color: rgb(240, 240, 240);
+    box-shadow: 2.5px 2.5px 5px 1px rgba(0, 0, 0, 0.25);
+
+    transform: scale(0.2);
+    transition: .7s;
+}
+
+.instructor-form p {
+    cursor: pointer;
+}
+
+.instructor-form input, .instructor-form select {
+    /* background-color: red; */
+    padding: 14px 10px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.instructor-form button {
     color: white;
     background-color: blue;
     padding: 16px 10px;
     border: none;
     border-radius: 2px;
     width: 20%;
-}
-
-.class-messages form {
-    width: 100%;
-    position: sticky;
-    bottom: 0;
-}
-
-.class-messages input {
-    /* color: white; */
-    padding: 14px 10px;
-    width: 80%;
 }
 
 

@@ -22,7 +22,8 @@
     "students": 4980,
     "syllabus": {
       "week 1": "color contrast"
-    }
+    },
+    "topics": ["HTML", "CSS", "JavaScript", "React"]
   },
 
   
