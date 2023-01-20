@@ -185,7 +185,7 @@ function ClassBody(props) {
                                         {eachsubmessage} 
                                         <span className="delete-msg"
                                         onClick={() => { deleteSubMessage(instructorMessages.indexOf(imessage),imessage.messageArray.indexOf(eachsubmessage)) }}
-                                        style={{ display: cookies.Role === "instructor" ? "" : "none", color:"yellow" }}
+                                        style={{ display: cookies.Role === "instructor" ? "" : "none"}}
                                     ><FaTrash /></span>
                                     </p>)
                                 })

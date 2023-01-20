@@ -70,7 +70,7 @@ font-size: smaller;
     /* border: 1px solid green; */
     /* position: relative; */
     width: 55%;
-    height: 87vh;
+    /* height: 100vh; */
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -99,7 +99,7 @@ font-size: smaller;
     position: relative;
 
     overflow-y: scroll;
-    /* height: 50%; */
+    height: 60%;
     padding: 5px 10px;
 }
 
@@ -212,7 +212,8 @@ margin-left: 10px;
     margin-top: 5px;
     border-radius: 7px;
     width: 85%;
-   
+   display: flex;
+   justify-content: space-between;
 }
 
 .class-comment h2:hover span{
@@ -221,6 +222,17 @@ margin-left: 10px;
 
 .class-comment h2 span{
     color: red;
+    margin-left: 10px;
+    display: none;
+    cursor: pointer;
+}
+
+.class-comment p:hover span{
+    display: inline;
+}
+
+.class-comment p span{
+    color: rgb(255, 145, 0);
     margin-left: 10px;
     display: none;
     cursor: pointer;
@@ -258,6 +270,7 @@ margin-left: 10px;
     position: sticky;
     left: 85%;
     bottom: 0px;
+    transform: translate(50%, 30%);
 
     color: white;
     background: var(--secondary);
