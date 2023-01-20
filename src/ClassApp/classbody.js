@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 import axios from "axios";
 
+import ImageUpload from "./uploadimage";
+
 import style from "./classapp.css";
 
 import { FaUser, FaUsers, FaComment, FaTrash, FaCommentAlt } from "react-icons/fa";
@@ -89,11 +91,26 @@ function ClassBody(props) {
 
     const [instructorMessages, setInstructorMessages] = useState([]);
 
+    const [lastTopic, setLastTopic] = useState([
+        {_id:  "63c931f36f755b3dd134f083",
+          message: "Topic",
+            class: "Web Development",
+            date:       "date" ,
+            
+            messageArray: [
+              "message loading...",
+              "message loading...",
+              "message loading...",
+            ]
+          }
+    ])
+
     const getMessages = () => {
         axios.get("api/messages/fetchmessages")
             .then((response) => {
                 // console.log(response.data.filter(forThisClass=>{return forThisClass._id === "63c0209a2ffd9164036e5bb7"}));
                 setInstructorMessages(response.data.filter(forThisClass => { return forThisClass.class === props.thisClass.name }).reverse());
+                setLastTopic([response.data.filter(forThisClass => { return forThisClass.class === props.thisClass.name }).reverse()[0]]);
             });
 
     };
@@ -101,13 +118,12 @@ function ClassBody(props) {
 
     useEffect(() => {
         getMessages();
-    }, [instructorMessages]);
-
+    }, [instructorMessages, lastTopic]);
 
     const deleteMessage = (a) => {
 
 
-        
+
         axios
             .post("/api/messages/deletemessage", { id: instructorMessages[a]._id })
             .then(res => {
@@ -120,7 +136,7 @@ function ClassBody(props) {
 
     }
 
-    const deleteSubMessage = (a,b) => {
+    const deleteSubMessage = (a, b) => {
 
 
         console.log(instructorMessages[a].messageArray[b]);
@@ -135,6 +151,19 @@ function ClassBody(props) {
             });
 
     }
+
+
+  
+
+  
+    console.log(lastTopic[0].imageArray);
+    // console.log(lastTopic[0].imageArray[0]);
+    // console.log(lastTopic[0]);
+    // console.log(instructorMessages);
+
+ 
+    
+
 
     return (
 
@@ -154,7 +183,7 @@ function ClassBody(props) {
 
             <div className="class-messages">
 
-                {
+                {/* {
                     instructorMessages.map(imessage => {
 
                         const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
@@ -210,7 +239,54 @@ function ClassBody(props) {
                         </div>
                         )
                     })
-                }
+                } */}
+
+<div className="class-comment">
+                            
+                            <>
+                                <h2 style={{ color: "#000000b3" }}
+                                >
+                                    {lastTopic[0].message}
+
+                                    <span className="delete-msg"
+                                        onClick={() => { deleteMessage(lastTopic) }}
+                                        style={{ display: cookies.Role === "instructor" ? "" : "none" }}
+                                    ><FaTrash /></span></h2> <br />
+
+                                <img src={lastTopic[0].imageArray}/>
+
+                                {lastTopic[0].messageArray.map(eachsubmessage => {
+                                    return (<p
+                                    style={{padding: "15px 10px", width: "100%", marginBottom: "15px"}}
+                                    >
+                                        {eachsubmessage} 
+                                        <span className="delete-msg"
+                                        onClick={() => { deleteSubMessage(lastTopic,lastTopic.messageArray.indexOf(eachsubmessage)) }}
+                                        style={{ display: cookies.Role === "instructor" ? "" : "none"}}
+                                    ><FaTrash /></span>
+                                    </p>)
+                                })
+                                }
+                                 {/* <b className="date-stamp">{dateFormat} <br /> {imessage.date.slice(11,16)}</b> */}
+
+                                <br />
+
+                                <form onSubmit={(e) => sendSubMessage(e, lastTopic[0].message)} noValidate>
+                                    <input
+                                        type="text"
+                                        id="submsg-box"
+                                        onChange={(e) => { setSubMessage(value => e.target.value) }}
+                                        placeholder="new message on this topic"
+                                        required
+                                    />
+                                    <button
+                                    
+                                    >send</button>
+                                </form>
+                            </>
+                        </div>
+
+
 
 
 
@@ -246,16 +322,23 @@ function ClassBody(props) {
                         }
 
                     </select> */}
+                    <h3>New Topic</h3>
                     <input type='text'
                         id="msg-box"
                         placeholder="Add New Topic"
                         onChange={(e) => { onChange(e.target.value) }}
                     />
-                   
-                    
+
+
                     <button>Add</button>
+
+                    <hr/>
+
+                    {/* <ImageUpload topic={lastTopic[0].message}/> */}
                 </form>
+                <ImageUpload topic={lastTopic[0].message}/>
             </div>
+
 
         </div>
     )
