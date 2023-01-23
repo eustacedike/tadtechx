@@ -12,6 +12,7 @@ import { FaUsers, FaComment } from "react-icons/fa";
 import ClassMembers from "./classmembers";
 import ClassQuestions from "./classquestions";
 import ClassBody from "./classbody";
+import PreviousTopics from "./prevclasses";
 
 import { useCookies } from 'react-cookie';
 
@@ -29,6 +30,7 @@ function ClassApp(props) {
     const openQuestions = () => {
         setQuestions(value => !value);
     }
+
 
 
     return (
@@ -61,8 +63,11 @@ function ClassApp(props) {
 
                 >
                     <ClassQuestions Dept={props.thisClass.name}/>
+                    <PreviousTopics 
+                    
+                    thisClass={props.thisClass}/>
                 </div>
-
+    
 
             </div>
         </div>

@@ -3,7 +3,9 @@
 import ReactDOM from "react-dom/client";
 import { HashRouter, BrowserRouter, Routes, Route } from "react-router-dom";
 
+import { useState, useEffect } from "react";
 
+import axios from "axios";
 
 import { CookiesProvider } from "react-cookie";
 
@@ -52,6 +54,25 @@ import PrivateRoute from "./Private-Route/PrivateRoute";
 
 
 function App() {
+
+  const [instructorMessages, setInstructorMessages] = useState([]);
+
+   
+    const getMessages = () => {
+        axios.get("api/messages/fetchmessages")
+            .then((response) => {
+              // console.log(response.data)
+                setInstructorMessages(response.data);
+            });
+
+    };
+
+
+    useEffect(() => {
+        getMessages();
+    }, [instructorMessages]);
+
+
   
   return (
   <CookiesProvider>
@@ -97,6 +118,23 @@ function App() {
           <Route path="class/ethicalhacking" element={<ClassApp thisClass={courseData.ehack} />}/>
           <Route path="class/androidiosdevelopment" element={<ClassApp thisClass={courseData.androidios} />}/>
           <Route path="class/graphicsdesign" element={<ClassApp thisClass={courseData.gdesign} />}/>
+
+
+          {
+                    instructorMessages.map(imessage => {
+
+         
+
+                        return (<Route
+                        path={`/class/webdevelopment/${imessage.message.split(' ').join('-').toLowerCase()}`}
+                        element={<About />}
+                        >
+                            
+                        </Route>
+                        )
+                    })
+                }
+
 
           <Route path="signin" element={<SignIn />}/>
           <Route path="signup" element={<SignUp />}/>

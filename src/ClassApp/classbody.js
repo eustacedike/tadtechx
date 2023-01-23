@@ -8,7 +8,7 @@ import ImageUpload from "./uploadimage";
 
 import style from "./classapp.css";
 
-import { FaUser, FaUsers, FaComment, FaTrash, FaCommentAlt } from "react-icons/fa";
+import { FaImage, FaUsers, FaComment, FaTrash, FaCommentAlt } from "react-icons/fa";
 import { BiRefresh } from "react-icons/bi";
 
 
@@ -19,6 +19,7 @@ function ClassBody(props) {
 
     const [cookies, setCookie, removeCookie] = useCookies(['user']);
     const [msgModal, setMsgModal] = useState(false);
+    const [imgModal, setImgModal] = useState(false);
 
     const thisIframe = useRef();
 
@@ -92,18 +93,22 @@ function ClassBody(props) {
     const [instructorMessages, setInstructorMessages] = useState([]);
 
     const [lastTopic, setLastTopic] = useState([
-        {_id:  "63c931f36f755b3dd134f083",
-          message: "Topic",
+        {
+            _id: "63c931f36f755b3dd134f083",
+            message: "Topic",
             class: "Web Development",
-            date:       "date" ,
-            
+            date: "date",
+
             messageArray: [
-              "message loading...",
-              "message loading...",
-              "message loading...",
+                "message loading...",
+                "message loading...",
+                "message loading...",
             ]
-          }
+        }
     ])
+
+    const [imgUrls, setImgUrls] = useState(["http://res.cloudinary.com/djrdbht1u/image/upload/v1674228821/myFolder%20/cu82ktjaxlkgklezs2vk.png"]);
+
 
     const getMessages = () => {
         axios.get("api/messages/fetchmessages")
@@ -111,6 +116,8 @@ function ClassBody(props) {
                 // console.log(response.data.filter(forThisClass=>{return forThisClass._id === "63c0209a2ffd9164036e5bb7"}));
                 setInstructorMessages(response.data.filter(forThisClass => { return forThisClass.class === props.thisClass.name }).reverse());
                 setLastTopic([response.data.filter(forThisClass => { return forThisClass.class === props.thisClass.name }).reverse()[0]]);
+                setImgUrls(response.data.filter(forThisClass => { return forThisClass.class === props.thisClass.name }).reverse()[0].imageArray);
+                
             });
 
     };
@@ -153,16 +160,14 @@ function ClassBody(props) {
     }
 
 
-  
 
-  
-    console.log(lastTopic[0].imageArray);
+    // console.log(imgUrls[0]);
+    // console.log(lastTopic[0].messageArray[2]);
     // console.log(lastTopic[0].imageArray[0]);
-    // console.log(lastTopic[0]);
     // console.log(instructorMessages);
 
- 
-    
+
+
 
 
     return (
@@ -241,50 +246,73 @@ function ClassBody(props) {
                     })
                 } */}
 
-<div className="class-comment">
-                            
-                            <>
-                                <h2 style={{ color: "#000000b3" }}
-                                >
-                                    {lastTopic[0].message}
+                <div className="class-comment">
 
-                                    <span className="delete-msg"
-                                        onClick={() => { deleteMessage(lastTopic) }}
-                                        style={{ display: cookies.Role === "instructor" ? "" : "none" }}
-                                    ><FaTrash /></span></h2> <br />
+                    <>
+                        <h2 style={{ color: "#000000b3" }}
+                        >
+                            {lastTopic[0].message}
 
-                                <img src={lastTopic[0].imageArray}/>
+                            <span className="delete-msg"
+                                onClick={() => { deleteMessage(lastTopic) }}
+                                style={{ display: cookies.Role === "instructor" ? "" : "none" }}
+                            ><FaTrash /></span></h2> <br />
 
-                                {lastTopic[0].messageArray.map(eachsubmessage => {
-                                    return (<p
-                                    style={{padding: "15px 10px", width: "100%", marginBottom: "15px"}}
-                                    >
-                                        {eachsubmessage} 
-                                        <span className="delete-msg"
-                                        onClick={() => { deleteSubMessage(lastTopic,lastTopic.messageArray.indexOf(eachsubmessage)) }}
-                                        style={{ display: cookies.Role === "instructor" ? "" : "none"}}
-                                    ><FaTrash /></span>
-                                    </p>)
-                                })
-                                }
-                                 {/* <b className="date-stamp">{dateFormat} <br /> {imessage.date.slice(11,16)}</b> */}
+                        {/* <img src={imgUrls[1]} /> */}
 
-                                <br />
+                        {lastTopic[0].messageArray.map(eachsubmessage => {
 
-                                <form onSubmit={(e) => sendSubMessage(e, lastTopic[0].message)} noValidate>
-                                    <input
-                                        type="text"
-                                        id="submsg-box"
-                                        onChange={(e) => { setSubMessage(value => e.target.value) }}
-                                        placeholder="new message on this topic"
-                                        required
-                                    />
-                                    <button
-                                    
-                                    >send</button>
-                                </form>
-                            </>
-                        </div>
+                            if (eachsubmessage.slice(0,21) === "http://res.cloudinary"){
+                                return (
+                                    <>
+                                    <img src={eachsubmessage}/>
+                                    </>
+                                )
+                            } else {
+                                return (
+                                    <p
+                                style={{ padding: "15px 10px", width: "100%", marginBottom: "15px" }}
+                            >
+                                {eachsubmessage}
+                                {/* {eachsubmessage.slice(0,21) === "http://res.cloudinary"? `$<img src="">` : "two"} */}
+                                <span className="delete-msg"
+                                    onClick={() => { deleteSubMessage(lastTopic, lastTopic.messageArray.indexOf(eachsubmessage)) }}
+                                    style={{ display: cookies.Role === "instructor" ? "" : "none" }}
+                                ><FaTrash /></span>
+                            </p>
+                                )
+                            }
+
+                            // return (<p
+                            //     style={{ padding: "15px 10px", width: "100%", marginBottom: "15px" }}
+                            // >
+                            //     {/* {eachsubmessage.slice(0,1)} */}
+                            //     {eachsubmessage.slice(0,21) === "http://res.cloudinary"? `$<img src="">` : "two"}
+                            //     <span className="delete-msg"
+                            //         onClick={() => { deleteSubMessage(lastTopic, lastTopic.messageArray.indexOf(eachsubmessage)) }}
+                            //         style={{ display: cookies.Role === "instructor" ? "" : "none" }}
+                            //     ><FaTrash /></span>
+                            // </p>)
+                        })
+                        }
+                        {/* <b className="date-stamp">{dateFormat} <br /> {imessage.date.slice(11,16)}</b> */}
+
+                        <br />
+
+                        <form onSubmit={(e) => sendSubMessage(e, lastTopic[0].message)} noValidate>
+                            <input
+                                type="text"
+                                id="submsg-box"
+                                onChange={(e) => { setSubMessage(value => e.target.value) }}
+                                placeholder="new message on this topic"
+                                required
+                            />
+                            <button
+
+                            >send</button>
+                        </form>
+                    </>
+                </div>
 
 
 
@@ -293,16 +321,23 @@ function ClassBody(props) {
 
 
 
-                <br />
+               
+            </div>
+ <br />
                 <button
                     className="instructor-modal"
                     onClick={() => setMsgModal(value => !value)}
                 ><FaCommentAlt /></button>
+
+                <button
+                    className="instructor-modal-2"
+                    onClick={() => setImgModal(value => !value)}
+                ><FaImage /></button>
                 <form
                     className="instructor-form"
                     style={{
                         display: cookies.Role === "instructor" ? "" : "none",
-                        transform: msgModal ? "scale(1)" : "scale(0)"
+                        transform: msgModal ? "scale(1) translateX(-50%)" : "scale(0) translateX(-50%)"
                     }}
                     onSubmit={sendMessage} noValidate
                 >
@@ -332,14 +367,19 @@ function ClassBody(props) {
 
                     <button>Add</button>
 
-                    <hr/>
 
-                    {/* <ImageUpload topic={lastTopic[0].message}/> */}
                 </form>
-                <ImageUpload topic={lastTopic[0].message}/>
-            </div>
 
-
+                <div className="instructor-form"
+                id="img-modal"
+                style={{
+                    display: cookies.Role === "instructor" ? "" : "none",
+                    transform: imgModal ? "scale(1) translateX(-50%)" : "scale(0) translateX(-50%)"
+                }}
+                >
+                    <p onClick={() => setImgModal(false)}>&#10006; </p>
+                <ImageUpload topic={lastTopic[0].message} />
+                </div>
         </div>
     )
 }

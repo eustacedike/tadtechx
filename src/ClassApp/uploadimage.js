@@ -17,6 +17,9 @@ function ImageUpload(props) {
 
     async function sendImg(e) {
         e.preventDefault();
+        document.getElementById('img-modal').style.transform = "scale(0)"
+
+
 
         let imageUrl = "";
            
@@ -46,12 +49,13 @@ function ImageUpload(props) {
             image: imageUrl,
             topic: props.topic,
         };
-        // console.log(submitPost);
+        
         
         await axios.post("/api/messages/uploadimage", submitPost)
             .catch(err => {
                 console.log(err.response)
             })
+
     }
 
 
