@@ -1,6 +1,6 @@
 import React from "react";
 
-import style from "./classapp.css"
+import style from "./classapp.css";
 
 function ClassMembers () {
 
@@ -18,9 +18,9 @@ function ClassMembers () {
 
             <h4>Participants</h4> <br/> 
             
-            <li><span>John Wallace</span></li> <br/>
-            <li><span>John Wallace</span></li> <br/>
-            <li><span>John Wallace</span></li> <br/>
+            {/* <ul>{props.people.map((person) => <li>{person}</li>)}</ul>; */}
+
+            
             <li>John Wallace</li> <br/>
             <li>John Wallace</li> <br/>
             <li>John Wallace</li> <br/>

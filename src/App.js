@@ -9,6 +9,9 @@ import axios from "axios";
 
 import { CookiesProvider } from "react-cookie";
 
+import socketIO from 'socket.io-client';
+
+
 // Style
 import './App.css';
 
@@ -24,6 +27,7 @@ import Contact from "./Contact/contact";
 import Application from "./Applcation/application";
 import ClassApp from "./ClassApp/classapp";
 import Dashboard from "./Dashboard/dashboard";
+import Topic from "./ClassApp/topic";
 
 import SignIn from "./SignIN/signIn";
 import SignUp from "./SignUP/signUp";
@@ -45,8 +49,7 @@ import ehack from './CoursePage/coursedata/images/hacking.png';
 import machinee from './CoursePage/coursedata/images/machine.png';
 import softw from './CoursePage/coursedata/images/software.png';
 
-// import webdev from './CoursePage/coursedata/images/webdev.png';
-
+import ChatBar from "./ClassApp/test";
 
 //Private Route
 import PrivateRoute from "./Private-Route/PrivateRoute";
@@ -54,6 +57,9 @@ import PrivateRoute from "./Private-Route/PrivateRoute";
 
 
 function App() {
+
+const socket = socketIO.connect('http://localhost:5000');
+
 
   const [instructorMessages, setInstructorMessages] = useState([]);
 
@@ -66,6 +72,8 @@ function App() {
             });
 
     };
+
+    // setInterval(()=>{console.log(instructorMessages)},2000) 
 
 
     useEffect(() => {
@@ -99,6 +107,7 @@ function App() {
           <Route path="aboutus" element={<About />}/>
           <Route path="contactus" element={<Contact />}/>
           <Route path="application" element={<Application />}/>
+          <Route path="chatbar" element={<ChatBar socket={socket} />}/>
 
           <Route path="dashboard" element={
                             <PrivateRoute>
@@ -127,7 +136,13 @@ function App() {
 
                         return (<Route
                         path={`/class/webdevelopment/${imessage.message.split(' ').join('-').toLowerCase()}`}
-                        element={<About />}
+                        element={<Topic 
+                        id={imessage._id}
+                        title={imessage.message}
+                        class={imessage.class}
+                        date={imessage.date}
+                        subs={imessage.messageArray}
+                        />}
                         >
                             
                         </Route>

@@ -4,7 +4,6 @@ import { Link, Routes, Route } from "react-router-dom";
 
 import axios from "axios";
 
-import Contact from "../Contact/contact";
 
 
 import style from "./classapp.css";
@@ -75,10 +74,6 @@ function PreviousTopics (props) {
                     })
                 }
 
-                
-                <Routes>
-                    <Route path="/class/webdevelopment/today" element={<Contact />}/>
-               </Routes>
             </div>
                 
      
