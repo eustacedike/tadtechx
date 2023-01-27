@@ -144,7 +144,7 @@ function CourseMobile() {
         
     };
 
-    setInterval (autScrll, 3000);
+    setInterval (autScrll, 6000);
 
 
     const linkStyle = {

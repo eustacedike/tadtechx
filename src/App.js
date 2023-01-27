@@ -9,7 +9,6 @@ import axios from "axios";
 
 import { CookiesProvider } from "react-cookie";
 
-import socketIO from 'socket.io-client';
 
 
 // Style
@@ -58,7 +57,7 @@ import PrivateRoute from "./Private-Route/PrivateRoute";
 
 function App() {
 
-const socket = socketIO.connect('http://localhost:5000');
+
 
 
   const [instructorMessages, setInstructorMessages] = useState([]);
@@ -107,7 +106,7 @@ const socket = socketIO.connect('http://localhost:5000');
           <Route path="aboutus" element={<About />}/>
           <Route path="contactus" element={<Contact />}/>
           <Route path="application" element={<Application />}/>
-          <Route path="chatbar" element={<ChatBar socket={socket} />}/>
+          <Route path="chatbar" element={<ChatBar />}/>
 
           <Route path="dashboard" element={
                             <PrivateRoute>

@@ -17,8 +17,9 @@
     width: 100%;
     height: 46vw;
     max-height: 650px;
-    background-color: rgb(41, 96, 236, 0.3);
-    background-image: url(../../Homepage/Learn/assets/header.png);
+    /* background-color: rgb(41, 96, 236, 0.3); */
+    /* background-image: url(../../Homepage/Learn/assets/header.png); */
+    background: linear-gradient(135deg, rgb(248,106,3,1), rgb(41,96,236,1));
 
     background-repeat: no-repeat;
     background-position: 37% top;
