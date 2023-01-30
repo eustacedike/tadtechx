@@ -66,7 +66,6 @@ const loginUser = (e) => {
       .post("/api/users/login", logUser)
       .then(res => {
         // Save to localStorage
-  
         // Set token to localStorage
         const { token } = res.data;
         localStorage.setItem("jwtToken", token);

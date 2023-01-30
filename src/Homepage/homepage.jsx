@@ -42,16 +42,16 @@ import servi from './assets/servi.png';
 function Homepage() {
 
   const learnn = [
-    { id: 1, title: "Web Development", icon: webber},
-    { id: 2, title: "Artificial Intelligence", icon: arti},
-    { id: 3, title: "Ethical Hacking", icon: hckng},
-    { id: 4, title: "Android/IOS Course", icon: iandroid},
+    { id: 1, title: "Web Development", icon: webber, link: "/courses/webdevelopment"},
+    { id: 2, title: "Artificial Intelligence", icon: arti, link: "/courses/artificialintelligence"},
+    { id: 3, title: "Ethical Hacking", icon: hckng, link: "/courses/ethicalhacking"},
+    { id: 4, title: "Android/IOS Course", icon: iandroid, link: "/courses/androidiosdevelopment"},
 
-    {id: 5, title: "Computer Diploma Course", icon: diplo},
-    {id: 6, title: "Software Engineering Course", icon: soft},
-    {id: 7, title: "Cyber Security Course", icon: cybb},
-    {id: 8, title: "Graphics Design UI/UX Course", icon: graphdez},
-    {id: 9, title: "Database MS Course", icon: dbicon},
+    {id: 5, title: "Computer Diploma Course", icon: diplo, link: "/courses/computerdiploma"},
+    {id: 6, title: "Software Engineering Course", icon: soft, link: "/courses/softwareengineering"},
+    {id: 7, title: "Cyber Security Course", icon: cybb, link: "/courses/cybersecurity"},
+    {id: 8, title: "Graphics Design UI/UX Course", icon: graphdez, link: "/courses/graphicsdesign"},
+    {id: 9, title: "Database MS Course", icon: dbicon, link: "/courses/databasecourse"},
     
     
 
@@ -127,7 +127,9 @@ const showOthers = () => {
       <ServiceHero theTags={deezTags} theBG="service-banner2"/>
 
       {/* <Hero/> */}
-      <Services/>
+
+      {/* <Services/> */}
+
       {/* <Ideas/> */}
 
       <div className="homeCourses">

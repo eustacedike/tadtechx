@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import jwt_decode from "jwt-decode";
+
 
 
 //Style
@@ -37,6 +39,12 @@ months[parseInt(cookies.JoinDate.slice(5,7))-1]
 +cookies.JoinDate.slice(0,4);
 
 // console.log(dateFormat);
+
+// const token = localStorage.getItem("jwtToken");
+
+// const decoded = jwt_decode(token);
+
+// console.log(decoded);
 
 
 

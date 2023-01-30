@@ -2,10 +2,14 @@ import React, {useState, useEffect} from 'react';
 
 import io from 'socket.io-client';
 
-const socket = io.connect('http://localhost:5000');
+const token = localStorage.getItem("jwtToken");
+const socket = io.connect('http://localhost:5000',{query: token});
 
 function ChatBar () {
   const [users, setUsers] = useState([]);
+
+
+
 
   useEffect(() => {
     socket.on('newUser', (data) => setUsers(data));

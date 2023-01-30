@@ -16,7 +16,7 @@
 .service-banner2 {
     width: 100%;
     height: 46vw;
-    max-height: 650px;
+    max-height: 690px;
     /* background-color: rgb(41, 96, 236, 0.3); */
     /* background-image: url(../../Homepage/Learn/assets/header.png); */
     background: linear-gradient(135deg, rgb(248,106,3,1), rgb(41,96,236,1));
@@ -83,7 +83,7 @@
     position: absolute;
     z-index: 6;
 
-    font-size: clamp(12px, 1.6vw, 24px);
+    font-size: clamp(12px, 1.6vw, 18px);
     transition: .7s;
     cursor: pointer;
     
@@ -140,6 +140,17 @@
 .sCourse:hover {
     transform: scale(1.1);
 }
+
+.headline {
+    color: white;
+    z-index: 9;
+    position: relative;
+    /* border: 2px solid red; */
+    width: 86%;
+    margin: 0 auto;
+    display: none;
+}
+
 
 .design-a {
     height: 9vw;
@@ -219,7 +230,7 @@
 
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
     .service-banner {
         height: 400px;
@@ -336,5 +347,96 @@
     .service-stats {
         height: 120px;
         font-size: 28px;
+    }
+}
+
+@media (min-width: 900px) {
+    .service-banner2 .headline {
+        display: block;
+    }
+
+    .headline h1 {
+        font-size: clamp(16px, 3.2vw, 78px);
+    }
+
+    .service-banner2 .serve-courses{
+        display: flex;
+        gap: 9%;
+        overflow-x: scroll;
+        /* flex-wrap: wrap; */
+        /* border: 2px solid red; */
+        width: 85%;
+        margin: 0 auto;
+        padding: 10px 0;
+        justify-content: space-between;
+        /* height: 100%; */
+        animation: inOut 1s;
+    
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    
+    .service-banner2 .serve-courses::-webkit-scrollbar {
+        display: none;
+      }
+    
+    .service-banner2 .sCourse {
+        width: 27%;
+        min-width: 27%;
+        height: 170px;
+        border-radius: 16px;
+        position: static;   
+        display: block;
+        text-align: center;
+
+        scroll-snap-align: start;
+    }
+    
+    .service-banner2 .sCourse img {
+            height: 80px;
+    }
+}
+
+
+
+@media (min-width: 1400px) {
+    
+    .service-banner2 .serve-courses{
+        gap: 4%;
+        padding: 10px 0;
+    }
+  
+    
+    .service-banner2 .sCourse {
+        width: 22%;
+        min-width: 22%;
+        height: 170px;
+    }
+    
+    .service-banner2 .sCourse img {
+            height: 75px;
+    }
+}
+
+@media (min-width: 1700px) {
+    
+    .service-banner2 .serve-courses{
+        gap: 2.5%;
+        width: 80%;
+        padding: 10px 0;
+    }
+  
+    
+    .service-banner2 .sCourse {
+        width: 18%;
+        min-width: 18%;
+        height: 170px;
+    }
+    
+    .service-banner2 .sCourse img {
+            height: 75px;
     }
 }

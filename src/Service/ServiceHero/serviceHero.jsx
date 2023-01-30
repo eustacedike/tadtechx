@@ -1,4 +1,7 @@
 import React from 'react';
+import { useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
 import style from './serviceHero.css';
 
 
@@ -14,7 +17,7 @@ import person from './assets/person.png';
 
 
 
-function serviceHero(props) {
+function ServiceHero(props) {
 
     const heroTags = [
         { id: 1, title: "Business Branding", icon: webdez },
@@ -29,26 +32,71 @@ function serviceHero(props) {
 
     ];
 
+   
+   
+    const carrd = useRef();
+
+    const scrll = () => {
+        carrd.current.scrollBy(240,0);
+    };
+
+    const scrllbck = () => {
+        carrd.current.scrollBy(-240,0);
+    };
+    
+
+    
+    useEffect(() => {    
+    const autScrll = () => {
+
+        if (carrd.current.scrollWidth - carrd.current.scrollLeft <= carrd.current.clientWidth * 1.2) {
+            carrd.current.scroll(0,0);
+
+        } else {
+            carrd.current.scrollBy(305,0);
+        }
+            
+        
+    };
+
+    setInterval (autScrll, 3000);
+
+}, []);
+
+const linkStyle = {
+    color: "unset",
+    textDecoration: "none"
+}
+
 
     return (
         <div className='ServiceHero'>
             <div className={props.theBG}>
 
                 <div className="inner-banner"></div>
-
+                <div className='headline'>
+                    <div className="map">
+                        <h1 className='animate-a'>Become Tech Savy By</h1>
+                        <h1 className='animate-b'>Learning With Us</h1>
+                    </div>
+                    <div className="intro-small">
+                        <p className='p1'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <p className='p2'>Voluptate voluptatibus autem numquam delectus?</p>
+                    </div>
+                </div>
                 <div className='bgg'></div>
 
                 <div className="design-a"></div>
                 <div className="design-b"></div>
 
-                <div className="serve-courses">
+                <div className="serve-courses" ref={carrd}>
 
                     {props.theTags.map(eachHeroTag => {
                         return (
-                            <div key={eachHeroTag.id} className="sCourse">
+                            <Link to={eachHeroTag.link} style={linkStyle} key={eachHeroTag.id} className="sCourse">
                                 <img src={eachHeroTag.icon} alt="" />
                                 <h4>{eachHeroTag.title}</h4>
-                            </div>
+                            </Link>
                         )
                     })}
 
@@ -86,4 +134,4 @@ function serviceHero(props) {
 
 }
 
-export default serviceHero;
+export default ServiceHero;
