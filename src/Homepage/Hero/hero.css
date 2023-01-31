@@ -66,6 +66,11 @@
     letter-spacing: 0.5px;
 }
 
+.map {
+    animation: backInLeftnRight 8s infinite;
+    width: 40%;
+}
+
 .animate-a {
     overflow: hidden;
     white-space: wrap;
@@ -78,7 +83,7 @@
     /* animation: typing 3.5s steps(30,end) forwards, blink .7s 0s 5; */
     /* animation-delay: 2s;
     animation-iteration-count: 1,2; */
-    animation: bust 2s;
+    /* animation: bust 2s; */
     /* animation: backInDown 1s forwards; */
 }
 
@@ -116,7 +121,7 @@
     margin-bottom: 5px;
     border-right: 2px solid transparent;
     /* animation: typing2 3.5s 3.5s steps(30,end) forwards, blink .7s 3.5s infinite; */
-    animation: bust 2s 2s forwards;
+    /* animation: bust 2s 2s forwards; */
     /* animation: backInDown 1s 1s forwards; */
 
     transform: translateX(-100%);
@@ -139,6 +144,45 @@
     80% {transform: translateY(20%);}
     100% {transform: translateY(0);}
 }
+
+@keyframes backInLeftnRight {
+    0% {
+      -webkit-transform: translateX(-2000px) scale(0.7);
+      transform: translateX(-2000px) scale(0.7);
+      opacity: 0.7;
+    }
+  
+    24% {
+      -webkit-transform: translateX(0px) scale(0.7);
+      transform: translateX(0px) scale(0.7);
+      opacity: 0.7;
+    }
+  
+    30% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+    }
+  
+    84% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+      }
+    
+      90% {
+        -webkit-transform: translateX(0px) scale(0.7);
+        transform: translateX(0px) scale(0.7);
+        opacity: 0.7;
+      }
+    
+      100% {
+        -webkit-transform: translateX(2000px) scale(0.7);
+        transform: translateX(2000px) scale(0.7);
+        opacity: 0.7;
+      }
+  }
+
 
 .curve {
     width: 22.5vw;
@@ -177,7 +221,7 @@
 }
 
 .p1 {
-    animation: typing 3.4s 5s steps(30,end) forwards, blink .7s .1s 12;
+    animation: typing 7.8s 2.7s steps(30,end) infinite, blink .7s .1s 12;
     white-space: nowrap;
     border-right: 2px solid transparent;
     overflow: hidden;
@@ -185,7 +229,7 @@
     width: 0%;
 }
 .p2 {
-    animation: typing 3.5s 8.5s steps(30,end) forwards, blink .7s 8.6s infinite;
+    animation: typing 3.5s 6.2s steps(30,end) forwards, blink .7s 8.6s infinite;
     white-space: nowrap;
     border-right: 2px solid transparent;
     overflow: hidden;
@@ -193,11 +237,13 @@
 }
 
 @keyframes typing {
-    from {width: 0}
-    to {width: 100%}
+    0% {width: 0}
+    44% {width: 100%}
+    56% {width: 100%}
+    70% {width: 0%}
 }
 
-@keyframes blink {
+@keyframes blink {git push 
     from {border-color: transparent;}
     to {border-color: orange;}
 }

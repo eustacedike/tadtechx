@@ -161,7 +161,8 @@
 
     position: absolute;
     top: 21%;
-    left: 28%;
+    left: 18%;
+    animation: ballRoam 24s linear infinite;
 }
 .design-b {
     height: 9vw;
@@ -173,6 +174,7 @@
     position: absolute;
     bottom: 21%;
     right: 27%;
+    animation: ballRoam2 24s linear infinite;
 }
 
 .service-stats {
@@ -230,7 +232,7 @@
 
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1199px) {
 
     .service-banner {
         height: 400px;
@@ -271,7 +273,7 @@
         /* width: 100px; */
         width: 30%;
         height: 20vw;
-        max-height: 110px;
+        max-height: 100px;
         border-radius: 8px;
         position: static;
     }
@@ -300,6 +302,37 @@
 @keyframes inOut {
     from {transform: scale(0.1);}
     to {transform: scale(1);}
+}
+
+@keyframes ballRoam {
+    
+    0%{top: 21%;left: 18%;}
+    10%{top: 38%;left: 30%;}
+    20%{top: 55%;left: 42%;}
+    30%{top: 21%;left: 54%;}
+    40%{top: 38%;left: 66%;}
+    50%{top: 55%;left: 78%;}
+    60%{top: 21%;left: 66%;}
+    70%{top: 38%;left: 54%;}
+    80%{top: 55%;left: 42%;}
+    90%{top: 38%;left: 30%;}
+    100%{top: 21%;left: 18%;}
+}
+
+@keyframes ballRoam2 {
+    
+    0%{bottom: 21%; right: 17%;}
+    10%{bottom: 38%; right: 30%;}
+    20%{bottom: 55%; right: 42%;}
+    30%{bottom: 21%; right: 54%;}
+    40%{bottom: 38%; right: 66%;}
+    50%{bottom: 55%; right: 78%;}
+    60%{bottom: 21%; right: 66%;}
+    70%{bottom: 38%; right: 54%;}
+    80%{bottom: 55%; right: 42%;}
+    90%{bottom: 38%; right: 30%;}
+    100%{bottom: 21%; right: 17%;}
+   
 }
 
 @media (max-width: 500px) {
@@ -350,7 +383,7 @@
     }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
     .service-banner2 .headline {
         display: block;
     }
@@ -370,7 +403,7 @@
         padding: 10px 0;
         justify-content: space-between;
         /* height: 100%; */
-        animation: inOut 1s;
+        animation: none;
     
         overflow-x: scroll;
         scroll-behavior: smooth;
@@ -402,11 +435,15 @@
 
 
 
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
     
     .service-banner2 .serve-courses{
         gap: 4%;
         padding: 10px 0;
+        position: absolute;
+        bottom: 75px;
+        left: 50%;
+        transform: translateX(-50%);
     }
   
     
@@ -439,4 +476,12 @@
     .service-banner2 .sCourse img {
             height: 75px;
     }
+}
+
+@media (min-width: 2000px) {
+    .service-banner2 {
+        width: 100%;
+        height: 900px;
+        max-height: unset;
+    } 
 }

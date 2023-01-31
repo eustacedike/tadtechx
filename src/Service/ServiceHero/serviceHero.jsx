@@ -76,8 +76,7 @@ const linkStyle = {
                 <div className="inner-banner"></div>
                 <div className='headline'>
                     <div className="map">
-                        <h1 className='animate-a'>Become Tech Savy By</h1>
-                        <h1 className='animate-b'>Learning With Us</h1>
+                        <h1>Become Tech Savy By Learning With Us</h1>
                     </div>
                     <div className="intro-small">
                         <p className='p1'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
