@@ -156,7 +156,7 @@ function ClassBody(props) {
                 const errors = err.response.data;
                 console.log(err.response.data)
             });
-
+            
     }
 
 

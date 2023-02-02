@@ -1,0 +1,30 @@
+
+
+.std-table {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.std-table td, .std-table th {
+    padding: 18px 20px;
+    /* font-size: 2px; */
+    font-size: clamp(12px,1.3vw,36px);
+}
+  
+.std-table td:nth-child(odd){
+    font-weight: bold;
+}
+
+.std-table td:nth-child(even){
+    color: rgba(14, 14, 44, 0.6);
+}
+
+.std-table tr:nth-child(odd){
+    background-color: #cfdcfd;
+    color: var(--secondary);
+}
+
+.std-table tr:nth-child(even){
+    background-color: white;
+}

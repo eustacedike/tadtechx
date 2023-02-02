@@ -243,7 +243,7 @@
     70% {width: 0%}
 }
 
-@keyframes blink {git push 
+@keyframes blink {
     from {border-color: transparent;}
     to {border-color: orange;}
 }

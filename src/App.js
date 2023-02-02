@@ -27,6 +27,7 @@ import Application from "./Applcation/application";
 import ClassApp from "./ClassApp/classapp";
 import Dashboard from "./Dashboard/dashboard";
 import Topic from "./ClassApp/topic";
+import Admin from "./Admin/admin";
 
 import SignIn from "./SignIN/signIn";
 import SignUp from "./SignUP/signUp";
@@ -106,6 +107,7 @@ function App() {
           <Route path="aboutus" element={<About />}/>
           <Route path="contactus" element={<Contact />}/>
           <Route path="application" element={<Application />}/>
+          <Route path="admin" element={<Admin />}/>
           <Route path="chatbar" element={<ChatBar />}/>
 
           <Route path="dashboard" element={
