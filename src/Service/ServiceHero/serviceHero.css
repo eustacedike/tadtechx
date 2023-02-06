@@ -14,7 +14,7 @@
 } 
 
 .service-banner2 {
-    width: 100%;
+    width: 100vw;
     height: 46vw;
     max-height: 690px;
     /* background-color: rgb(41, 96, 236, 0.3); */
@@ -25,6 +25,8 @@
     background-position: 37% top;
     background-size: cover;
     position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 3% 0;
 } 
 

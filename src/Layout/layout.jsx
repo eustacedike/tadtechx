@@ -5,7 +5,7 @@ import React from 'react';
 import Navbar from './Navigation/navbar';
 import Footer from './Footer/footer';
 
-
+import './layout.css';
 
 function Layout () {
     
@@ -14,7 +14,10 @@ function Layout () {
                
                <Navbar/>
 
-               <Outlet />
+<div className="outlet">
+    <Outlet />
+</div>
+               
 
                 <Footer/>
                
